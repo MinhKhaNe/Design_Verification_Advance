@@ -1,0 +1,17 @@
+QuestaSim-64 vlog 10.6d_1 Compiler 2018.04 Apr 11 2018
+Start time: 16:39:32 on Apr 13,2026
+vlog -sv -f compile.f 
+-- Compiling module i2c_master_control
+-- Compiling interface dut_if
+-- Compiling package i2c_pkg
+-- Compiling package test_pkg
+-- Importing package i2c_pkg
+** Warning: ../testcase/i2c_fast_test.sv(12): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+** Warning: ../testcase/i2c_fast_plus_test.sv(11): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+-- Compiling module testbench
+-- Importing package test_pkg
+
+Top level modules:
+	testbench
+End time: 16:39:32 on Apr 13,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 2

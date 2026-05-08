@@ -1,0 +1,33 @@
+module register (
+    input  wire        pclk,       // APB Clock
+    input  wire        presetn,    // Active-low reset
+    input  wire        psel,       // APB Select
+    input  wire        penable,    // APB Enable
+    input  wire        pwrite,     // APB Write enable
+    input  wire [1:0]  paddr,      // APB Address
+    input  wire [7:0]  pwdata,     // APB Write data
+    output reg  [7:0]  prdata,     // APB Read data
+    output wire        pready, 
+    output wire        count_down, 
+    output wire        en, 
+    output reg[7:0]    reg_CDR
+);
+
+`protected
+
+    MTI!#1f|z3>o',i!jpkWD2+Gp*s$]li<a]=,FffGF]in_&|TrZAm_ZYY,5xzJO<#5kWD]v=Cr2Y3
+    v3@[{WDY3'Ao\^oVIHQNW'#v$eJwx^iRcV\?XYV's>HlITEkw[D#}o>BA@=+wQG-R?[12/-r{*RR
+    V7BnenLG+TGe$V~FVQ{5jG_<5V^^m}AAOYka,UXnJ^>[zrHRII}sRb#D>$uew^WBzr0!$wr=TTo}
+    -JV#{lB:InIX7Xmr35=sWOA-7DT,&-s!$GrTH}+UON*3Z@3on3F<H<XfsGQu]z7IR7Q?pG+#m>2>
+    @7V$[[ku$KxYZ5'][~GrETsu5iEO/^8aE+_O}IX=^{7_wCz/>Uj-E;\pWjZwf^*]uX{]BX'kVsx*
+    QX]ppf~HYQ5O~72rJ'Y+=xY5=Xa'#YbC|5okWW[~z_<=z3>X[:+oo~-TmpIX7$'\'_'e*}B_Yn5R
+    uW?E}^:1*1J\WjH#TBI]ueDoY'*TEz_B3nK~o[C\,=@^pXZJO\~'|]!,>[a[RM6ddlTTn-$Y<OB5
+    Hf{TCr~H]<(plraDaRAp<wXl^*+2]{oOG---p1[7j~Gtx2*@?p:x>;7XV>=$>Heorj>D~;U\*sZJ
+    <zn7zB<unZ;$lKZV,<Q'~3Rx7=BvU}!Z>T_=D$17*rDUC{7}RpzV2Z_}xvUouB}iU+>y"\OYJ\kC
+    O'eoD_5#Rm<[z\wT[BIE,Y@>UD;_<}$zO=fB1oV'(UH_-_KoeD}=mhRYQsW+>l7sA'SiGIWew\Q}
+    2A51mYIm5"QiRAxZpuj7x]v^T+W{\{;<1Z~Vl1w}k>xRA?2C'aKRzY;<3s?\@^i7?Y&1JJVrueZp
+    V{@\7s@D?+2|\~\2we!Q^[
+`endprotected
+
+endmodule
+

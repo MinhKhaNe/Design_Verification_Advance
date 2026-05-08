@@ -1,0 +1,27 @@
+module sram (
+    input  wire       clk,        // Clock input
+    input  wire       rst_n,      // Active low reset
+    input  wire       bank_addr,  // Bank address (2 banks)
+    input  wire [3:0] row_addr,   // Row address (4 rows)
+    input  wire [7:0] col_addr,   // Column address (4 columns)
+    input  wire [7:0] wr_data,    // Data to write to memory (8-bit)
+    input  wire       wr_en,      // Write enable signal
+    input  wire       rd_en,      // Write enable signal
+    output wire [7:0] rd_data     // Data read from memory (8-bit)
+);
+
+`protected
+
+    MTI!#-O*eD<avILZV@eHe?Xx^U!~*~O>$V!eo#]*?7[l!2Z|.[%6a5U7[}rV5p[<[@p?IWVz7iz[
+    [=}+,Zl<P@<X@G?mvjCv>(QAj;j,,BNm}BA}~xG,$ixvVQoCuZo}#Q7QA>[8%*x?ks1=eAj5EG_V
+    jIC[^o}_nf\Y+wC<1$v,5wm1<CA'#W<Y+]PlOX]fExr#a7ZU}{2IAHCOGI<#w$QX>w+VjeUKl[Z@
+    lA}UBI1D]$k]*e1H?'zCYZ{R@pW#j:B_o,v!oVRV<{(a'n@ajKY'r2YkBzJMaY!!jr>sT}o')\<I
+    xNqe#TI?a\,~AE^xHl^oDX7T$onDITv&b?+,]6iO>Ei+7-=K<a@'vr$,JU~De!UvUXTj<@i=;^cu
+    +7XpQeX=_ku5-{$ta[i[UVkpajDJ@U{nj^j=h7Yj7o~Qj=?\i1[AYczYAxx]k,CX^Y=~+1plK-!E
+    CDmpW?NJr>lf=A>zwenjnRl}ieI&z$v{aYv,'O<$T}zK_Ofd<+>O_w!XG{EGm]Yin\l,QCWxIiap
+    $'GH5m*TG~_~2=u1#XJsKlDve2rkeC!@vs;?{Xs3^remEUeO5IoRvV=UE2]ap#l5fpZpZ?[i<EKE
+    EE}E<
+`endprotected
+
+endmodule
+

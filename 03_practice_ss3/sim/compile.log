@@ -1,0 +1,11 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 12:48:41 on Apr 04,2026
+vlog -sv -f compile.f 
+-- Compiling package src_snk_pkg
+-- Compiling module testbench
+-- Importing package src_snk_pkg
+
+Top level modules:
+	testbench
+End time: 12:48:41 on Apr 04,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

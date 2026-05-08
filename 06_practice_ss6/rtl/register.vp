@@ -1,0 +1,18 @@
+module register (
+    input  wire        pclk,       // APB Clock
+    input  wire        presetn,    // Active-low reset
+    input  wire        psel,       // APB Select
+    input  wire        penable,    // APB Enable
+    input  wire        pwrite,     // APB Write enable
+    input  wire [7:0]  paddr,      // APB Address
+    input  wire [7:0]  pwdata,     // APB Write data
+    output wire        pready      // APB ready 
+);
+
+  `protected
+
+    MTI!#'o1YW$Bu^X-Qj'r=On}5\QDv$R*}_TR1F^Z{Y7m*+}vlmAUZZ-TR\xB3YP5]{@IWp{QO$aA
+    lQpVp_u7;{jR\vnACoZ^~-O1T5G2=?XF!Dw'KE~K/=-B[B+KZbzO@lG#VrlTX[Tr?[e#''w\mmR<
+`endprotected
+endmodule
+

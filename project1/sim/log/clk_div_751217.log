@@ -1,0 +1,202 @@
+# vsim -sv_seed 751217 -coverage -coveranalysis -debugDB -l clk_div_751217.log -voptargs="+acc" -assertdebug -c testbench -do "coverage save -codeAll -cvg -onexit clk_div.ucdb; log -r /*;run -all;" "+clk_div" 
+# Start time: 15:53:15 on May 07,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 10.6d_1 linux_x86_64 Apr 11 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dut_if(fast)
+# Loading work.timer_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.dut_if(fast)
+# Loading work.timer_top(fast)
+# Loading work.timer_register(fast)
+# Loading work.timer_clock_divisor(fast)
+# Loading work.timer_counter(fast)
+# Loading work.timer_interrupt(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# coverage save -codeAll -cvg -onexit clk_div.ucdb
+#  log -r /*
+# run -all
+# [Environment] Environment is building
+# 
+# ===== t=0 Case 3.1 No divide with count up =====
+# 
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 01 at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 01 at Address 03
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 00
+# 
+# ===== t=1370000 PASSED SUCCESSFULLY !!! Expected timing is 1280000, Actual timing is 1299999 =====
+# 
+# 
+# ===== t=1370000 Case 3.2 Divide by 2 with count up =====
+# 
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 08 at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 09 at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 01 at Address 03
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 00
+# 
+# ===== t=4070000 PASSED SUCCESSFULLY !!! Expected timing is 2560000, Actual timing is 2559999 =====
+# 
+# 
+# ===== t=4070000 Case 3.3 Divide by 4 with count up =====
+# 
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 10 at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 11 at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 01 at Address 03
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 00
+# 
+# ===== t=9330000 PASSED SUCCESSFULLY !!! Expected timing is 5120000, Actual timing is 5119999 =====
+# 
+# 
+# ===== t=9330000 Case 3.4 Divide by 8 with count up =====
+# 
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 18 at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 19 at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 01 at Address 03
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 00
+# 
+# ===== t=19710000 PASSED SUCCESSFULLY !!! Expected timing is 10240000, Actual timing is 10239999 =====
+# 
+# 
+# ===== t=19710000 Case 3.5 No divide with count down =====
+# 
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 02 at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 03 at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 02 at Address 03
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 00
+# 
+# ===== t=21150000 PASSED SUCCESSFULLY !!! Expected timing is 1280000, Actual timing is 1299999 =====
+# 
+# 
+# ===== t=21150000 Case 3.6 Divide by 2 with count down =====
+# 
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 0a at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 0b at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 02 at Address 03
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 00
+# 
+# ===== t=23850000 PASSED SUCCESSFULLY !!! Expected timing is 2560000, Actual timing is 2559999 =====
+# 
+# 
+# ===== t=23850000 Case 3.7 Divide by 4 with count down =====
+# 
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 12 at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 13 at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 02 at Address 03
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 00
+# 
+# ===== t=29110000 PASSED SUCCESSFULLY !!! Expected timing is 5120000, Actual timing is 5119999 =====
+# 
+# 
+# ===== t=29110000 Case 3.8 Divide by 8 with count down =====
+# 
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 1a at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 1b at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] Write finished! Write Data 02 at Address 03
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 00
+# 
+# ===== t=39490000 PASSED SUCCESSFULLY !!! Expected timing is 10240000, Actual timing is 10239999 =====
+# 
+# [Base] End simulation
+# ** Note: $finish    : ../testcase/base_test.sv(103)
+#    Time: 40490 ns  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 15:53:17 on May 07,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

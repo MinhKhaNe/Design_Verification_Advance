@@ -1,0 +1,27 @@
+module cpu_model(pclk,presetn,pwrite,psel,penable,pready,paddr,pwdata);
+  
+  input wire pclk,presetn, pready;
+  output reg [7:0] pwdata,paddr;
+  output reg pwrite,psel,penable;
+    
+  task apb_write;
+    input [7:0] address;
+    input [7:0] data;
+    
+    begin
+      $display("==================================================================");
+      $display("At time %d,CPU is writing to address = %h, the value data = %h",$stime,address,data);
+      `protected
+
+    MTI!#lnaoPJs}<'s}Ap~s11lm$~vV-l'U=-V"}ZA[7mBjO'KavA}i7Wj'|;=QHlI@R57221_r^5'
+    !w3DA'[]X}lU,Z\OxWj=Q!BaD}\p,]C$Em7_w5*'~$_R]=7J-OG@]1=<{,r21B\mG^+Xj~=TXV{=
+    K*JHDoF]!jU~nVK]E\BXYGDR1]VeU2K>D{a^WEk~1[WDZWYwXp*YxU?T_B'7~Z<UI#U5wITa<W=I
+    n<7-[i7UxZn-UK=
+`endprotected
+      $display("At time %d,CPU wrote completely",$stime);
+      $display("==================================================================");
+      $display("\n");
+    end
+  endtask
+endmodule        
+

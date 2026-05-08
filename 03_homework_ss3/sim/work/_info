@@ -1,0 +1,159 @@
+m255
+K4
+z2
+!s12c _opt1
+Z0 !s99 nomlopt
+!s12c _opt
+R0
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/ictc/student_data/khaminh_3008/Desktop/project_dva/03_homework_ss3/sim
+T_opt
+!s11d converter_pkg /ictc/student_data/khaminh_3008/Desktop/project_dva/03_homework_ss3/sim/work 1 dut_if 1 /ictc/student_data/khaminh_3008/Desktop/project_dva/03_homework_ss3/sim/work 
+!s110 1775559913
+VjM>V?PD=>8@RfWgVajA<U0
+Z2 04 9 4 work testbench fast 0
+=1-bc2411209e67-69d4e4e9-6d133-ee2e
+R0
+Z3 !s12f OEM100
+Z4 !s12b OEM100
+Z5 !s124 OEM10U3 
+Z6 !s135 nogc
+Z7 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z8 tCvgOpt 0
+n@_opt
+Z9 OL;O;2024.3;79
+R1
+T_opt1
+!s11d converter_pkg /ictc/student_data/khaminh_3008/project_dva/03_homework_ss3/sim/work 1 dut_if 1 /ictc/student_data/khaminh_3008/project_dva/03_homework_ss3/sim/work 
+!s110 1775564239
+V_zY9ZaQMGGeAEYl3Y?h@l2
+R2
+=1-bc2411209e67-69d4f5ce-dc6f6-1af03
+R0
+R3
+R4
+R5
+R6
+R7
+R8
+n@_opt1
+R9
+R1
+Xconverter_pkg
+Z10 2../rtl/parallel_to_serial.vp|../tb/dut_interface.sv|../tb/converter_pkg.sv|../tb/testbench.sv
+!s115 dut_if
+Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z12 !s110 1775794307
+!i10b 1
+!s100 F]AJ=7d_N?<2==SGfH>G;1
+Ik3CHfKamVAg=XIi@1ae?=2
+S1
+Z13 d/ictc/student_data/khaminh_3008/project_dva/03_homework_ss3/sim
+Z14 w1775563895
+8../tb/converter_pkg.sv
+F../tb/converter_pkg.sv
+F../tb/packet.sv
+F../tb/stimulus.sv
+F../tb/driver.sv
+F../tb/monitor.sv
+F../tb/scoreboard.sv
+!i122 4
+Z15 L0 1 0
+Vk3CHfKamVAg=XIi@1ae?=2
+Z16 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z17 !s108 1775794307.000000
+!s107 ../tb/scoreboard.sv|../tb/monitor.sv|../tb/driver.sv|../tb/stimulus.sv|../tb/packet.sv|../tb/testbench.sv|../tb/converter_pkg.sv|../tb/dut_interface.sv|../rtl/parallel_to_serial.vp|
+Z18 !s90 -sv|-f|compile.f|
+!i113 0
+Z19 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z20 !s92 -sv +incdir+../tb -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+Ydut_if
+R10
+R11
+R12
+!i10b 1
+!s100 ?BlVhE5A462T>;SDe4Jh=1
+Ii=HNYhj^[A9>FzFlH[h1Z1
+S1
+R13
+R14
+8../tb/dut_interface.sv
+F../tb/dut_interface.sv
+!i122 4
+R15
+Z21 VDg1SIo80bB@j0V0VzS_@n1
+R16
+r1
+!s85 0
+31
+R17
+Z22 !s107 ../tb/scoreboard.sv|../tb/monitor.sv|../tb/driver.sv|../tb/stimulus.sv|../tb/packet.sv|../tb/testbench.sv|../tb/converter_pkg.sv|../tb/dut_interface.sv|../rtl/parallel_to_serial.vp|
+R18
+!i113 0
+R19
+R20
+R8
+vparallel_to_serial
+R10
+R11
+R12
+!i10b 1
+!s100 IGLmiI0L2NAk0X1TN7>mK2
+IOOB7Mm]7kQ2Xj`O^`RIH02
+!i119 1
+S1
+R13
+R14
+8../rtl/parallel_to_serial.vp
+F../rtl/parallel_to_serial.vp
+!i122 4
+L0 1 13
+R21
+R16
+r1
+!s85 0
+31
+R17
+R22
+R18
+!i113 0
+R19
+R20
+R8
+vtestbench
+R10
+R11
+DXx4 work 13 converter_pkg 0 22 k3CHfKamVAg=XIi@1ae?=2
+R12
+!i10b 1
+!s100 WcLiP6NlPQNh>TG98]O4n2
+IYL3JBmBXdal87INRY1Nf30
+S1
+R13
+w1775794301
+8../tb/testbench.sv
+F../tb/testbench.sv
+!i122 4
+L0 1 61
+R21
+R16
+r1
+!s85 0
+31
+R17
+R22
+R18
+!i113 0
+R19
+R20
+R8

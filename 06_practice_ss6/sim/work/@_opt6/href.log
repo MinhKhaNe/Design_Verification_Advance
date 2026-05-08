@@ -1,0 +1,10 @@
+BEGIN 3:apb_interface:fast__1:work
+    penable :  1:testbench:fast:work
+    pwdata :  1:testbench:fast:work
+    presetn :  1:testbench:fast:work
+    pclk :  1:testbench:fast:work
+    psel :  1:testbench:fast:work
+    paddr :  1:testbench:fast:work
+    pready :  1:testbench:fast:work
+    pwrite :  1:testbench:fast:work
+END 

@@ -1,0 +1,54 @@
+###########################################################
+####               ICTC Regression Report              ####
+###########################################################
+Total testcase run: 43
+Passed            : 43
+Failed            : 0
+Unknown           : 0
+Used time         : 26s
+-----------------------------------------------------------
+Run log detail:
+log/clk_div_751217.log: => Passed
+log/clk_div_751217.log: => Passed
+log/clk_div_751217.log: => Passed
+log/clk_div_751217.log: => Passed
+log/clk_div_751217.log: => Passed
+log/clk_div_751217.log: => Passed
+log/clk_div_751217.log: => Passed
+log/clk_div_751217.log: => Passed
+log/counter_chk_295187.log: => Passed
+log/counter_chk_295187.log: => Passed
+log/counter_chk_295187.log: => Passed
+log/counter_chk_295187.log: => Passed
+log/ovf_int_chk_959945.log: => Passed
+log/ovf_int_chk_959945.log: => Passed
+log/ovf_int_chk_959945.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/register_chk_917115.log: => Passed
+log/signal_chk_886977.log: => Passed
+log/signal_chk_886977.log: => Passed
+log/signal_chk_886977.log: => Passed
+log/udf_int_chk_657026.log: => Passed
+log/udf_int_chk_657026.log: => Passed
+log/udf_int_chk_657026.log: => Passed
+-----------------------------------------------------------

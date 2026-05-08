@@ -1,0 +1,16 @@
+module encoder (
+  input wire[2:0]  pid,
+  input wire       valid,
+  output reg[7:0]  data
+);
+
+`protected
+
+    MTI!#,};3lD{2W$Z'VJ,T[>oTlYr];1Y}x_,w=Z7;~Y"[X^k|gN&xzZe7t1~pAbBC]V*vlI}nHp)
+    aX<~B:aE+zJ[,JJ5>[\me'9>x1|qevBAl\\YTE+QOU@I9j[_Jl2,iou+OB@jA+9'K2QSwR@<<Ozn
+    v\vx>_i?BuUeVHuD-VsU]$wJQAz'}Yx+{>OB@RZVs2Wmlsnw_B5KV\m>ke,[o?[GAQjB}wR=H'RE
+    "i5KnKUwl\Ax'qEYU$sK]p.\{K]f~B~#>^i<&E#p]b_E@>xmnIG7n}w'hr#l'w\~ee<
+`endprotected
+
+endmodule
+

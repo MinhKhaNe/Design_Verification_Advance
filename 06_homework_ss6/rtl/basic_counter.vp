@@ -1,0 +1,25 @@
+module basic_counter (
+    input  wire        pclk,       // APB Clock
+    input  wire        presetn,    // Active-low reset
+    input  wire        psel,       // APB Select
+    input  wire        penable,    // APB Enable
+    input  wire        pwrite,     // APB Write enable
+    input  wire [1:0]  paddr,      // APB Address
+    input  wire [7:0]  pwdata,     // APB Write data
+    output wire [7:0]  prdata,     // APB Read data
+    output wire        pready,     // APB Read data
+    output wire        intr        // Interrupt signal
+);
+
+`protected
+
+    MTI!#EI7;vT<-8oQwR1WYmxa<,PnIuwJY3@v7i[Img'@QU5!'vvQv=L"H=i_CwI25!AQIm!sI?]D
+    ?*Ue#Ia<jwU1hp+][@]]kzx_jI;OKT{Gve#=e7ZOn'_~7;la[mE7'[Z5ErSw*[E(A77@BFK77[[l
+    #Dn=B?a,3xC'=]EgWT_e"}D{X}G'r7kVY|g<x}il-e;}G<o[*?Bnrv?3XJB}25u3,-=G^oYTs1e^
+    #3Wdq[2,_]3vR{R+orvLm7z2v3nRX]Ks!5CoR*[3jAE#xBp#Z{1u-{aVfbl~$Qf<=}!}v1=NznaD
+    ~>YmxWT51:eu5JD{QzUa!^^sB=i5K#^5AnG__;j?XkaxU<jR<msa!KJ5I>e7pkmCADD^_uS$Krru
+    _A7F*+v#B2lpQAAGrr}$*C\x|V@un{pHCY7
+`endprotected
+
+endmodule
+

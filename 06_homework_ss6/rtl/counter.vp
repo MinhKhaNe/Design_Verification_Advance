@@ -1,0 +1,22 @@
+module counter (
+    input  wire       pclk,       // APB Clock
+    input  wire       presetn,    // Active-low reset
+    input  wire       en,
+    input  wire       count_down,
+    input  wire[7:0]  reg_CDR,
+    output wire       intr        // Interrupt signal
+);
+  
+`protected
+
+    MTI!#{[DaRvR~\{W}f\OK$E[V$PfJl2AaDv+}?<JK[/iDxi9FT]@*joU=FPV.T{Rxx7C$x,3Q'wl
+    QCan?#ztpO?_e!RRiB;2;<_!.(CRn$H&H9|!{l*[+s[!Y^O-XW?z=koZno@oZ\eN!jur}@m*Gjpk
+    B\R^v~=5Br=AI1EC13IilU!z$@X@D/q(K$1uEi'i1Ku$/_mD7n'#=wj?~j5+Y;UEX-5iwaDJz@Hl
+    kul@vfljm2qoT3>wjrs7RU<aw{e]W5{H7e'zJ,uV@>B)k1UBjIEu>{nuBHKY_jz>s*$w\l%C@m?B
+    <aWB3+'=3E7_^3'z?BZK}*'QYkkw7#H#z]YDuAQ[oIBbuAuT'i2A.6^mwz7jkWT{*[2<BeX}DlRU
+    Z;KY^i)sxiO,Vs*r^QjC'A3\CQ3a{aGlG!__5i_uaAv|<roKOc}n~7@,u!j4!X}pxxmk&lKRE;vH
+    uwEInQOn}]_;$rkOK67(=PE3xuwB~xm[
+`endprotected
+
+endmodule
+

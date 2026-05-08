@@ -1,0 +1,40 @@
+module i2c_master_control ( //non synthesizable RTL
+    input  wire        clk,           // System clock
+    input  wire        rst_n,         // Active-low reset
+    input  wire        start,         // Start signal for I2C transmission
+    input  wire [7:0]  data_in,       // 8-bit data to be transmitted
+    input  wire [6:0]  slave_addr,    // 7-bit I2C slave address
+    input  wire [15:0] scl_low_time,  // SCL low time (dynamic configuration)
+    input  wire [15:0] scl_high_time, // SCL high time (dynamic configuration)
+    input  wire [15:0] sda_hold_time, // SDA setup time (dynamic configuration)
+    output reg         scl,           // I2C clock signal (SCL)
+    output reg         sda,           // I2C data signal (SDA)
+    output reg         done           // Done signal, indicates transmission completion
+);
+
+
+`protected
+
+    MTI!#qN@nz-a*=@#S@OT,#zkl?Q~r\~oAGYMj~s?|"*-=]=~YAZXz}$;3{*x]rp#v>N^WUa<v@'S
+    vFxAw;~}[NG>*w3E7V.1u2]7#2oJ^A~}kG!Co{p@]Ru6BlTr-EnJx#TW]V<?>sVux;~}.1nX@NV!
+    nH6!<*OEus7+er3e&=iG5OE}Xk<}k}zs[[xOEU|J]sxvuGe*BU$jX^p9wl}+#wY]If}1lB;=+Azz
+    -;}vsGl1IjEp+\<a]?I'KI[~KB*Be;OxjA5e~RKRiD~nuH[_<Xr{3];Y?O-VD$x;\zC$N*.KYoB?
+    TU2oZrD~1^l7<OYjTR}M?$ux"!Yi#|H<-ss,}D}A<'|AClZ}f2^2;*!m>^~'1o7MH5+[nQT}='Un
+    }u,1!p=_l^ne|wr{Q1AIDjs#C}y!5AEJr#Uwj@;1G+XzWn>OE[>^{[?;<XTw}YkzpZKR_VaX7CC#
+    .@5OTO_mm7m1v/IGR--+@rK'RXOn;s-Xm2GmVxl_~EwG7sH'ajlT<H|^sT$EZ7T2j\GTokpS/=kQ
+    {vJ,+JHH7^xVU&]'{}0$[]A>n=\sh9jDCa-^-1rG*aGA~I,KT5?CBI6IlKjjeUsCOsHejJBX{rwj
+    zp\72\G[B$-lZ}{CiQ,QAZDBUUJJj*7$?\U=Yj-OoQr}F_=A7Qj=\>,s@fuqc:A72U2Yaj=32asQ
+    XD:I<RBRB_#Y3v=z=+,''7'a++ZJ*K$*nD\VA@!z\5^R^X]<HX!RJe=r+,XJR$Qo_[D1#]H1KQ*T
+    AnGgk[RYKUHxXOlX/Fs[vG}qe+*~aIvTD<TaHvB-G97H'H_O*HV]D,zVx<n={uG@Y{Q$VY7Dw@>a
+    @7Ke3@CiTr=TAsoY\@\k>~}R*oX_@_FO>Bs99"h%q+^AmBeQ{{a<,kwmO{72z?'r3F=[^~1/-[G2
+    'B*;sO-7izi[iGV'1T,A,9U>=[*-m1u[}1Qm{[j8gRjxO2pj$CT,;=?C+*\p!]gg2ODKv}l,zT3s
+    g63$Up(fuQHu~an1.R?r\QQ3ZEnm@2V1T'C*Uqwo;]6+pAeX1ez:[x~][{C5+1I~aXU!\vz;QivA
+    7^KszOn2?]A}~,mAnI_n)H+'Dk*Ta*77mlKv}]W7-ozJRjxaIwYx'7;eJ;l,s-XzCC~$i6-]j}<Y
+    Q]*^RG+V]UuRDs$J1pG_!>L!$'$-]u-=QnmiO'{JQ}W[\pz?AeYFj5<we1oO\=nH%&>Y=iwp<X,z
+    o}3$ilBCAT\Ax\nA}+$m~poWepiOB(]xj5p;A7mU+aW^_mQEi5U$>-!HO5~o^^#XuG^x3U-eTj[z
+    k<bk$J2_mzV%>{ARvD$-C<~Eg!=i^o$5U8RBnKKj[2<5^^}j1nG>2QkazHQ#Z\%{zJQ?U$O!^}E#
+    [ibNCux$NC<u$,n+2Nd{naEXOAz
+`endprotected
+
+endmodule
+

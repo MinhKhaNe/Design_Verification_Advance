@@ -1,0 +1,173 @@
+# vsim -debugDB -l test.log -voptargs="+acc" -assertdebug -c testbench -do "log -r /*;run -all;" 
+# Start time: 19:16:54 on Apr 07,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.sram(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# log -r /*
+# run -all
+# 
+# ===== t=200, Size of Reference model is           0 =====
+# 
+# ===== t=230, Write value  36 to Bank 0, Col   0, Row  0 =====
+# 
+# ===== t=230, Size of Reference model is           1 =====
+# 
+# ===== t=270, Write value 129 to Bank 0, Col   5, Row  3 =====
+# 
+# ===== t=270, Size of Reference model is           2 =====
+# 
+# ===== t=310, Write value   9 to Bank 0, Col  15, Row 13 =====
+# 
+# ===== t=310, Size of Reference model is           3 =====
+# 
+# ===== t=350, Write value  99 to Bank 0, Col   9, Row  2 =====
+# 
+# ===== t=350, Size of Reference model is           4 =====
+# 
+# ===== t=390, Write value  13 to Bank 0, Col 252, Row 14 =====
+# 
+# ===== t=390, Size of Reference model is           5 =====
+# 
+# ===== t=430, Write value 141 to Bank 0, Col 123, Row 12 =====
+# 
+# ===== t=430, Size of Reference model is           6 =====
+# 
+# ===== t=470, Write value 101 to Bank 0, Col 255, Row 15 =====
+# 
+# ===== t=470, Size of Reference model is           7 =====
+# 
+# ===== t=510, Write value  18 to Bank 1, Col   0, Row  0 =====
+# 
+# ===== t=510, Size of Reference model is           8 =====
+# 
+# ===== t=550, Write value   1 to Bank 1, Col   5, Row  3 =====
+# 
+# ===== t=550, Size of Reference model is           9 =====
+# 
+# ===== t=590, Write value  13 to Bank 1, Col  15, Row 13 =====
+# 
+# ===== t=590, Size of Reference model is          10 =====
+# 
+# ===== t=630, Write value 118 to Bank 1, Col   9, Row  2 =====
+# 
+# ===== t=630, Size of Reference model is          11 =====
+# 
+# ===== t=670, Write value  61 to Bank 1, Col 252, Row 14 =====
+# 
+# ===== t=670, Size of Reference model is          12 =====
+# 
+# ===== t=710, Write value 237 to Bank 1, Col 123, Row 12 =====
+# 
+# ===== t=710, Size of Reference model is          13 =====
+# 
+# ===== t=750, Write value 140 to Bank 1, Col 255, Row 15 =====
+# 
+# ===== t=750, Size of Reference model is          14 =====
+# 
+# ===== t=791, Read data  36 from Bank 0, Col   0, Row  0 =====
+# 
+# ===== t=791, Data matching!!! =====
+# 
+# ===== t=791, Size of Reference model is          13 =====
+# 
+# ===== t=831, Read data 129 from Bank 0, Col   5, Row  3 =====
+# 
+# ===== t=831, Data matching!!! =====
+# 
+# ===== t=831, Size of Reference model is          12 =====
+# 
+# ===== t=871, Read data   9 from Bank 0, Col  15, Row 13 =====
+# 
+# ===== t=871, Data matching!!! =====
+# 
+# ===== t=871, Size of Reference model is          11 =====
+# 
+# ===== t=911, Read data  99 from Bank 0, Col   9, Row  2 =====
+# 
+# ===== t=911, Data matching!!! =====
+# 
+# ===== t=911, Size of Reference model is          10 =====
+# 
+# ===== t=951, Read data  13 from Bank 0, Col 252, Row 14 =====
+# 
+# ===== t=951, Data matching!!! =====
+# 
+# ===== t=951, Size of Reference model is           9 =====
+# 
+# ===== t=991, Read data 141 from Bank 0, Col 123, Row 12 =====
+# 
+# ===== t=991, Data matching!!! =====
+# 
+# ===== t=991, Size of Reference model is           8 =====
+# 
+# ===== t=1031, Read data 101 from Bank 0, Col 255, Row 15 =====
+# 
+# ===== t=1031, Data matching!!! =====
+# 
+# ===== t=1031, Size of Reference model is           7 =====
+# 
+# ===== t=1071, Read data  18 from Bank 1, Col   0, Row  0 =====
+# 
+# ===== t=1071, Data matching!!! =====
+# 
+# ===== t=1071, Size of Reference model is           6 =====
+# 
+# ===== t=1111, Read data   1 from Bank 1, Col   5, Row  3 =====
+# 
+# ===== t=1111, Data matching!!! =====
+# 
+# ===== t=1111, Size of Reference model is           5 =====
+# 
+# ===== t=1151, Read data  13 from Bank 1, Col  15, Row 13 =====
+# 
+# ===== t=1151, Data matching!!! =====
+# 
+# ===== t=1151, Size of Reference model is           4 =====
+# 
+# ===== t=1191, Read data 118 from Bank 1, Col   9, Row  2 =====
+# 
+# ===== t=1191, Data matching!!! =====
+# 
+# ===== t=1191, Size of Reference model is           3 =====
+# 
+# ===== t=1231, Read data  61 from Bank 1, Col 252, Row 14 =====
+# 
+# ===== t=1231, Data matching!!! =====
+# 
+# ===== t=1231, Size of Reference model is           2 =====
+# 
+# ===== t=1271, Read data 237 from Bank 1, Col 123, Row 12 =====
+# 
+# ===== t=1271, Data matching!!! =====
+# 
+# ===== t=1271, Size of Reference model is           1 =====
+# 
+# ===== t=1311, Read data 140 from Bank 1, Col 255, Row 15 =====
+# 
+# ===== t=1311, Data matching!!! =====
+# End simulation
+# 
+# ===== t=1311, Size of Reference model is           0 =====
+# ** Note: $finish    : ../tb/testbench.sv(205)
+#    Time: 1411 ns  Iteration: 0  Instance: /testbench
+# End time: 19:16:55 on Apr 07,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

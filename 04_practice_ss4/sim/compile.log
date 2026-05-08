@@ -1,0 +1,15 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 20:54:09 on Apr 07,2026
+vlog -sv -f compile.f 
+-- Compiling module counter_4bit
+-- Compiling interface dut_if
+-- Compiling package counter_pkg
+-- Compiling package test_pkg
+-- Importing package counter_pkg
+-- Compiling module testbench
+-- Importing package test_pkg
+
+Top level modules:
+	testbench
+End time: 20:54:09 on Apr 07,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

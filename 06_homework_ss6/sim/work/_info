@@ -1,0 +1,219 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/ictc/student_data/khaminh_3008/project_dva/06_homework_ss6/sim
+T_opt
+!s110 1776947622
+V>XcZNSHcW;HBURHTKz7L:1
+04 9 4 work testbench fast 0
+=1-bc2411209e67-69ea11a6-c5067-154dc
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6d_1;65
+vbasic_counter
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z3 !s110 1776947600
+!i10b 1
+!s100 8_F1f5fRCmB<1K98JP[L:1
+IgzM7A52NeCIOjLU]zgabA0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!i119 1
+!s105 basic_counter_vp_unit
+S1
+R0
+Z5 w1776329265
+8../rtl/basic_counter.vp
+F../rtl/basic_counter.vp
+L0 1
+Z6 OL;L;10.6d_1;65
+r1
+!s85 0
+31
+Z7 !s108 1776947600.000000
+Z8 !s107 ../testcase/count_down_with_data_test.sv|../testcase/count_up_with_data_test.sv|../testcase/count_down_test.sv|../testcase/count_up_test.sv|../testcase/base_test.sv|../tb/environment.sv|../tb/scoreboard.sv|../tb/monitor.svp|../tb/driver.svp|../tb/stimulus.sv|../tb/packet.sv|../tb/testbench.sv|../testcase/test_pkg.sv|../tb/counter_pkg.sv|../tb/dut_interface.sv|../rtl/basic_counter.vp|../rtl/counter.vp|../rtl/register.vp|
+Z9 !s90 -coveropt|3|+cover=bcestf|-sv|-f|compile.f|
+!i113 0
+Z10 !s102 -coveropt 3 +cover=bcestf
+Z11 o-coveropt 3 +cover=bcestf -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 !s92 -coveropt 3 +cover=bcestf -sv +incdir+../tb +incdir+../testcase -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vcounter
+R2
+R3
+!i10b 1
+!s100 _]2TPoRI9j@k6[zL2XQSX2
+IhigCl;I:O;G3gN3L:TGWf3
+R4
+!i119 1
+!s105 counter_vp_unit
+S1
+R0
+R5
+8../rtl/counter.vp
+F../rtl/counter.vp
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+R1
+Xcounter_pkg
+Z13 !s115 dut_if
+R2
+R3
+!i10b 1
+!s100 f[E]efCSOkZEDg=4F:RH`2
+IO49Cd^fE_WIn;;b^WkOmV2
+VO49Cd^fE_WIn;;b^WkOmV2
+!i119 1
+S1
+R0
+w1776849486
+8../tb/counter_pkg.sv
+F../tb/counter_pkg.sv
+F../tb/packet.sv
+F../tb/stimulus.sv
+F../tb/driver.svp
+F../tb/monitor.svp
+F../tb/scoreboard.sv
+F../tb/environment.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+R1
+Ydut_if
+R2
+R3
+!i10b 1
+!s100 [<Tb>:z3Lg:3VZQDAle1@2
+InPjFSRYamgdGKUb9]D^B]1
+R4
+!s105 dut_interface_sv_unit
+S1
+R0
+w1776825881
+8../tb/dut_interface.sv
+F../tb/dut_interface.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+R1
+vregister
+R2
+R3
+!i10b 1
+!s100 ^;SCfmVz8Xl@S>ZISEmOR2
+IEHGoRF>6JI:`V[9VU^L>H1
+R4
+!i119 1
+!s105 register_vp_unit
+S1
+R0
+R5
+8../rtl/register.vp
+F../rtl/register.vp
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+R1
+Xtest_pkg
+R13
+R2
+Z14 DXx4 work 11 counter_pkg 0 22 O49Cd^fE_WIn;;b^WkOmV2
+R3
+!i10b 1
+!s100 >oME;CQ`cQU5eL^VVLD9Q3
+I4af]T<a74YkW:1XB7UBG]1
+V4af]T<a74YkW:1XB7UBG]1
+S1
+R0
+w1776849601
+8../testcase/test_pkg.sv
+F../testcase/test_pkg.sv
+F../testcase/base_test.sv
+F../testcase/count_up_test.sv
+F../testcase/count_down_test.sv
+F../testcase/count_up_with_data_test.sv
+F../testcase/count_down_with_data_test.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+R1
+vtestbench
+R2
+R14
+DXx4 work 8 test_pkg 0 22 4af]T<a74YkW:1XB7UBG]1
+R3
+!i10b 1
+!s100 `N181IT>8kYH2@j7jbda?3
+IX0lf8]7_AceTamc=5Qh@e1
+R4
+!s105 testbench_sv_unit
+S1
+R0
+w1776845456
+8../tb/testbench.sv
+F../tb/testbench.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+R1

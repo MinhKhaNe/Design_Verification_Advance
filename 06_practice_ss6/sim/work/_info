@@ -1,0 +1,137 @@
+m255
+K4
+z2
+Z0 !s12c _opt6
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/ictc/student_data/khaminh_3008/project_dva/06_practice_ss6/sim
+T_opt6
+!s110 1776236169
+VG]cT]d9C94J6LYR49EfDg0
+04 9 4 work testbench fast 0
+=1-bc2411209e67-69df3689-a2701-3a28
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U4 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z3 tCvgOpt 0
+n@_opt6
+OL;O;2024.3;79
+Yapb_interface
+Z4 2../rtl/register.vp|../tb/apb_interface.sv|../tb/cpu_model.vp|../tb/testbench.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 !s110 1776236168
+!i10b 1
+!s100 6eOImAe]Y63A]U_j<dCZF1
+I<MTHbL;kKBa]gK6oRj`MW1
+S1
+R2
+Z7 w1776169763
+8../tb/apb_interface.sv
+F../tb/apb_interface.sv
+!i122 8
+L0 1 0
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z10 !s108 1776236168.000000
+Z11 !s107 ../tb/testbench.sv|../tb/cpu_model.vp|../tb/apb_interface.sv|../rtl/register.vp|
+Z12 !s90 -sv|-f|compile.f|
+!i113 0
+Z13 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 !s92 -sv +incdir+../tb -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vcpu_model
+R4
+R5
+R6
+!i10b 1
+!s100 <z<Ddz@SldTLWmW<@lXzJ1
+I2cWQUn?OTZMP2LBP^e[P50
+!i119 1
+S1
+R2
+R7
+8../tb/cpu_model.vp
+F../tb/cpu_model.vp
+!i122 8
+L0 1 22
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+vregister
+R4
+R5
+R6
+!i10b 1
+!s100 JLI=@@5Xaf7OQ<CQPhn;<0
+I4V@0OgXgOSDf;mUA`1aRm0
+!i119 1
+S1
+R2
+R7
+8../rtl/register.vp
+F../rtl/register.vp
+!i122 8
+L0 1 15
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+vtestbench
+R4
+R5
+R6
+!i10b 1
+!s100 ]0^S6DZ5T2KQe9AO7[IW:2
+I2BQO>cj^lXKFgXHQZ2f5C3
+S1
+R2
+w1776236164
+8../tb/testbench.sv
+F../tb/testbench.sv
+!i122 8
+L0 1 82
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3

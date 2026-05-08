@@ -1,0 +1,76 @@
+# vsim -debugDB -l test.log -voptargs="+acc" -assertdebug -c testbench -do "log -r /*;run -all;" 
+# Start time: 11:11:48 on Apr 10,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.dut_if(fast)
+# Loading work.converter_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.dut_if(fast__2)
+# Loading work.parallel_to_serial(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# log -r /*
+# run -all
+# [Stimulus] Created random value 3
+# [Stimulus] Sent packet to Driver
+# [Stimulus] Sent packet to Scoreboard
+# [Stimulus] Created random value 3a
+# [Stimulus] Sent packet to Driver
+# [Stimulus] Sent packet to Scoreboard
+# [Stimulus] Created random value ca
+# [Stimulus] Sent packet to Driver
+# [Stimulus] Sent packet to Scoreboard
+# [Stimulus] Created random value 2a
+# [Stimulus] Sent packet to Driver
+# [Stimulus] Sent packet to Scoreboard
+# [Stimulus] Created random value f4
+# [Stimulus] Sent packet to Driver
+# [Stimulus] Sent packet to Scoreboard
+# [Driver] Get packet from stimulus
+# [Driver] Drive DUT with data in 8'h03
+# [Monitor] Start capture data in TXD
+# [Driver] Get packet from stimulus
+# [Monitor] Data captured is 8'h03, sent to Scoreboard
+# [Scoreboard] Data comparison is matching, Actual data is 03, Expected data is 03
+# 
+# [Driver] Drive DUT with data in 8'h3a
+# [Monitor] Start capture data in TXD
+# [Driver] Get packet from stimulus
+# [Monitor] Data captured is 8'h3a, sent to Scoreboard
+# [Scoreboard] Data comparison is matching, Actual data is 3a, Expected data is 3a
+# 
+# [Driver] Drive DUT with data in 8'hca
+# [Monitor] Start capture data in TXD
+# [Driver] Get packet from stimulus
+# [Monitor] Data captured is 8'hca, sent to Scoreboard
+# [Scoreboard] Data comparison is matching, Actual data is ca, Expected data is ca
+# 
+# [Driver] Drive DUT with data in 8'h2a
+# [Monitor] Start capture data in TXD
+# [Driver] Get packet from stimulus
+# [Monitor] Data captured is 8'h2a, sent to Scoreboard
+# [Scoreboard] Data comparison is matching, Actual data is 2a, Expected data is 2a
+# 
+# [Driver] Drive DUT with data in 8'hf4
+# [Monitor] Start capture data in TXD
+# [Monitor] Data captured is 8'hf4, sent to Scoreboard
+# [Scoreboard] Data comparison is matching, Actual data is f4, Expected data is f4
+# 
+# End simulation
+# ** Note: $finish    : /ictc/student_data/khaminh_3008/Desktop/project_dva/03_homework_ss3/sim/../tb/testbench.sv(58)
+#    Time: 3010 ns  Iteration: 0  Instance: /testbench
+# End time: 11:11:48 on Apr 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

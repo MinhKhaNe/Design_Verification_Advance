@@ -1,0 +1,19 @@
+module counter_4bit (
+    input wire clk,           // Clock signal
+    input wire rst_n,         // Asynchronous reset, active low
+    input wire enable,        // Enable signal: 1 = counter enabled, 0 = counter disabled 
+    input wire up_down,       // Control signal: 1 = count up, 0 = count down
+    output reg [3:0] count    // 4-bit counter output
+);
+
+`protected
+
+    MTI!#AtV~3C/D@+DAoW1$<=?$isI{]IW{{pn}~-{7$i}I!9tQ\K;6>Xenc,u-pre[z?or^.7l1Y'
+    Jur\VV#*UVVoKo$1dk{DW-a{+2EO=*Ve{CJ{]-7>sz;K?kGkW@<5}a]T*aX=[ECi[|iUsi\Z5?<Q
+    VZGo%+rBBz_nJ_U[G$'_R7l,i<IVlfq1)'O<mVr8CO=}guE7uv1#n|1YjBg1AjI~{p\i5n5-=>ro
+    BCK}QOkv;T[GC\;[,?~{X,>C;;{$G;*mh+HZxspVpkerJ'e7xKRcB]5w,>'iCGV'];AU^I$*=VoQ
+    qsk[Z3aJ1hZET=7R*''xE7ksx{v~@xn7+}Jj\i/{VaEXs1x
+`endprotected
+
+endmodule
+

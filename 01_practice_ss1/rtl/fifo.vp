@@ -1,0 +1,31 @@
+module fifo (
+  input wire        clk,        // Clock signal
+  input wire        rst_n,      // Active-low reset
+  input wire        wr_en,      // Write enable signal
+  input wire        rd_en,      // Read enable signal
+  input wire [7:0]  wr_data,    // Write data (8 bits)
+  output reg [7:0]  rd_data,    // Read data (8 bits)
+  output wire       full,       // FIFO full indicator
+  output wire       empty       // FIFO empty indicator
+);
+
+`protected
+
+    MTI!#7K=iX7pj<o\?e2!aAoC{@*5wRXIsm5HK[MOGO[8BEWr@9vm+UNY\\D^O3VjYZwywYV3iaso
+    oVVOveQlb=?QK28]y2vvr2A}pi^YlqB@[xORORur~@Wzw>y<}QK8?}C\E\w}7?;;rX,[2wJ#MYVQ
+    G@U31$YjKrTaes^pA]m2eu}nQlJ;RGn!B4(lz3DB,Q\$!TrXpQ<UN!rJAQ=G1"L\uoi3Y+7D#-uQ
+    $iY7iv@wX+{lsJ^X1$Zz*kef/ICVspZ,'u]XlsJ6M-]Dp.o$;WaQX]$lCJnYEm3GZ{2Ruoe!31\R
+    *z#nm}sk+BX=;E~['e7Em#v1x[4=*u[P5[#?,I#YE@*s2T=lHU3@xp#Em$1@T5ovxx2@!GvD[?v]
+    [Q][7w7Z!-X'ho^;}aX3BQv=YF)I}+oOjm*%-UvuT]oX_u3DIIW5I,3eKE#\QG-'Vz?;]'*XvV]B
+    LZ+eC@1AGY#oD@5Uj*VK[rziX?sla-17a}$>oWaRC$v<OJ$Xu<>+]_<_DgGmO_7I7k^RH-Y$[kEw
+    *+l#p^Hwm1+]kODfz'\keYW'RlzxNI1Zz2[DIrTDm2epsQADE3'DrKSg#_XY5$!7H$Xu@=Y'TT_}
+    C3jAomR5WR#o+Aw[|_{E^P7#Z\7p3]$!ViZlkRDlz#jimEU-jJ.7+JU}-7I|dY>3DUR>GW+pizA'
+    I~<[]Z1{<21KIdC$l[Y>QCl}nGA*n^9?_r+?BT#>5kTvQAw&rOC{}Ks3+EI~7'G_w+pC%}1XZ$/w
+    jY=P}j?rZe!}DEWK*HBvW5l?i\v1%}ms[Z=@+DW7_ppBQz[a>qWp!n!>\x[E[~7*_Q0v@}e[[oi;
+    YZJRa1$;12U<HwapIm@pAp!1Z~3|[J!\y~{+7D~m>Vr-!*^u]~pom)!nzKr>@^O!2s{VDTeKsr7r
+    o>Bvme\AQnCr=nfC[#@Ka$1WB+vDTlYWpYEWxH5ZV^OB}L!<B?7CWUCR\k>D1e^Yu@{<Dr0\{\Z%
+    yxljz2X$pT{1Tnss-v5Tp7IBO+sE7p=p'<G<ukRCW2=*J~}j!E@n~?Ul+DI#=\k$'=rDjZOwlEA;
+    ',mzoYS<RwQ@}X$#[1'vp1=[7^r;_G;t!wso6lut'Z<lor>;5<
+`endprotected
+
+endmodule

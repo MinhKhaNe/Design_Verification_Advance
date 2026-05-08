@@ -1,0 +1,28 @@
+class monitor;
+  mailbox #(packet) m2s_mb;
+  virtual dut_if dut_vif;
+
+  function new(virtual dut_if dut_vif, mailbox #(packet) m2s_mb);
+    this.dut_vif = dut_vif;
+    this.m2s_mb  = m2s_mb;
+  endfunction
+
+  task run();
+    packet pkt;
+
+    while(1) begin
+      `protected
+
+    MTI!#LZHO*$R<,z@l\^w}EoYzJMr,IHXUOIwR#',IW[C2x_!]<sI5k'[G4YQ^;#'Dvv*+!eU<X#w
+    rVtiao_<wwTsrpZHCkp@a+=,~G='Lv7;W=iTZKsn\k]k{@}7vI?{=x1i?li7#>1[<'81LgG=QV=u
+    -#s9-[Uk'x>AIWQHQ+I+@r+B^ozWjiP*{\o@w=U^+rE~H$^!^#B=z?v^<lv2VCjAC#T-Up*B'zH^
+    Kmp|.hVel+$@Vp-hp@U!^W*#R><xKo^T<h\[#<ZvlvUau<
+`endprotected
+      $display("%0t [monitor] Captured APB transaction",$time);
+      m2s_mb.put(pkt);
+    end
+  endtask
+
+endclass
+
+

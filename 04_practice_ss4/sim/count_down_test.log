@@ -1,0 +1,81 @@
+# vsim -debugDB -l count_down_test.log -voptargs="+acc" -assertdebug -c testbench -do "log -r /*;run -all;" "+count_down_test" 
+# Start time: 20:54:37 on Apr 07,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 linux_x86_64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.dut_if(fast)
+# Loading work.counter_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.dut_if(fast__2)
+# Loading work.counter_4bit(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# log -r /*
+# run -all
+# 0: [base_test] build
+# 0: [stimulus] Sent packet to driver
+# 0: [driver] Get packet from stimulus
+# 0: [testbench] Value of counter is 0
+# 110: [testbench] Value of counter is 15
+# 130: [testbench] Value of counter is 14
+# 150: [testbench] Value of counter is 13
+# 170: [testbench] Value of counter is 12
+# 190: [testbench] Value of counter is 11
+# 210: [testbench] Value of counter is 10
+# 230: [testbench] Value of counter is 9
+# 250: [testbench] Value of counter is 8
+# 270: [testbench] Value of counter is 7
+# 290: [testbench] Value of counter is 6
+# 310: [testbench] Value of counter is 5
+# 330: [testbench] Value of counter is 4
+# 350: [testbench] Value of counter is 3
+# 370: [testbench] Value of counter is 2
+# 390: [testbench] Value of counter is 1
+# 410: [testbench] Value of counter is 0
+# 430: [testbench] Value of counter is 15
+# 450: [testbench] Value of counter is 14
+# 470: [testbench] Value of counter is 13
+# 490: [testbench] Value of counter is 12
+# 510: [testbench] Value of counter is 11
+# 530: [testbench] Value of counter is 10
+# 550: [testbench] Value of counter is 9
+# 570: [testbench] Value of counter is 8
+# 590: [testbench] Value of counter is 7
+# 610: [testbench] Value of counter is 6
+# 630: [testbench] Value of counter is 5
+# 650: [testbench] Value of counter is 4
+# 670: [testbench] Value of counter is 3
+# 690: [testbench] Value of counter is 2
+# 710: [testbench] Value of counter is 1
+# 730: [testbench] Value of counter is 0
+# 750: [testbench] Value of counter is 15
+# 770: [testbench] Value of counter is 14
+# 790: [testbench] Value of counter is 13
+# 810: [testbench] Value of counter is 12
+# 830: [testbench] Value of counter is 11
+# 850: [testbench] Value of counter is 10
+# 870: [testbench] Value of counter is 9
+# 890: [testbench] Value of counter is 8
+# 910: [testbench] Value of counter is 7
+# 930: [testbench] Value of counter is 6
+# 950: [testbench] Value of counter is 5
+# 970: [testbench] Value of counter is 4
+# 990: [testbench] Value of counter is 3
+# 1000: [base_test] End simulation
+# ** Note: $finish    : ../testcase/base_test.sv(37)
+#    Time: 1 us  Iteration: 0  Instance: /testbench
+# End time: 20:54:38 on Apr 07,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

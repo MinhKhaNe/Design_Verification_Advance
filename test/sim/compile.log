@@ -1,0 +1,10 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 19:06:55 on Mar 31,2026
+vlog -sv -f compile.f 
+-- Compiling module sram
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+End time: 19:06:56 on Mar 31,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

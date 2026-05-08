@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/ictc/student_data/khaminh_3008/project_dva/05_homework_ss5/sim
+T_opt
+!s110 1776073193
+Ve1eBV<<KH=>fz2b4?M4RL0
+04 9 4 work testbench fast 0
+=1-bc2411209e67-69dcb9e9-253b6-16a48
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6d_1;65
+Ydut_if
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z3 !s110 1776073172
+!i10b 1
+!s100 7N]X<acamj?=FLCI:goJT3
+IKad;]Y;_2EVg_D2O:YKfJ1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 dut_interface_sv_unit
+S1
+R0
+Z5 w1775989855
+8../tb/dut_interface.sv
+F../tb/dut_interface.sv
+L0 1
+Z6 OL;L;10.6d_1;65
+r1
+!s85 0
+31
+Z7 !s108 1776073172.000000
+Z8 !s107 ../testcase/i2c_fast_plus_test.sv|../testcase/i2c_fast_test.sv|../testcase/i2c_standard_test.sv|../testcase/base_test.sv|../tb/environment.sv|../tb/monitor.sv|../tb/driver.sv|../tb/stimulus.sv|../tb/packet.sv|../tb/testbench.sv|../testcase/test_pkg.sv|../tb/i2c_pkg.sv|../tb/dut_interface.sv|../rtl/i2c_master_control.svp|
+Z9 !s90 -sv|-f|compile.f|
+!i113 0
+Z10 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 !s92 -sv +incdir+../tb +incdir+../testcase -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vi2c_master_control
+R2
+R3
+!i10b 1
+!s100 gKN_m:m@ZCgVU0>jmkmeA2
+IXKWEYOV2@Xd;IiAlUTN8H1
+R4
+!i119 1
+!s105 i2c_master_control_svp_unit
+S1
+R0
+R5
+8../rtl/i2c_master_control.svp
+F../rtl/i2c_master_control.svp
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R1
+Xi2c_pkg
+Z12 !s115 dut_if
+R2
+R3
+!i10b 1
+!s100 Lo]LH<<dF]HlG]H09gYF`0
+IfDgQHCiTY[Cc=cCC^GRG[0
+VfDgQHCiTY[Cc=cCC^GRG[0
+S1
+R0
+w1776072974
+8../tb/i2c_pkg.sv
+F../tb/i2c_pkg.sv
+F../tb/packet.sv
+F../tb/stimulus.sv
+F../tb/driver.sv
+F../tb/monitor.sv
+F../tb/environment.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R1
+Xtest_pkg
+R12
+R2
+Z13 DXx4 work 7 i2c_pkg 0 22 fDgQHCiTY[Cc=cCC^GRG[0
+R3
+!i10b 1
+!s100 XNdGg[<2iOUoSg[;CNFNn2
+IAOe1<Fz<QheXXgRjASZz41
+VAOe1<Fz<QheXXgRjASZz41
+S1
+R0
+w1776071452
+8../testcase/test_pkg.sv
+F../testcase/test_pkg.sv
+F../testcase/base_test.sv
+F../testcase/i2c_standard_test.sv
+F../testcase/i2c_fast_test.sv
+F../testcase/i2c_fast_plus_test.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R1
+vtestbench
+R2
+R13
+DXx4 work 8 test_pkg 0 22 AOe1<Fz<QheXXgRjASZz41
+R3
+!i10b 1
+!s100 a4H?`CliE^EIQT9;a17OG2
+IBkQ[mLe;lO@@B_6:1QWzT3
+R4
+!s105 testbench_sv_unit
+S1
+R0
+w1776050940
+8../tb/testbench.sv
+F../tb/testbench.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R1

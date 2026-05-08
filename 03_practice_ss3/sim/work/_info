@@ -1,0 +1,87 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/ictc/student_data/khaminh_3008/Desktop/project_dva/03_practice_ss3/sim
+T_opt1
+!s110 1775281722
+VbD>FHjnFUk8;L2d@dIhLF1
+04 9 4 work testbench fast 0
+=1-bc2411209e67-69d0a63a-a884b-15de8
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U1 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z3 tCvgOpt 0
+n@_opt1
+OL;O;2024.3;79
+Xsrc_snk_pkg
+Z4 2../tb/src_snk_pkg.sv|../tb/testbench.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 !s110 1775281721
+!i10b 1
+!s100 ;I5?=NeAH@_=SOfFL^eBI3
+IQSHgiiP4_VdYMU?6;C48B1
+S1
+R2
+w1775136211
+8../tb/src_snk_pkg.sv
+F../tb/src_snk_pkg.sv
+F../tb/packet.sv
+F../tb/source.sv
+F../tb/sink.sv
+!i122 5
+L0 1 0
+VQSHgiiP4_VdYMU?6;C48B1
+Z7 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z8 !s108 1775281721.000000
+Z9 !s107 ../tb/sink.sv|../tb/source.sv|../tb/packet.sv|../tb/testbench.sv|../tb/src_snk_pkg.sv|
+Z10 !s90 -sv|-f|compile.f|
+!i113 0
+Z11 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 !s92 -sv +incdir+../tb -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vtestbench
+R4
+R5
+DXx4 work 11 src_snk_pkg 0 22 QSHgiiP4_VdYMU?6;C48B1
+R6
+!i10b 1
+!s100 XO0`UA6^hLeP4PzNP[37]2
+I]K[cha?NLjTcgha>X10Gb0
+S1
+R2
+w1775281717
+8../tb/testbench.sv
+F../tb/testbench.sv
+!i122 5
+L0 1 27
+VDg1SIo80bB@j0V0VzS_@n1
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R3

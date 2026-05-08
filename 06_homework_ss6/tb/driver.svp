@@ -1,0 +1,30 @@
+class driver;
+  mailbox #(packet) s2d_mb;
+  virtual dut_if dut_vif;
+  event xfer_done;
+
+  function new(virtual dut_if dut_vif, mailbox #(packet) s2d_mb);
+    this.dut_vif = dut_vif;
+    this.s2d_mb  = s2d_mb;
+  endfunction
+
+  task run();
+    packet pkt;
+
+    while(1) begin
+      s2d_mb.get(pkt);
+      $display("%0t: [driver] Get packet from stimulus",$time);
+      `protected
+
+    MTI!#3[o,V*\H5*=K1_u?{<*TNMJpl?<=BloPs~_?N&i51Dc[G#wEl#*7UGpB?OWNog5*{V{=1Jr
+    [23=3-U>zr{}!}#np=!q72wj'C*DjlkZkUZ~O+O^=A[i_Kp2=^i[7zp>cZ]om$zmD5,~zKB!]=CQ
+    +sJ+m*!*AOu^\ezvo**v^mTTuaR9?HmQ=Hu5Q^ACnR^]"qo7n#F:OL=z2*!'p'6+*>jUrjuj[+#+
+    L7mVQw$Ku*z>=_72_]?Krd>CjKx}+k\UOK-RU51z51TsA5a52!?wp{'pJZ1wV-Xlk=sHxzZ1ljm<
+    T3fxs?v4oek=~<T$QCwk^>oG3SzuEX3n\BOi
+`endprotected
+    end
+  endtask
+
+endclass
+
+

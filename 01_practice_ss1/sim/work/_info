@@ -1,0 +1,86 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/ictc/student_data/khaminh_3008/Desktop/project_dva/01_practice_ss1/sim
+T_opt
+!s110 1774448328
+VFRe:2Sf@14oVl8_OIz5RW2
+04 9 4 work testbench fast 0
+=1-bc2411209e67-69c3eec8-2b7ee-11a37
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U2 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vfifo
+Z4 2../rtl/fifo.vp|../tb/testbench.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 !s110 1774448327
+!i10b 1
+!s100 89Wm2ZEhghG6`7JaI>N2X0
+I6^NKAEI;=`XdehPe[Lb6m3
+!i119 1
+S1
+R2
+w1774446919
+8../rtl/fifo.vp
+F../rtl/fifo.vp
+!i122 5
+L0 1 16
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z9 !s108 1774448327.000000
+Z10 !s107 ../tb/testbench.sv|../rtl/fifo.vp|
+Z11 !s90 -sv|-f|compile.f|
+!i113 0
+Z12 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vtestbench
+R4
+R5
+R6
+!i10b 1
+!s100 6Em3OBV^8kXDn@Miam;G30
+I`iVbZGjCF43nNXL_G]8g33
+S1
+R2
+w1774448323
+8../tb/testbench.sv
+F../tb/testbench.sv
+!i122 5
+L0 1 80
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3

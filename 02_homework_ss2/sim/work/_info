@@ -1,0 +1,122 @@
+m255
+K4
+z2
+!s12c _opt1
+Z0 !s99 nomlopt
+!s12c _opt
+R0
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/ictc/student_data/khaminh_3008/Desktop/project_dva/02_homework_ss2/sim
+T_opt
+!s110 1775383310
+VnNXKZW8Jo1b:=fzZCUn_O0
+Z2 04 9 4 work testbench fast 0
+=1-bc2411209e67-69d2330e-429e9-fe66
+R0
+Z3 !s12f OEM100
+Z4 !s12b OEM100
+Z5 !s124 OEM10U2 
+Z6 !s135 nogc
+Z7 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z8 tCvgOpt 0
+n@_opt
+Z9 OL;O;2024.3;79
+R1
+T_opt1
+!s110 1775564226
+VUeh;QXWk:1LAdbzOKOQSz1
+R2
+=1-bc2411209e67-69d4f5c2-6484a-1a2d3
+R0
+R3
+R4
+R5
+R6
+R7
+R8
+n@_opt1
+R9
+R1
+Xdata_type_pkg
+Z10 2../rtl/encoder.vp|../tb/data_type_pkg.sv|../tb/testbench.sv
+Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z12 !s110 1775564658
+!i10b 1
+!s100 Gfe17ISn?ZTiAgnldfCUK0
+I5S9[Z2A=VR1dF[Z4jmL<<1
+S1
+Z13 d/ictc/student_data/khaminh_3008/project_dva/02_homework_ss2/sim
+Z14 w1775563895
+8../tb/data_type_pkg.sv
+F../tb/data_type_pkg.sv
+!i122 2
+L0 1 0
+V5S9[Z2A=VR1dF[Z4jmL<<1
+Z15 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z16 !s108 1775564658.000000
+!s107 ../tb/testbench.sv|../tb/data_type_pkg.sv|../rtl/encoder.vp|
+Z17 !s90 -sv|-f|compile.f|
+!i113 0
+Z18 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+vencoder
+R10
+R11
+R12
+!i10b 1
+!s100 ><jmO2U=X@Y116fJ1]lU33
+I8ba<<9zX2<1ooF@UY:?K[1
+!i119 1
+S1
+R13
+w1775563894
+8../rtl/encoder.vp
+F../rtl/encoder.vp
+!i122 2
+L0 1 11
+Z19 VDg1SIo80bB@j0V0VzS_@n1
+R15
+r1
+!s85 0
+31
+R16
+Z20 !s107 ../tb/testbench.sv|../tb/data_type_pkg.sv|../rtl/encoder.vp|
+R17
+!i113 0
+R18
+R8
+vtestbench
+R10
+R11
+DXx4 work 13 data_type_pkg 0 22 5S9[Z2A=VR1dF[Z4jmL<<1
+R12
+!i10b 1
+!s100 =6bPS[5Z]Kd]PSYh19K=X2
+IlidBfA?>Y8gaGibRK?_]j2
+S1
+R13
+R14
+8../tb/testbench.sv
+F../tb/testbench.sv
+!i122 2
+L0 1 93
+R19
+R15
+r1
+!s85 0
+31
+R16
+R20
+R17
+!i113 0
+R18
+R8
