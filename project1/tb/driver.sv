@@ -18,26 +18,27 @@ class driver;
       @(posedge dut.pclk);
       //Setup phase
       #1;
-      dut.pwrite  <= pkt.pwrite;
-      dut.psel    <= pkt.psel;
+      dut.pwrite  <= pkt.trans_type;
+      dut.psel    <= 1'b1;
       dut.paddr   <= pkt.paddr;
       dut.penable <= 1'b0;
-      if(pkt.pwrite) begin
-        dut.pwdata  <= pkt.pwdata;
+      if(pkt.trans_type == packet::WRITE) begin
+        dut.pwdata  <= pkt.data;
       end
 
       @(posedge dut.pclk);
       //Access phase
       #1;
       dut.penable <= 1'b1;
-      if(!pkt.pwrite) begin
-        pkt.prdata <= dut.prdata;
+      if(pkt.trans_type == packet::READ) begin
+        pkt.data <= dut.prdata;
       end
 
       @(posedge dut.pclk);
       #1;
       dut.psel    <= 1'b0;
       dut.penable <= 1'b0;
+      dut.pwrite  <= 1'b0;
       -> xfer_done;
         
       $display("[Driver] Data is sent to DUT");

@@ -9,18 +9,17 @@ z2
 cModel Technology
 Z0 d/ictc/student_data/khaminh_3008/project_dva/project1/sim
 T_opt
-!s110 1778143986
-VP2okMTcR:;[Z7z6;[a8iY2
+!s110 1778760468
+VgQ49Bgb6XW>]FhlSbe[MR0
 04 9 4 work testbench fast 0
-=1-bc2411209e67-69fc52f1-f1bf2-1a890
+=1-bc2411209e67-6a05bb14-2293d-13d89
 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
 Z1 tCvgOpt 0
 n@_opt
 OL;O;10.6d_1;65
-R0
 Ydut_if
 Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z3 !s110 1778144223
+Z3 !s110 1778760465
 !i10b 1
 !s100 XFElfcPY8dUK0V`:hkoU02
 IQO9fhnzEaK3BdM4f8abG23
@@ -28,7 +27,7 @@ Z4 VDg1SIo80bB@j0V0VzS_@n1
 !s105 dut_interface_sv_unit
 S1
 R0
-Z5 w1776753577
+Z5 w1778549313
 8../tb/dut_interface.sv
 F../tb/dut_interface.sv
 L0 1
@@ -36,26 +35,26 @@ Z6 OL;L;10.6d_1;65
 r1
 !s85 0
 31
-Z7 !s108 1778144223.000000
-!s107 ../testcase/ovf_int_chk.sv|../testcase/udf_int_chk.sv|../testcase/counter_chk.sv|../testcase/clk_div.sv|../testcase/register_chk.sv|../testcase/signal_chk.sv|../testcase/base_test.sv|../tb/environment.sv|../tb/scoreboard.sv|../tb/monitor.sv|../tb/driver.sv|../tb/stimulus.sv|../tb/packet.sv|../tb/testbench.sv|../testcase/test_pkg.sv|../tb/timer_pkg.sv|../tb/dut_interface.sv|../rtl/timer_top.v|../rtl/timer_counter.vp|../rtl/timer_interrupt.vp|../rtl/timer_clock_divisor.vp|../rtl/timer_register.vp|
-Z8 !s90 -coveropt|3|+cover=bcestf|-sv|-f|compile.f|
+Z7 !s108 1778760465.000000
+Z8 !s107 ../testcase/ovf_int_chk.sv|../testcase/udf_int_chk.sv|../testcase/counter_chk.sv|../testcase/clk_div.sv|../testcase/register_chk.sv|../testcase/signal_chk.sv|../testcase/base_test.sv|../tb/environment.sv|../tb/scoreboard.sv|../tb/monitor.sv|../tb/driver.sv|../tb/stimulus.sv|../tb/packet.sv|../tb/testbench.sv|../testcase/test_pkg.sv|../tb/timer_pkg.sv|../tb/dut_interface.sv|../rtl/timer_top.v|../rtl/timer_counter.vp|../rtl/timer_interrupt.vp|../rtl/timer_clock_divisor.vp|../rtl/timer_register.vp|
+Z9 !s90 -coveropt|3|+cover=bcestf|-sv|-f|compile.f|
 !i113 0
-Z9 !s102 -coveropt 3 +cover=bcestf
-Z10 o-coveropt 3 +cover=bcestf -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z11 !s92 -coveropt 3 +cover=bcestf -sv +incdir+../tb +incdir+../testcase -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 !s102 -coveropt 3 +cover=bcestf
+Z11 o-coveropt 3 +cover=bcestf -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 !s92 -coveropt 3 +cover=bcestf -sv +incdir+../tb +incdir+../testcase -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 Xtest_pkg
-Z12 !s115 dut_if
+Z13 !s115 dut_if
 R2
-Z13 DXx4 work 9 timer_pkg 0 22 H:Wc`SSZ^nY6P5:4fAm;E0
+Z14 DXx4 work 9 timer_pkg 0 22 ^5?4_R:DTXe2SV9OaPD7T2
 R3
 !i10b 1
-!s100 gaVLZZll;k5X2NWljD;_i3
-ISCOk0j@o8O?HMao[lgU;F2
-VSCOk0j@o8O?HMao[lgU;F2
+!s100 0mGUeA;8A25zi<1HDLM<D2
+IR^IAh`Pc5FC<jWzmG_T3c1
+VR^IAh`Pc5FC<jWzmG_T3c1
 S1
 R0
-w1777983816
+R5
 8../testcase/test_pkg.sv
 F../testcase/test_pkg.sv
 F../testcase/base_test.sv
@@ -71,26 +70,26 @@ r1
 !s85 0
 31
 R7
-Z14 !s107 ../testcase/ovf_int_chk.sv|../testcase/udf_int_chk.sv|../testcase/counter_chk.sv|../testcase/clk_div.sv|../testcase/register_chk.sv|../testcase/signal_chk.sv|../testcase/base_test.sv|../tb/environment.sv|../tb/scoreboard.sv|../tb/monitor.sv|../tb/driver.sv|../tb/stimulus.sv|../tb/packet.sv|../tb/testbench.sv|../testcase/test_pkg.sv|../tb/timer_pkg.sv|../tb/dut_interface.sv|../rtl/timer_top.v|../rtl/timer_counter.vp|../rtl/timer_interrupt.vp|../rtl/timer_clock_divisor.vp|../rtl/timer_register.vp|
 R8
-!i113 0
 R9
+!i113 0
 R10
 R11
+R12
 R1
 vtestbench
 R2
-R13
-DXx4 work 8 test_pkg 0 22 SCOk0j@o8O?HMao[lgU;F2
-R3
+R14
+DXx4 work 8 test_pkg 0 22 R^IAh`Pc5FC<jWzmG_T3c1
+!s110 1778760466
 !i10b 1
 !s100 5PRhdd<42=c8RTZOEEZz93
-I^e?O1l[WC5G3I`0HV7FoM1
+I0zLz8WkNgSgU5l]@D9zT]3
 R4
 !s105 testbench_sv_unit
 S1
 R0
-w1776951340
+R5
 8../tb/testbench.sv
 F../tb/testbench.sv
 L0 3
@@ -99,12 +98,12 @@ r1
 !s85 0
 31
 R7
-R14
 R8
-!i113 0
 R9
+!i113 0
 R10
 R11
+R12
 R1
 vtimer_clock_divisor
 R2
@@ -117,7 +116,7 @@ R4
 !s105 timer_clock_divisor_vp_unit
 S1
 R0
-w1776753606
+R5
 8../rtl/timer_clock_divisor.vp
 F../rtl/timer_clock_divisor.vp
 L0 1
@@ -126,12 +125,12 @@ r1
 !s85 0
 31
 R7
-R14
 R8
-!i113 0
 R9
+!i113 0
 R10
 R11
+R12
 R1
 vtimer_counter
 R2
@@ -153,12 +152,12 @@ r1
 !s85 0
 31
 R7
-R14
 R8
-!i113 0
 R9
+!i113 0
 R10
 R11
+R12
 R1
 vtimer_interrupt
 R2
@@ -180,24 +179,24 @@ r1
 !s85 0
 31
 R7
-R14
 R8
-!i113 0
 R9
+!i113 0
 R10
 R11
+R12
 R1
 Xtimer_pkg
-R12
+R13
 R2
 R3
 !i10b 1
-!s100 Ij3NGK0Ym6B7?lLmh90010
-IH:Wc`SSZ^nY6P5:4fAm;E0
-VH:Wc`SSZ^nY6P5:4fAm;E0
+!s100 9KGN?;HoZAnYSm>A[^=062
+I^5?4_R:DTXe2SV9OaPD7T2
+V^5?4_R:DTXe2SV9OaPD7T2
 S1
 R0
-w1777983106
+R5
 8../tb/timer_pkg.sv
 F../tb/timer_pkg.sv
 F../tb/packet.sv
@@ -212,12 +211,12 @@ r1
 !s85 0
 31
 R7
-R14
 R8
-!i113 0
 R9
+!i113 0
 R10
 R11
+R12
 R1
 vtimer_register
 R2
@@ -239,12 +238,12 @@ r1
 !s85 0
 31
 R7
-R14
 R8
-!i113 0
 R9
+!i113 0
 R10
 R11
+R12
 R1
 vtimer_top
 R2
@@ -256,7 +255,7 @@ R4
 !s105 timer_top_v_unit
 S1
 R0
-w1776951407
+R5
 8../rtl/timer_top.v
 F../rtl/timer_top.v
 L0 1
@@ -265,10 +264,10 @@ r1
 !s85 0
 31
 R7
-R14
 R8
-!i113 0
 R9
+!i113 0
 R10
 R11
+R12
 R1

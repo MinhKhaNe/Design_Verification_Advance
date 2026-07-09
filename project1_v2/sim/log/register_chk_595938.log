@@ -1,0 +1,297 @@
+# vsim -sv_seed 595938 -coverage -coveranalysis -debugDB -l register_chk_595938.log -voptargs="+acc" -assertdebug -c testbench -do "coverage save -codeAll -cvg -onexit register_chk.ucdb; log -r /*;run -all;" "+register_chk" 
+# Start time: 08:27:34 on May 12,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 10.6d_1 linux_x86_64 Apr 11 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dut_if(fast)
+# Loading work.timer_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.dut_if(fast)
+# Loading work.timer_top(fast)
+# Loading work.timer_register(fast)
+# Loading work.timer_clock_divisor(fast)
+# Loading work.timer_counter(fast)
+# Loading work.timer_interrupt(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# coverage save -codeAll -cvg -onexit register_chk.ucdb
+#  log -r /*
+# run -all
+# [Environment] Environment is building
+# 
+# ===== t=0 Case 2.1 Read default value =====
+# 
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=70001  Read finished! At Address 00, Data is 00
+# 
+# ===== t=70001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=130001  Read finished! At Address 01, Data is 00
+# 
+# ===== t=130001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 01, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=190001  Read finished! At Address 02, Data is 00
+# 
+# ===== t=190001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 02, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=250001  Read finished! At Address 03, Data is 00
+# 
+# ===== t=250001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# 
+# ===== t=250001 Case 2.2 Read and Write value check =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data 1e at Address 00
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address 01
+# [Scoreboard] Get packet from Monitor: Address: 01, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address 02
+# [Scoreboard] Get packet from Monitor: Address: 02, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address 03
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=550001  Read finished! At Address 00, Data is 1e
+# 
+# ===== t=550001 PASSED SUCCESSFULLY!!!! Expected value is 1e, Actual value is 1e =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 1e
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=610001  Read finished! At Address 01, Data is 00
+# 
+# ===== t=610001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 01, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=670001  Read finished! At Address 02, Data is ff
+# 
+# ===== t=670001 PASSED SUCCESSFULLY!!!! Expected value is ff, Actual value is ff =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 02, Data: ff
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=730001  Read finished! At Address 03, Data is 03
+# 
+# ===== t=730001 PASSED SUCCESSFULLY!!!! Expected value is 03, Actual value is 03 =====
+# 
+# 
+# ===== t=730001 Case 2.3 Reset on the fly check =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 03
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=810001  Read finished! At Address 00, Data is 00
+# 
+# ===== t=810001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 00, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=870001  Read finished! At Address 01, Data is 00
+# 
+# ===== t=870001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 01, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=930001  Read finished! At Address 02, Data is 00
+# 
+# ===== t=930001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 02, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=990001  Read finished! At Address 03, Data is 00
+# 
+# ===== t=990001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# 
+# ===== t=990001 Case 2.4 Write and Read invalid Addresses =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 03, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address 97
+# [Scoreboard] Get packet from Monitor: Address: 97, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address 54
+# [Scoreboard] Get packet from Monitor: Address: 54, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address d0
+# [Scoreboard] Get packet from Monitor: Address: d0, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address f9
+# [Scoreboard] Get packet from Monitor: Address: f9, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address ef
+# [Scoreboard] Get packet from Monitor: Address: ef, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address 6d
+# [Scoreboard] Get packet from Monitor: Address: 6d, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address 28
+# [Scoreboard] Get packet from Monitor: Address: 28, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address e3
+# [Scoreboard] Get packet from Monitor: Address: e3, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address b4
+# [Scoreboard] Get packet from Monitor: Address: b4, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [base] Write finished! Write data ff at Address dd
+# [Scoreboard] Get packet from Monitor: Address: dd, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=1670001  Read finished! At Address 97, Data is 00
+# 
+# ===== t=1670001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 97, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=1730001  Read finished! At Address 54, Data is 00
+# 
+# ===== t=1730001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 54, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=1790001  Read finished! At Address d0, Data is 00
+# 
+# ===== t=1790001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: d0, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=1850001  Read finished! At Address f9, Data is 00
+# 
+# ===== t=1850001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: f9, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=1910001  Read finished! At Address ef, Data is 00
+# 
+# ===== t=1910001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: ef, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=1970001  Read finished! At Address 6d, Data is 00
+# 
+# ===== t=1970001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 6d, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=2030001  Read finished! At Address 28, Data is 00
+# 
+# ===== t=2030001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: 28, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=2090001  Read finished! At Address e3, Data is 00
+# 
+# ===== t=2090001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: e3, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=2150001  Read finished! At Address b4, Data is 00
+# 
+# ===== t=2150001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: b4, Data: 00
+# [Stimulus] Packet is sent to Driver
+# [Driver] Data is sent to DUT
+# [Monitor] Data is sent to Scoreboard
+# [Base] t=2210001  Read finished! At Address dd, Data is 00
+# 
+# ===== t=2210001 PASSED SUCCESSFULLY!!!! Expected value is 00, Actual value is 00 =====
+# 
+# [Scoreboard] Get packet from Monitor: Address: dd, Data: 00
+# [Base] End simulation
+# ** Note: $finish    : ../testcase/base_test.sv(209)
+#    Time: 3210001 ps  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 08:27:36 on May 12,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

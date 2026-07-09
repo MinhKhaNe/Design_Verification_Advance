@@ -1,5 +1,5 @@
 QuestaSim-64 vlog 10.6d_1 Compiler 2018.04 Apr 11 2018
-Start time: 19:33:20 on Apr 23,2026
+Start time: 11:18:59 on May 21,2026
 vlog -coveropt 3 "+cover=bcestf" -sv -f compile.f 
 -- Compiling module register
 -- Compiling module counter
@@ -13,5 +13,5 @@ vlog -coveropt 3 "+cover=bcestf" -sv -f compile.f
 
 Top level modules:
 	testbench
-End time: 19:33:20 on Apr 23,2026, Elapsed time: 0:00:00
+End time: 11:18:59 on May 21,2026, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0

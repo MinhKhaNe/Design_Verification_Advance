@@ -1,0 +1,13 @@
+BEGIN 3:dut_if:fast__1:work
+    valid :  1:converter_pkg:fast:work
+    clk :  1:converter_pkg:fast:work
+    data_in :  1:converter_pkg:fast:work
+    TXD :  1:converter_pkg:fast:work
+END 
+BEGIN 3:dut_if:fast__2:work
+    clk :  1:testbench:fast:work
+    valid :  1:testbench:fast:work
+    TXD :  1:testbench:fast:work
+    rst_n :  1:testbench:fast:work
+    data_in :  1:testbench:fast:work
+END 

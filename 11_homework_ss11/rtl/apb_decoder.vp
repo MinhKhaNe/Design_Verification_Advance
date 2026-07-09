@@ -1,0 +1,39 @@
+
+module apb_decoder (// APB interface
+                    input wire pclk, 
+                    input wire presetn,
+                    input wire [9:0]  paddr, 
+                    input wire        psel, 
+                    input wire        penable, 
+                    input wire        pwrite, 
+                    input wire [31:0] pwdata,
+                    output wire       pready, 
+                    output reg [31:0] prdata, 
+                    output wire       pslverr                    
+                    );
+
+`protected
+
+    MTI!#0A\>z!EwO~=G3LKO\*z~=7w-C<t1pD{|)-Th"%A^i[|H$|,n^o7ZvlQDZrhJ{DET}>JuD2!
+    C1?xF~XB!xU~m[Dxo;RD_J'#^)]p[?2N'\n@J,ue2B$K}(/\jrD%-&[|Epmc5Yk;wC;$)$OBV#r<
+    e7eT]eA7Ha5azix3',,]k52IKK[oe2r7VB7a>>5XVu=aRRJUmIOlY~zz-UDZ_sU\DVYTu#<Ir}ba
+    '##$?KWp,Y@'l{Gz><{(_CzpC<~[kUJDIUp2l#Ffr-@<rjEE|!+uE}b#pT[[C#U~<H2-'QJxVGpQ
+    #-v1erQ1,13H5KZ>R>r'l7=*@KJB\,O$m;I9BR2D|Gl+^L%$omK1Kv*};jQeb_X]#J}<]-*W!Tn>
+    p'_wm|o![z$COx<pOJs3<,d**,;bmjvE'3wu^wGIzW@AE$xBDaQ<NQ;D=zWY1sl?3v5@^wG$_Qp7
+    O}oY'1~KkRn=;^3+lPasuCeSeZZ~!Cr7<]Ded}3W='V^lj#}O$koAe}p@A=\-Z52<ap#Ql>2XI\{
+    lo1zXeHB-kXC_D6]$=>G5uXU5l2,33CuCiaruuxUX$QKOQ-'lGOKO=$p3w?3jwD'^U;vs#1A7O7t
+    GnA<LJ<Cv@G~T{TX\Lr5n5WvJpzG_K_K\W?+;x__#jMOR_,7,ak*'!ul1Ysz[mAET@p_7\p-XKB>
+    XQE52']3Xmk^m-@*'W}~C]jQ3sT~U7A1R\-{Vw<-5B?HU=-A=Q=^IWo+{e+73Q?Z'pa4j7X#Dm}3
+    WpCB3G7TeA3GBCOp$2Imi=#jW[*YpAU\{1a\l{_Ybvm}^nzani}l<@_1?lZ+\YKUpI#U[8u5Xa+_
+    2x}hvVOo,+@KjV2wpaaovo3>lJoXCRmB_!\7?5!*ziaR^3D*R$#]&>eKo>IaGjr$Q!'2=U}zK6Tz
+    ;Ew}+3RIm7KXT#u^@o<xo]c{T3w}>;*qQv7Y.G2UjnxkzuT+m'p}Wjw<_$>BzLe7,iU$pY%QrrmI
+    GO~',nIcKU1*}?>e9zwV*.'uJl~1s,B>_WR1zoUG*>l1!uV2+3R{m<If3^apMPOrAKSxsDmxI5!<
+    \\R1YV=Q>{Xie_usiW<T=^BVu<]XIYX}ZK[[aB^@Xw2fo~o[VH*}eJej>T_15G$IbYkJ-r2Vu;Xe
+    k$s{wVxnBnCWZBAmEBU+eYUKJY'~<E3u{PC21p;$DE!'wGUw~le2wJ|Z{B\Sy<\J2_{VJpvJQOKW
+    ]Vr+veQIEIauO6p~El@X=]1ix#L5#-{1^?J|k[R}CW+BwR{[e2K_BA;O=e-'Ivmqa-Ju%,Apw5Ip
+    p%nHn^5vW=f]=}G$HExQ<2[ORwURpJBk+@*W{>K'<WpXs?-.fBG_rK]em~*;T1saD1!5RulwU[%p
+    cr~_<^V~5E=JBpk=uc.tH>-xIlEiN!^sK>Bm?
+`endprotected
+endmodule
+
+

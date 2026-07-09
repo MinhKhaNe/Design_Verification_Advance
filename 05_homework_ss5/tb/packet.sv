@@ -36,9 +36,9 @@ class packet;
   };
 
   constraint sda_ht_limit {
-    i2c_mode == STANDARD  -> sda_hold_time <= 4450;   //Hold = SCL_Low - SetUp
-    i2c_mode == FAST      -> sda_hold_time <= 1200;
-    i2c_mode == FAST_PLUS -> sda_hold_time <= 450;
+    i2c_mode == STANDARD  -> sda_hold_time <= scl_low_time - 250;   //Hold = SCL_Low - SetUp
+    i2c_mode == FAST      -> sda_hold_time <= scl_low_time - 100;
+    i2c_mode == FAST_PLUS -> sda_hold_time <= scl_low_time - 50;
   }
 
 endclass

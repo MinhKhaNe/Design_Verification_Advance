@@ -1,0 +1,17 @@
+  CREATE_STREAM @0 {NAME:write_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:625}
+  CREATE_STREAM @1350000 {NAME:read_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:724}
+  CREATE_STREAM @0 {NAME:read_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:625}
+  CREATE_STREAM @0 {NAME:write_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:625}
+  CREATE_STREAM @0 {NAME:read_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:625}
+  CREATE_STREAM @0 {NAME:write_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:625}
+  CREATE_STREAM @1350000 {NAME:read_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:724}
+  CREATE_STREAM @0 {NAME:write_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:625}
+  CREATE_STREAM @1350000 {NAME:read_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:736}
+  CREATE_STREAM @0 {NAME:write_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:625}
+  CREATE_STREAM @1350000 {NAME:read_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:718}
+  CREATE_STREAM @0 {NAME:write_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:625}
+  CREATE_STREAM @1350000 {NAME:read_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:710}
+  CREATE_STREAM @0 {NAME:write_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:625}
+  CREATE_STREAM @1350000 {NAME:read_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:710}
+  CREATE_STREAM @0 {NAME:write_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:625}
+  CREATE_STREAM @1350000 {NAME:read_seq T:Transactions SCOPE:uvm_test_top.ahb_env.ahb_agt.sequencer STREAM:710}

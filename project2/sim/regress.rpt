@@ -1,0 +1,21 @@
+###########################################################
+####               ICTC Regression Report              ####
+###########################################################
+Total testcase run: 10
+Passed            : 0
+Failed            : 0
+Unknown           : 10
+Used time         : 33s
+-----------------------------------------------------------
+Run log detail:
+log/uart_baud_rate_test_927289.log => Unknown
+log/uart_baud_rate_test_966552.log => Unknown
+log/uart_data_frame_test_678081.log => Unknown
+log/uart_data_frame_test_681400.log => Unknown
+log/uart_parity_test_319703.log => Unknown
+log/uart_parity_test_323848.log => Unknown
+log/uart_random_test_101427.log => Unknown
+log/uart_random_test_125517.log => Unknown
+log/uart_stop_bit_test_571427.log => Unknown
+log/uart_stop_bit_test_929673.log => Unknown
+-----------------------------------------------------------

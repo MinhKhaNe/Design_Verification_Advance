@@ -9,17 +9,17 @@ z2
 cModel Technology
 Z0 d/ictc/student_data/khaminh_3008/project_dva/06_homework_ss6/sim
 T_opt
-!s110 1776947622
-V>XcZNSHcW;HBURHTKz7L:1
+!s110 1779337154
+VSDj>KIJ2O:H[aIh2kjLl70
 04 9 4 work testbench fast 0
-=1-bc2411209e67-69ea11a6-c5067-154dc
+=1-bc2411209e67-6a0e87c2-3eba7-1ccbd
 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
 Z1 tCvgOpt 0
 n@_opt
 OL;O;10.6d_1;65
 vbasic_counter
 Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z3 !s110 1776947600
+Z3 !s110 1779337139
 !i10b 1
 !s100 8_F1f5fRCmB<1K98JP[L:1
 IgzM7A52NeCIOjLU]zgabA0
@@ -36,7 +36,7 @@ Z6 OL;L;10.6d_1;65
 r1
 !s85 0
 31
-Z7 !s108 1776947600.000000
+Z7 !s108 1779337139.000000
 Z8 !s107 ../testcase/count_down_with_data_test.sv|../testcase/count_up_with_data_test.sv|../testcase/count_down_test.sv|../testcase/count_up_test.sv|../testcase/base_test.sv|../tb/environment.sv|../tb/scoreboard.sv|../tb/monitor.svp|../tb/driver.svp|../tb/stimulus.sv|../tb/packet.sv|../tb/testbench.sv|../testcase/test_pkg.sv|../tb/counter_pkg.sv|../tb/dut_interface.sv|../rtl/basic_counter.vp|../rtl/counter.vp|../rtl/register.vp|
 Z9 !s90 -coveropt|3|+cover=bcestf|-sv|-f|compile.f|
 !i113 0

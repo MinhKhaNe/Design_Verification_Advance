@@ -1,0 +1,582 @@
+# vsim -sv_seed 1 -voptargs="+acc" -assertdebug -debugDB -c testbench -do "log -r /*;run -all;" -l ahb_read_write_register_chk_1.log "+UVM_TESTNAME=ahb_read_write_register_chk" "+UVM_VERBOSITY=UVM_HIGH" 
+# Start time: 09:12:31 on May 22,2026
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_96765/linux_x86_64_gcc-11/export_tramp.so
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: ./../sequences/ahb_read_sequence.sv(12): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
+# ** Warning: ./../sequences/ahb_write_sequence.sv(12): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
+# ** Warning: ./../sequences/ahb_default_chk_sequence.sv(11): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
+# ** Warning: ./../sequences/ahb_default_chk_sequence.sv(23): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
+# ** Warning: ./../sequences/ahb_default_chk_sequence.sv(35): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.6d_1 linux_x86_64 Apr 11 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.ahb_if(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.ahb_pkg(fast)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.seq_pkg(fast)
+# Loading work.env_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.ahb_if(fast)
+# Loading work.uart_top(fast)
+# Loading work.cmsdk_ahb_to_apb(fast)
+# Loading work.apb_decoder(fast)
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_96765/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_96765/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_96765/linux_x86_64_gcc-11/vsim_auto_compile.so
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# log -r /*
+# run -all
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(453) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+# UVM_INFO @ 0: reporter [RNTST] Running test ahb_read_write_register_chk...
+# UVM_INFO ./../testcases/ahb_base_test.sv(12) @ 0: uvm_test_top [build_phase] Entered...
+# UVM_INFO ./../testcases/ahb_base_test.sv(16) @ 0: uvm_test_top [build_phase] Exiting...
+# UVM_INFO ./../tb/ahb_environment.sv(12) @ 0: uvm_test_top.ahb_env [build_phase] Entered...
+# UVM_INFO ./../tb/ahb_environment.sv(16) @ 0: uvm_test_top.ahb_env [build_phase] Exiting...
+# UVM_INFO ./../ahb_vip/ahb_agent.sv(15) @ 0: uvm_test_top.ahb_env.ahb_agt [ahb_agent] Active agent is configued
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+# UVM_INFO ./../testcases/ahb_base_test.sv(20) @ 0: uvm_test_top [start_of_simulation_phase] Entered...
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(579) @ 0: reporter [UVMTOP] UVM testbench topology:
+# -------------------------------------------------------------------
+# Name                       Type                         Size  Value
+# -------------------------------------------------------------------
+# uvm_test_top               ahb_read_write_register_chk  -     @341 
+#   ahb_env                  ahb_environment              -     @356 
+#     ahb_agt                ahb_agent                    -     @369 
+#       driver               ahb_driver                   -     @383 
+#         rsp_port           uvm_analysis_port            -     @402 
+#         seq_item_port      uvm_seq_item_pull_port       -     @392 
+#       monitor              ahb_monitor                  -     @549 
+#       sequencer            ahb_sequencer                -     @412 
+#         rsp_export         uvm_analysis_export          -     @421 
+#         seq_item_export    uvm_seq_item_pull_imp        -     @539 
+#         arbitration_queue  array                        0     -    
+#         lock_queue         array                        0     -    
+#         num_last_reqs      integral                     32    'd1  
+#         num_last_rsps      integral                     32    'd1  
+# -------------------------------------------------------------------
+# 
+# UVM_INFO ./../testcases/ahb_base_test.sv(22) @ 0: uvm_test_top [start_of_simulation_phase] Exiting...
+# UVM_INFO ./../sequences/ahb_write_sequence.sv(16) @ 100000: uvm_test_top.ahb_env.ahb_agt.sequencer@@write_seq [ahb_write_sequence] Send req to driver: 
+#  ------------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                           
+# ------------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @592                                            
+#   xact_type                    xact_type_enum   1     WRITE                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                      
+#   burst_type                   burst_type_enum  3     SINGLE                                          
+#   addr                         integral         10    'h0                                             
+#   data                         integral         32    'h28e43e30                                      
+#   prot                         integral         4     'h1                                             
+#   lock                         integral         1     'h0                                             
+#   begin_time                   time             64    100000                                          
+#   depth                        int              32    'd2                                             
+#   parent sequence (name)       string           9     write_seq                                       
+#   parent sequence (full name)  string           48    uvm_test_top.ahb_env.ahb_agt.sequencer.write_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer          
+# ------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(22) @ 100000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Driver received transaction: ------------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                           
+# ------------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @592                                            
+#   xact_type                    xact_type_enum   1     WRITE                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                      
+#   burst_type                   burst_type_enum  3     SINGLE                                          
+#   addr                         integral         10    'h0                                             
+#   data                         integral         32    'h28e43e30                                      
+#   prot                         integral         4     'h1                                             
+#   lock                         integral         1     'h0                                             
+#   begin_time                   time             64    100000                                          
+#   depth                        int              32    'd2                                             
+#   parent sequence (name)       string           9     write_seq                                       
+#   parent sequence (full name)  string           48    uvm_test_top.ahb_env.ahb_agt.sequencer.write_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer          
+# ------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(26) @ 190000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Start drive value to AHB: ------------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                           
+# ------------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @592                                            
+#   xact_type                    xact_type_enum   1     WRITE                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                      
+#   burst_type                   burst_type_enum  3     SINGLE                                          
+#   addr                         integral         10    'h0                                             
+#   data                         integral         32    'h28e43e30                                      
+#   prot                         integral         4     'h1                                             
+#   lock                         integral         1     'h0                                             
+#   begin_time                   time             64    100000                                          
+#   end_time                     time             64    100000                                          
+#   depth                        int              32    'd2                                             
+#   parent sequence (name)       string           9     write_seq                                       
+#   parent sequence (full name)  string           48    uvm_test_top.ahb_env.ahb_agt.sequencer.write_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer          
+# ------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(35) @ 190000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Transaction drives back: -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# req           ahb_transaction  -     @628      
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h0       
+#   data        integral         32    'h28e43e30
+#   prot        integral         4     'h1       
+#   lock        integral         1     'h0       
+#   begin_time  time             64    100000    
+#   end_time    time             64    100000    
+# -----------------------------------------------
+# 
+# UVM_INFO ./../sequences/ahb_write_sequence.sv(16) @ 190000: uvm_test_top.ahb_env.ahb_agt.sequencer@@write_seq [ahb_write_sequence] Send req to driver: 
+#  ------------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                           
+# ------------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @634                                            
+#   xact_type                    xact_type_enum   1     WRITE                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                      
+#   burst_type                   burst_type_enum  3     SINGLE                                          
+#   addr                         integral         10    'h4                                             
+#   data                         integral         32    'h4420f1f2                                      
+#   prot                         integral         4     'hb                                             
+#   lock                         integral         1     'h0                                             
+#   begin_time                   time             64    190000                                          
+#   depth                        int              32    'd2                                             
+#   parent sequence (name)       string           9     write_seq                                       
+#   parent sequence (full name)  string           48    uvm_test_top.ahb_env.ahb_agt.sequencer.write_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer          
+# ------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(22) @ 190000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Driver received transaction: ------------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                           
+# ------------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @634                                            
+#   xact_type                    xact_type_enum   1     WRITE                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                      
+#   burst_type                   burst_type_enum  3     SINGLE                                          
+#   addr                         integral         10    'h4                                             
+#   data                         integral         32    'h4420f1f2                                      
+#   prot                         integral         4     'hb                                             
+#   lock                         integral         1     'h0                                             
+#   begin_time                   time             64    190000                                          
+#   depth                        int              32    'd2                                             
+#   parent sequence (name)       string           9     write_seq                                       
+#   parent sequence (full name)  string           48    uvm_test_top.ahb_env.ahb_agt.sequencer.write_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer          
+# ------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(26) @ 270000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Start drive value to AHB: ------------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                           
+# ------------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @634                                            
+#   xact_type                    xact_type_enum   1     WRITE                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                      
+#   burst_type                   burst_type_enum  3     SINGLE                                          
+#   addr                         integral         10    'h4                                             
+#   data                         integral         32    'h4420f1f2                                      
+#   prot                         integral         4     'hb                                             
+#   lock                         integral         1     'h0                                             
+#   begin_time                   time             64    190000                                          
+#   end_time                     time             64    190000                                          
+#   depth                        int              32    'd2                                             
+#   parent sequence (name)       string           9     write_seq                                       
+#   parent sequence (full name)  string           48    uvm_test_top.ahb_env.ahb_agt.sequencer.write_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer          
+# ------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(35) @ 270000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Transaction drives back: -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# req           ahb_transaction  -     @644      
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h4       
+#   data        integral         32    'h4420f1f2
+#   prot        integral         4     'hb       
+#   lock        integral         1     'h0       
+#   begin_time  time             64    190000    
+#   end_time    time             64    190000    
+# -----------------------------------------------
+# 
+# UVM_INFO ./../sequences/ahb_write_sequence.sv(16) @ 270000: uvm_test_top.ahb_env.ahb_agt.sequencer@@write_seq [ahb_write_sequence] Send req to driver: 
+#  ------------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                           
+# ------------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @650                                            
+#   xact_type                    xact_type_enum   1     WRITE                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                      
+#   burst_type                   burst_type_enum  3     SINGLE                                          
+#   addr                         integral         10    'h8                                             
+#   data                         integral         32    'h1503268b                                      
+#   prot                         integral         4     'h6                                             
+#   lock                         integral         1     'h0                                             
+#   begin_time                   time             64    270000                                          
+#   depth                        int              32    'd2                                             
+#   parent sequence (name)       string           9     write_seq                                       
+#   parent sequence (full name)  string           48    uvm_test_top.ahb_env.ahb_agt.sequencer.write_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer          
+# ------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(22) @ 270000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Driver received transaction: ------------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                           
+# ------------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @650                                            
+#   xact_type                    xact_type_enum   1     WRITE                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                      
+#   burst_type                   burst_type_enum  3     SINGLE                                          
+#   addr                         integral         10    'h8                                             
+#   data                         integral         32    'h1503268b                                      
+#   prot                         integral         4     'h6                                             
+#   lock                         integral         1     'h0                                             
+#   begin_time                   time             64    270000                                          
+#   depth                        int              32    'd2                                             
+#   parent sequence (name)       string           9     write_seq                                       
+#   parent sequence (full name)  string           48    uvm_test_top.ahb_env.ahb_agt.sequencer.write_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer          
+# ------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(26) @ 350000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Start drive value to AHB: ------------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                           
+# ------------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @650                                            
+#   xact_type                    xact_type_enum   1     WRITE                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                      
+#   burst_type                   burst_type_enum  3     SINGLE                                          
+#   addr                         integral         10    'h8                                             
+#   data                         integral         32    'h1503268b                                      
+#   prot                         integral         4     'h6                                             
+#   lock                         integral         1     'h0                                             
+#   begin_time                   time             64    270000                                          
+#   end_time                     time             64    270000                                          
+#   depth                        int              32    'd2                                             
+#   parent sequence (name)       string           9     write_seq                                       
+#   parent sequence (full name)  string           48    uvm_test_top.ahb_env.ahb_agt.sequencer.write_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer          
+# ------------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(35) @ 350000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Transaction drives back: -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# req           ahb_transaction  -     @660      
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h8       
+#   data        integral         32    'h1503268b
+#   prot        integral         4     'h6       
+#   lock        integral         1     'h0       
+#   begin_time  time             64    270000    
+#   end_time    time             64    270000    
+# -----------------------------------------------
+# 
+# UVM_INFO ./../sequences/ahb_write_sequence.sv(21) @ 1350000: uvm_test_top.ahb_env.ahb_agt.sequencer@@write_seq [ahb_write_sequence] Recevied rsp to driver: 
+#  -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# req           ahb_transaction  -     @660      
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h8       
+#   data        integral         32    'h1503268b
+#   prot        integral         4     'h6       
+#   lock        integral         1     'h0       
+#   begin_time  time             64    270000    
+#   end_time    time             64    270000    
+# -----------------------------------------------
+# 
+# UVM_INFO ./../sequences/ahb_read_sequence.sv(16) @ 1350000: uvm_test_top.ahb_env.ahb_agt.sequencer@@read_seq [ahb_read_sequence] Send req to driver: 
+#  -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @678                                           
+#   xact_type                    xact_type_enum   1     READ                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h0                                            
+#   data                         integral         32    'hef96e506                                     
+#   prot                         integral         4     'h1                                            
+#   lock                         integral         1     'h0                                            
+#   begin_time                   time             64    1350000                                        
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           8     read_seq                                       
+#   parent sequence (full name)  string           47    uvm_test_top.ahb_env.ahb_agt.sequencer.read_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer         
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(22) @ 1350000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Driver received transaction: -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @678                                           
+#   xact_type                    xact_type_enum   1     READ                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h0                                            
+#   data                         integral         32    'hef96e506                                     
+#   prot                         integral         4     'h1                                            
+#   lock                         integral         1     'h0                                            
+#   begin_time                   time             64    1350000                                        
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           8     read_seq                                       
+#   parent sequence (full name)  string           47    uvm_test_top.ahb_env.ahb_agt.sequencer.read_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer         
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(30) @ 1440000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Start read value of AHB: -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @678                                           
+#   xact_type                    xact_type_enum   1     READ                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h0                                            
+#   data                         integral         32    'h0                                            
+#   prot                         integral         4     'h1                                            
+#   lock                         integral         1     'h0                                            
+#   begin_time                   time             64    1350000                                        
+#   end_time                     time             64    1350000                                        
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           8     read_seq                                       
+#   parent sequence (full name)  string           47    uvm_test_top.ahb_env.ahb_agt.sequencer.read_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer         
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(35) @ 1440000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Transaction drives back: -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# req           ahb_transaction  -     @688      
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h0       
+#   data        integral         32    'h0       
+#   prot        integral         4     'h1       
+#   lock        integral         1     'h0       
+#   begin_time  time             64    1350000   
+#   end_time    time             64    1350000   
+# -----------------------------------------------
+# 
+# UVM_INFO ./../sequences/ahb_read_sequence.sv(16) @ 1440000: uvm_test_top.ahb_env.ahb_agt.sequencer@@read_seq [ahb_read_sequence] Send req to driver: 
+#  -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @694                                           
+#   xact_type                    xact_type_enum   1     READ                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h4                                            
+#   data                         integral         32    'h20f6b092                                     
+#   prot                         integral         4     'hf                                            
+#   lock                         integral         1     'h0                                            
+#   begin_time                   time             64    1440000                                        
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           8     read_seq                                       
+#   parent sequence (full name)  string           47    uvm_test_top.ahb_env.ahb_agt.sequencer.read_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer         
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(22) @ 1440000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Driver received transaction: -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @694                                           
+#   xact_type                    xact_type_enum   1     READ                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h4                                            
+#   data                         integral         32    'h20f6b092                                     
+#   prot                         integral         4     'hf                                            
+#   lock                         integral         1     'h0                                            
+#   begin_time                   time             64    1440000                                        
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           8     read_seq                                       
+#   parent sequence (full name)  string           47    uvm_test_top.ahb_env.ahb_agt.sequencer.read_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer         
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(30) @ 1540000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Start read value of AHB: -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @694                                           
+#   xact_type                    xact_type_enum   1     READ                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h4                                            
+#   data                         integral         32    'hf2                                           
+#   prot                         integral         4     'hf                                            
+#   lock                         integral         1     'h0                                            
+#   begin_time                   time             64    1440000                                        
+#   end_time                     time             64    1440000                                        
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           8     read_seq                                       
+#   parent sequence (full name)  string           47    uvm_test_top.ahb_env.ahb_agt.sequencer.read_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer         
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(35) @ 1540000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Transaction drives back: -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# req           ahb_transaction  -     @704      
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h4       
+#   data        integral         32    'hf2      
+#   prot        integral         4     'hf       
+#   lock        integral         1     'h0       
+#   begin_time  time             64    1440000   
+#   end_time    time             64    1440000   
+# -----------------------------------------------
+# 
+# UVM_INFO ./../sequences/ahb_read_sequence.sv(16) @ 1540000: uvm_test_top.ahb_env.ahb_agt.sequencer@@read_seq [ahb_read_sequence] Send req to driver: 
+#  -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @710                                           
+#   xact_type                    xact_type_enum   1     READ                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h8                                            
+#   data                         integral         32    'h724023e6                                     
+#   prot                         integral         4     'h5                                            
+#   lock                         integral         1     'h0                                            
+#   begin_time                   time             64    1540000                                        
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           8     read_seq                                       
+#   parent sequence (full name)  string           47    uvm_test_top.ahb_env.ahb_agt.sequencer.read_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer         
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(22) @ 1540000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Driver received transaction: -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @710                                           
+#   xact_type                    xact_type_enum   1     READ                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h8                                            
+#   data                         integral         32    'h724023e6                                     
+#   prot                         integral         4     'h5                                            
+#   lock                         integral         1     'h0                                            
+#   begin_time                   time             64    1540000                                        
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           8     read_seq                                       
+#   parent sequence (full name)  string           47    uvm_test_top.ahb_env.ahb_agt.sequencer.read_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer         
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(30) @ 1640000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Start read value of AHB: -----------------------------------------------------------------------------------------------------
+# Name                           Type             Size  Value                                          
+# -----------------------------------------------------------------------------------------------------
+# req                            ahb_transaction  -     @710                                           
+#   xact_type                    xact_type_enum   1     READ                                           
+#   xfer_size                    xfer_size_enum   3     SIZE_32BIT                                     
+#   burst_type                   burst_type_enum  3     SINGLE                                         
+#   addr                         integral         10    'h8                                            
+#   data                         integral         32    'h8b                                           
+#   prot                         integral         4     'h5                                            
+#   lock                         integral         1     'h0                                            
+#   begin_time                   time             64    1540000                                        
+#   end_time                     time             64    1540000                                        
+#   depth                        int              32    'd2                                            
+#   parent sequence (name)       string           8     read_seq                                       
+#   parent sequence (full name)  string           47    uvm_test_top.ahb_env.ahb_agt.sequencer.read_seq
+#   sequencer                    string           38    uvm_test_top.ahb_env.ahb_agt.sequencer         
+# -----------------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ./../ahb_vip/ahb_driver.sv(35) @ 1640000: uvm_test_top.ahb_env.ahb_agt.driver [driver] Transaction drives back: -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# req           ahb_transaction  -     @720      
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h8       
+#   data        integral         32    'h8b      
+#   prot        integral         4     'h5       
+#   lock        integral         1     'h0       
+#   begin_time  time             64    1540000   
+#   end_time    time             64    1540000   
+# -----------------------------------------------
+# 
+# UVM_INFO ./../sequences/ahb_read_sequence.sv(21) @ 2640000: uvm_test_top.ahb_env.ahb_agt.sequencer@@read_seq [ahb_read_sequence] Recevied rsp to driver: 
+#  -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# req           ahb_transaction  -     @720      
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h8       
+#   data        integral         32    'h8b      
+#   prot        integral         4     'h5       
+#   lock        integral         1     'h0       
+#   begin_time  time             64    1540000   
+#   end_time    time             64    1540000   
+# -----------------------------------------------
+# 
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 2640000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 2640000: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   39
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [NO_DPI_TSTNAME]     1
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVM/COMP/NAMECHECK]     1
+# [UVM/RELNOTES]     1
+# [UVMTOP]     1
+# [ahb_agent]     1
+# [ahb_read_sequence]     4
+# [ahb_write_sequence]     4
+# [build_phase]     4
+# [driver]    18
+# [start_of_simulation_phase]     2
+# 
+# ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 2640 ns  Iteration: 73  Instance: /testbench
+# End time: 09:12:35 on May 22,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 5

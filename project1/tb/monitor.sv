@@ -14,13 +14,10 @@ class monitor;
       @(posedge dut.pclk);
       #1;
       if(dut.psel && dut.penable) begin   //Take value at Access phase
-        pkt = new();
+        pkt         = new();
         pkt.paddr   = dut.paddr;
-        pkt.pwdata  = dut.pwdata;
-        pkt.pwrite  = dut.pwrite;
-        pkt.psel    = dut.psel;
         if(!dut.pwrite) begin
-          pkt.prdata  = dut.prdata;
+          pkt.data  = dut.prdata;
         end
         pkt.intr    = dut.interrupt;
         m2s_mb.put(pkt);

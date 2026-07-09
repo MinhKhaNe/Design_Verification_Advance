@@ -1,5 +1,5 @@
 # vsim -sv_seed 1 -debugDB -l i2c_fast_test.log -voptargs="+acc" -assertdebug -c testbench -do "log -r /*;run -all;" "+i2c_fast_test" 
-# Start time: 16:40:12 on Apr 13,2026
+# Start time: 09:35:07 on May 15,2026
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 10.6d_1 linux_x86_64 Apr 11 2018
@@ -31,10 +31,10 @@
 # 100: [stimulus] Sent packet to driver
 # 100: [driver] Get packet from stimulus
 # 135: [monitor] Start condition detect
-# 76175: [monitor] TSCL_Low  = 13120, TSCL_High  = 11110
-# 76175: [monitor] TSDA_Hold = 3330, TSCL_Setup = 9790
+# 74925: [monitor] TSCL_Low  = 14280, TSCL_High  = 7560
+# 74925: [monitor] TSDA_Hold = 9250, TSCL_Setup = 5030
 # 300100: [base_test] End simulation
 # ** Note: $finish    : ../testcase/base_test.sv(30)
 #    Time: 300100 ns  Iteration: 0  Instance: /testbench
-# End time: 16:40:13 on Apr 13,2026, Elapsed time: 0:00:01
+# End time: 09:35:08 on May 15,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
