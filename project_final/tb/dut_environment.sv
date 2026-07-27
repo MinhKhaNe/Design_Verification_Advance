@@ -7,7 +7,7 @@ class dut_environment extends uvm_env;
   ahb_agent             ahb_agt;
   uart_reg_block        regmodel;
   uart_reg2ahb_adapter  ahb_adapter;
-  uart_configuration    uart_config;
+  uart_configuration    cfg;
   dut_scoreboard        dut_sb;
 
   uvm_reg_predictor #(ahb_transaction) ahb_predictor;
@@ -18,16 +18,16 @@ class dut_environment extends uvm_env;
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    if(!uvm_config_db(virtual ahb_if)::get(this, "", "ahb_vif", ahb_vif))
+    if(!uvm_config_db#(virtual ahb_if)::get(this, "", "ahb_vif", ahb_vif))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get ahb_vif from uvm_config_db"))
 
-    if(!uvm_config_db(virtual uart_if)::get(this, "", "uart_vif", uart_vif))
+    if(!uvm_config_db#(virtual uart_if)::get(this, "", "uart_vif", uart_vif))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get uart_vif from uvm_config_db"))
 
-    if(!uvm_config_db(uart_configuration)::get(this, "", "uart_config", uart_config))
+    if(!uvm_config_db#(uart_configuration)::get(this, "", "cfg", cfg))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get uart_config from uvm_config_db"))
 
-    uart_config     = uart_configuration::type_id::create("uart_config", this);
+    cfg             = uart_configuration::type_id::create("cfg", this);
     dut_sb          = dut_scoreboard::type_id::create("dut_sb", this); 
 
     ahb_agt         = ahb_agent::type_id::create("ahb_agt", this);
@@ -40,7 +40,7 @@ class dut_environment extends uvm_env;
 
     uvm_config_db#(virtual ahb_if)::set(this, "ahb_agt", "ahb_vif", ahb_vif); 
     uvm_config_db#(virtual uart_if)::set(this, "uart_agt", "uart_vif", uart_vif);
-    uvm_config_db#(uart_configuration)::set(this, "uart_agt", "uart_config", uart_config);
+    uvm_config_db#(uart_configuration)::set(this, "uart_agt", "cfg", cfg);
   endfunction
 
   virtual function void connect_phase(uvm_phase phase);
@@ -50,7 +50,7 @@ class dut_environment extends uvm_env;
     
     //Connect RAL
     if(regmodel.get_parent() == null)
-      regmodel.ahb_map.set_sequence(ahb_agt.sequencer, ahb_adapter);
+      regmodel.ahb_map.set_sequencer(ahb_agt.sequencer, ahb_adapter);
 
     //Predictor connection
     ahb_predictor.map     = regmodel.ahb_map;

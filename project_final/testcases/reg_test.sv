@@ -12,7 +12,7 @@ class reg_test extends base_test;
      
     def_seq   = default_value_chk_sequence::type_id::create("def_seq");
 
-    def_seq.regmodel  = env.regmodel:
+    def_seq.regmodel  = env.regmodel;
 
     def_seq.start(null);
 

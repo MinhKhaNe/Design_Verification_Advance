@@ -8,7 +8,7 @@ class base_test extends uvm_test;
 
   uvm_report_server   svr;
   uart_reg_block      regmodel;
-  timer   usr_timeout = 1s;
+  time   usr_timeout = 1s;
 
   function new(string name = "base_test", uvm_component parent);
     super.new(name, parent);
@@ -25,13 +25,13 @@ class base_test extends uvm_test;
     if(!uvm_config_db#(virtual ahb_if)::get(this, "", "ahb_vif", ahb_vif))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get ahb_if from uvm_config_db"))
 
-    env   = dut_environment::type_id::create("env", this);
-
     uvm_config_db#(uart_configuration)::set(this, "*", "uart_config", uart_config);
     uvm_config_db#(virtual uart_if)::set(this, "*", "uart_vif", uart_vif);
     uvm_config_db#(virtual ahb_if)::set(this, "*", "ahb_vif", ahb_vif);
 
-    uvm_top.set_timerout(usr_timeout);
+    env   = dut_environment::type_id::create("env", this);
+
+    uvm_top.set_timeout(usr_timeout);
   endfunction
 
   virtual function void start_of_simulation_phase(uvm_phase phase);

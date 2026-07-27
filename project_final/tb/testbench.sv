@@ -16,15 +16,15 @@ module testbench;
     .HTRANS(ahb_vif.HTRANS),
     .HSIZE(ahb_vif.HSIZE),
     .HPROT(ahb_vif.HPROT),
-    .HWRTE(ahb_vif.HWRTE),
+    .HWRITE(ahb_vif.HWRITE),
     .HWDATA(ahb_vif.HWDATA),
     .HSEL(ahb_vif.HSEL),
     .HREADYOUT(ahb_vif.HREADYOUT),
     .HRDATA(ahb_vif.HRDATA),
     .HRESP(ahb_vif.HRESP),
-    .uart_rxd(uart_vif.TX),
-    .uart_txd(uart_vif.RX),
-    .interrupt(),
+    .uart_rxd(uart_vif.tx),
+    .uart_txd(uart_vif.rx),
+    .interrupt()
   );
 
   assign ahb_vif.HSEL = 1'b1;
