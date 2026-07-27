@@ -29,6 +29,12 @@ class uart_configuration extends uvm_object;
 
   function new(string name = "uart_configuration");
     super.new(name);
+    //Default value
+    parity_mode     = UART_PARITY_NONE;
+    data_width      = 8;
+    num_of_stop_bit = 1;
+    baud_rate       = 115200;
+    baud_rate_enable = 0;
   endfunction
 
 endclass

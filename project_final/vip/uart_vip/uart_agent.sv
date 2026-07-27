@@ -5,7 +5,7 @@ class uart_agent extends uvm_agent;
   uart_driver     drv;
   uart_sequencer  seq;
 
-  virtual   uart_if   dut_vif;
+  virtual   uart_if   uart_vif;
   uart_configuration  cfg;
 
   function new(string name = "uart_agent", uvm_component parent);
@@ -18,7 +18,7 @@ class uart_agent extends uvm_agent;
     if(!uvm_config_db #(uart_configuration)::get(this, "", "cfg", cfg))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get UART_CONFIG from uvm_config_db"))
 
-     if(!uvm_config_db #(virtual uart_if)::get(this, "", "dut_vif", dut_vif))
+     if(!uvm_config_db #(virtual uart_if)::get(this, "", "uart_vif", uart_vif))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get UART_INTERFACE from uvm_config_db"))
 
     if(is_active == UVM_ACTIVE) begin
@@ -31,8 +31,8 @@ class uart_agent extends uvm_agent;
       uvm_config_db#(uart_configuration)::set(this, "driver", "cfg", cfg);
       uvm_config_db#(uart_configuration)::set(this, "monitor", "cfg", cfg);
 
-      uvm_config_db#(virtual uart_if)::set(this, "driver", "dut_vif", dut_vif);
-      uvm_config_db#(virtual uart_if)::set(this, "monitor", "dut_vif", dut_vif);
+      uvm_config_db#(virtual uart_if)::set(this, "driver", "uart_vif", uart_vif);
+      uvm_config_db#(virtual uart_if)::set(this, "monitor", "uart_vif", uart_vif);
     end
     else begin
       `uvm_info(get_type_name(), $sformatf("Passive agent is configured"), UVM_LOW)
@@ -40,7 +40,7 @@ class uart_agent extends uvm_agent;
       mon   = uart_monitor::type_id::create("monitor", this);
 
       uvm_config_db#(uart_configuration)::set(this, "monitor", "cfg", cfg);
-      uvm_config_db#(virtual uart_if)::set(this, "monitor", "dut_vif", dut_vif);
+      uvm_config_db#(virtual uart_if)::set(this, "monitor", "uart_vif", uart_vif);
     end
 
   endfunction

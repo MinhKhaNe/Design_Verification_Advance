@@ -12,7 +12,9 @@ class dut_scoreboard extends uvm_scoreboard;
   endfunction
 
   virtual function void build_phase(uvm_phase phase);
-
+    super.build_phase(phase);
+    ahb_a_export  = new("ahb_a_export", this);
+    uart_a_export = new("uart_a_export", this);
   endfunction
 
   virtual task run_phase(uvm_phase phase);

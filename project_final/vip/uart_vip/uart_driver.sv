@@ -3,7 +3,7 @@ class uart_driver extends uvm_driver #(uart_transaction);
 
   uvm_analysis_port #(uart_transaction) uart_a_port;
 
-  virtual uart_if   dut_vif;
+  virtual uart_if   uart_vif;
   uart_configuration  cfg;
 
   function new(string name = "uart_driver", uvm_component parent);
@@ -16,7 +16,7 @@ class uart_driver extends uvm_driver #(uart_transaction);
     if(!uvm_config_db#(uart_configuration)::get(this, "", "cfg", cfg))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get UART_CONFIG from uvm_config_db"))
 
-    if(!uvm_config_db#(virtual uart_if)::get(this, "", "dut_vif", dut_vif))
+    if(!uvm_config_db#(virtual uart_if)::get(this, "", "uart_vif", uart_vif))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get UART_INTERFACE from uvm_config_db"))
 
   endfunction
@@ -49,28 +49,28 @@ class uart_driver extends uvm_driver #(uart_transaction);
     clk = 1s / cfg.baud_rate;
 
     //IDLE
-    dut_vif.tx  <= 1'b1; 
+    uart_vif.tx  <= 1'b1; 
     
     //START BIT
-    dut_vif.tx  <= 1'b0;
+    uart_vif.tx  <= 1'b0;
     #(clk);
 
     //TRANSFER DATA
     for(int i = 0; i < cfg.data_width; i++) begin
-      dut_vif.tx  <= trans.data[i];
+      uart_vif.tx  <= trans.data[i];
       #(clk);
     end
 
     //PARITY BIT
     if(cfg.parity_mode != uart_configuration::UART_PARITY_NONE) begin
-      dut_vif.tx    <= parity_calculation(trans.data);
+      uart_vif.tx    <= parity_calculation(trans.data);
       trans.parity  = parity_calculation(trans.data);
       #(clk);
     end
 
     //STOP BIT
     repeat(cfg.num_of_stop_bit) begin
-      dut_vif.tx  <= 1'b1;
+      uart_vif.tx  <= 1'b1;
      // trans.stop_bit = trans.stop_bit + 1'b1;
       #(clk);
     end

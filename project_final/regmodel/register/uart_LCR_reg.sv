@@ -20,7 +20,7 @@ class uart_LCR_reg extends uvm_reg;
     stb   = uvm_reg_field::type_id::create("stb");
     wls   = uvm_reg_field::type_id::create("wls");  
 
-    rsvd.configure(this, 31, 6, "RO", 1'b0, 26'b0, 1, 0, 1);
+    rsvd.configure(this, 26, 6, "RO", 1'b0, 26'b0, 1, 0, 1);
     bge.configure(this, 1, 5, "RW", 1'b0, 1'b0, 1, 1, 1);
     eps.configure(this, 1, 4, "RW", 1'b0, 1'b0, 1, 1, 1);
     pen.configure(this, 1, 3, "RW", 1'b0, 1'b0, 1, 1, 1);

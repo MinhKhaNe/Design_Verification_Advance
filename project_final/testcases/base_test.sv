@@ -2,7 +2,7 @@ class base_test extends uvm_test;
   `uvm_component_utils(base_test)
 
   dut_environment     env;
-  uart_configuration  uart_config;
+  uart_configuration  cfg;
   virtual   uart_if   uart_vif;
   virtual   ahb_if    ahb_vif;
 
@@ -17,7 +17,7 @@ class base_test extends uvm_test;
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
 
-    uart_config   = uart_configuration::type_id::create("uart_config", this);
+    cfg   = uart_configuration::type_id::create("cfg", this);
 
     if(!uvm_config_db#(virtual uart_if)::get(this, "", "uart_vif", uart_vif))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get uart_if from uvm_config_db"))
@@ -25,7 +25,7 @@ class base_test extends uvm_test;
     if(!uvm_config_db#(virtual ahb_if)::get(this, "", "ahb_vif", ahb_vif))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get ahb_if from uvm_config_db"))
 
-    uvm_config_db#(uart_configuration)::set(this, "*", "uart_config", uart_config);
+    uvm_config_db#(uart_configuration)::set(this, "*", "cfg", cfg);
     uvm_config_db#(virtual uart_if)::set(this, "*", "uart_vif", uart_vif);
     uvm_config_db#(virtual ahb_if)::set(this, "*", "ahb_vif", ahb_vif);
 

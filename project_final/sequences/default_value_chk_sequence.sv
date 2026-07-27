@@ -12,66 +12,66 @@ class default_value_chk_sequence extends uvm_sequence #(ahb_transaction);
   virtual task body();
     regmodel.MDR.read(status, data);
     if(data != 32'h0) begin
-      `uvm_error("RAL", $sformatf("===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0, data))
+      `uvm_error("RAL", $sformatf("\n===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0, data))
     end
     else begin
-      `uvm_info("RAL", "===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
+      `uvm_info("RAL", "\n===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
     end
 
     regmodel.DLL.read(status, data);
     if(data != 32'h0) begin
-      `uvm_error("RAL", $sformatf("===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0, data))
+      `uvm_error("RAL", $sformatf("\n===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0, data))
     end
     else begin
-      `uvm_info("RAL", "===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
+      `uvm_info("RAL", "\n===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
     end
 
     regmodel.DLH.read(status, data);
     if(data != 32'h0) begin
-      `uvm_error("RAL", $sformatf("===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0, data))
+      `uvm_error("RAL", $sformatf("\n===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0, data))
     end
     else begin
-      `uvm_info("RAL", "===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
+      `uvm_info("RAL", "\n===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
     end
 
     regmodel.LCR.read(status, data);
     if(data != 32'h03) begin
-      `uvm_error("RAL", $sformatf("===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h03, data))
+      `uvm_error("RAL", $sformatf("\n===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h03, data))
     end
     else begin
-      `uvm_info("RAL", "===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
+      `uvm_info("RAL", "\n===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
     end
 
     regmodel.IER.read(status, data);
     if(data != 32'h0) begin
-      `uvm_error("RAL", $sformatf("===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0, data))
+      `uvm_error("RAL", $sformatf("\n===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0, data))
     end
     else begin
-      `uvm_info("RAL", "===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
+      `uvm_info("RAL", "\n===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
     end
 
     regmodel.FSR.read(status, data);
     if(data != 32'h0A) begin
-      `uvm_error("RAL", $sformatf("===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0A, data))
+      `uvm_error("RAL", $sformatf("\n===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0A, data))
     end
     else begin
-      `uvm_info("RAL", "===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
+      `uvm_info("RAL", "\n===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
     end
 
     regmodel.TBR.read(status, data);
     if(data != 32'h0) begin
-      `uvm_error("RAL", $sformatf("===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0, data))
+      `uvm_error("RAL", $sformatf("\n===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0, data))
     end
     else begin
-      `uvm_info("RAL", "===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
+      `uvm_info("RAL", "\n===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
     end
 
     regmodel.RBR.read(status, data);
     if(data != 32'hxx) begin
-      `uvm_error("RAL", $sformatf("===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0xx, data))
+      `uvm_error("RAL", $sformatf("\n===== FAILED!!! Expected data = %h, Actual data = %h =====", 32'h0xx, data))
     end
     else begin
-      `uvm_info("RAL", "===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
+      `uvm_info("RAL", "\n===== PASSED SUCCESSFULLY!!!! =====", UVM_LOW)
     end
 
   endtask

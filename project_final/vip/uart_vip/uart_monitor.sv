@@ -1,7 +1,7 @@
 class uart_monitor extends uvm_monitor;
   `uvm_component_utils(uart_monitor)
 
-  virtual uart_if   dut_vif;
+  virtual uart_if   uart_vif;
 
   uart_configuration  cfg;
   
@@ -49,7 +49,7 @@ class uart_monitor extends uvm_monitor;
     if(!uvm_config_db #(uart_configuration)::get(this, "", "cfg", cfg))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get UART_CONFIG from uvm_config_db"))
   
-    if(!uvm_config_db #(virtual uart_if)::get(this, "", "dut_vif", dut_vif))
+    if(!uvm_config_db #(virtual uart_if)::get(this, "", "uart_vif", uart_vif))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get UART_INTERFACE from uvm_config_db"))
   
   endfunction
@@ -89,10 +89,10 @@ class uart_monitor extends uvm_monitor;
       forever begin
         wait(cfg.baud_rate_enable == 1'b1);
 
-        @(negedge dut_vif.rx);
+        @(negedge uart_vif.rx);
         T1 = $realtime;
         period = 1s/cfg.baud_rate;
-        @(posedge dut_vif.rx);
+        @(posedge uart_vif.rx);
         T2 = $realtime;
 
         `uvm_info(get_type_name(), $sformatf("\n===== Baud rate actual is %d, Baud rate expected is %d =====",(1s / (T2-T1)), cfg.baud_rate ), UVM_LOW)
@@ -109,7 +109,7 @@ class uart_monitor extends uvm_monitor;
       
           //trans.data_frame = cfg.data_width;
           //having start bi
-          @(negedge dut_vif.tx);
+          @(negedge uart_vif.tx);
           period = 1s / cfg.baud_rate;
         
           #(period/2.00);
@@ -117,17 +117,17 @@ class uart_monitor extends uvm_monitor;
           //data
           for(int i = 0; i < cfg.data_width; i++) begin
             #(period);
-            trans.data[i] =  dut_vif.tx;
+            trans.data[i] =  uart_vif.tx;
           end
           //parity
           if(cfg.parity_mode != uart_configuration::UART_PARITY_NONE) begin
             #(period);
-            trans.parity  = dut_vif.tx;
+            trans.parity  = uart_vif.tx;
           end
           //stop bit
           repeat (cfg.num_of_stop_bit) begin
             #(period);
-            if(dut_vif.tx != 1'b1) begin
+            if(uart_vif.tx != 1'b1) begin
               `uvm_error(get_type_name(), "===== stop bit error detected =====")
             end
           end
@@ -144,7 +144,7 @@ class uart_monitor extends uvm_monitor;
       
           //trans.data_frame = cfg.data_width;
           //having start bi
-          @(negedge dut_vif.rx);
+          @(negedge uart_vif.rx);
           period = 1s / cfg.baud_rate;
         
           #(period/2.00);
@@ -152,17 +152,17 @@ class uart_monitor extends uvm_monitor;
           //data
           for(int i = 0; i < cfg.data_width; i++) begin
             #(period);
-            trans.data[i] =  dut_vif.rx;
+            trans.data[i] =  uart_vif.rx;
           end
           //parity
           if(cfg.parity_mode != uart_configuration::UART_PARITY_NONE) begin
             #(period);
-            trans.parity  = dut_vif.rx;
+            trans.parity  = uart_vif.rx;
           end
           //stop bit
           repeat (cfg.num_of_stop_bit) begin
             #(period);
-            if(dut_vif.rx != 1'b1) begin
+            if(uart_vif.rx != 1'b1) begin
               `uvm_error(get_type_name(), "===== stop bit error detected =====")
             end
           end

@@ -23,7 +23,7 @@ class uart_FSR_reg extends uvm_reg;
     rsvd.configure(this, 27, 5, "RO", 1'b0, 27'b0, 1, 0, 1);
     rx_empty_status.configure(this, 1, 3, "RO", 1'b0, 1'b1, 1, 1, 1);
     rx_full_status.configure(this, 1, 2, "RO", 1'b0, 1'b0, 1, 1, 1);
-    parrity_error_status.configure(this, 1, 4, "R/W1C", 1'b0, 1'b0, 1, 1, 1);
+    parrity_error_status.configure(this, 1, 4, "W1C", 1'b0, 1'b0, 1, 1, 1);
     tx_empty_status.configure(this, 1, 1, "RO", 1'b0, 1'b1, 1, 1, 1);
     tx_full_status.configure(this, 1, 0, "RO", 1'b0, 1'b0, 1, 1, 1);
   endfunction
