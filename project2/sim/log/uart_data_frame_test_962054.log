@@ -1,0 +1,227 @@
+# vsim -sv_seed 962054 -coverage -coveranalysis -voptargs="+acc" -assertdebug -c testbench -do "coverage save -codeAll -cvg -onexit uart_data_frame_test_962054.ucdb; log -r /*;run -all;" -l uart_data_frame_test_962054.log "+UVM_TESTNAME=uart_data_frame_test" "+UVM_VERBOSITY=UVM_HIGH" 
+# Start time: 07:49:33 on Jul 15,2026
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_6477/linux_x86_64_gcc-11/export_tramp.so
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 10.6d_1 linux_x86_64 Apr 11 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.uart_if(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.uart_pkg(fast)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.env_pkg(fast)
+# Loading work.seq_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.uart_if(fast)
+# Loading work.uart_dut(fast)
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_6477/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_6477/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_6477/linux_x86_64_gcc-11/vsim_auto_compile.so
+# coverage save -codeAll -cvg -onexit uart_data_frame_test_962054.ucdb
+#  log -r /*
+# run -all
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(453) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+# UVM_INFO @ 0: reporter [RNTST] Running test uart_data_frame_test...
+# UVM_INFO ./../tb/uart_env.sv(20) @ 0: uvm_test_top.env [build_phase] Entered ....
+# UVM_INFO ./../tb/uart_env.sv(44) @ 0: uvm_test_top.env [build_phase] Existing ....
+# UVM_INFO ./../uart_vip/uart_agent.sv(25) @ 0: uvm_test_top.env.uart_lhs_agent [uart_agent] Active agent is configured
+# UVM_INFO ./../uart_vip/uart_agent.sv(25) @ 0: uvm_test_top.env.uart_rhs_agent [uart_agent] Active agent is configured
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+# UVM_INFO ./../testcases/uart_data_frame_test.sv(30) @ 0: uvm_test_top [uart_data_frame_test] UART_RHS_CONFIG info: -------------------------------------------------------------
+# Name               Type                Size  Value           
+# -------------------------------------------------------------
+# uart_rhs_config    uart_configuration  -     @358            
+#   parity_mode      parity_mode_e       32    UART_PARITY_NONE
+#   data_width       integral            32    'h5             
+#   num_of_stop_bit  integral            32    'h1             
+#   baud_rate        integral            32    'h12c0          
+# -------------------------------------------------------------
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(108) @ 1456000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[LHS Only] DATA COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(113) @ 1456000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 00b, Actual value is 00b =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(116) @ 1456000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[LHS Only] PARITY COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(121) @ 1456000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 0, Actual value is 0 =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(69) @ 2912000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[RHS & LHS] DATA COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(74) @ 2912000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 008, Actual value is 008 =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(77) @ 2912000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[RHS & LHS] PARITY COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(82) @ 2912000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 0, Actual value is 0 =====
+# UVM_INFO ./../testcases/uart_data_frame_test.sv(30) @ 2912000: uvm_test_top [uart_data_frame_test] UART_RHS_CONFIG info: -------------------------------------------------------------
+# Name               Type                Size  Value           
+# -------------------------------------------------------------
+# uart_rhs_config    uart_configuration  -     @358            
+#   parity_mode      parity_mode_e       32    UART_PARITY_NONE
+#   data_width       integral            32    'h6             
+#   num_of_stop_bit  integral            32    'h1             
+#   baud_rate        integral            32    'h12c0          
+# -------------------------------------------------------------
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(108) @ 4576000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[LHS Only] DATA COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(113) @ 4576000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 01d, Actual value is 01d =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(116) @ 4576000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[LHS Only] PARITY COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(121) @ 4576000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 0, Actual value is 0 =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(69) @ 6240000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[RHS & LHS] DATA COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(74) @ 6240000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 020, Actual value is 020 =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(77) @ 6240000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[RHS & LHS] PARITY COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(82) @ 6240000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 0, Actual value is 0 =====
+# UVM_INFO ./../testcases/uart_data_frame_test.sv(30) @ 6240000: uvm_test_top [uart_data_frame_test] UART_RHS_CONFIG info: -------------------------------------------------------------
+# Name               Type                Size  Value           
+# -------------------------------------------------------------
+# uart_rhs_config    uart_configuration  -     @358            
+#   parity_mode      parity_mode_e       32    UART_PARITY_NONE
+#   data_width       integral            32    'h7             
+#   num_of_stop_bit  integral            32    'h1             
+#   baud_rate        integral            32    'h12c0          
+# -------------------------------------------------------------
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(108) @ 8112000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[LHS Only] DATA COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(113) @ 8112000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 07e, Actual value is 07e =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(116) @ 8112000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[LHS Only] PARITY COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(121) @ 8112000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 0, Actual value is 0 =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(69) @ 9984000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[RHS & LHS] DATA COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(74) @ 9984000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 07f, Actual value is 07f =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(77) @ 9984000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[RHS & LHS] PARITY COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(82) @ 9984000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 0, Actual value is 0 =====
+# UVM_INFO ./../testcases/uart_data_frame_test.sv(30) @ 9984000: uvm_test_top [uart_data_frame_test] UART_RHS_CONFIG info: -------------------------------------------------------------
+# Name               Type                Size  Value           
+# -------------------------------------------------------------
+# uart_rhs_config    uart_configuration  -     @358            
+#   parity_mode      parity_mode_e       32    UART_PARITY_NONE
+#   data_width       integral            32    'h8             
+#   num_of_stop_bit  integral            32    'h1             
+#   baud_rate        integral            32    'h12c0          
+# -------------------------------------------------------------
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(108) @ 12064000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[LHS Only] DATA COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(113) @ 12064000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 0b9, Actual value is 0b9 =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(116) @ 12064000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[LHS Only] PARITY COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(121) @ 12064000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 0, Actual value is 0 =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(69) @ 14144000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[RHS & LHS] DATA COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(74) @ 14144000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 069, Actual value is 069 =====
+# UVM_INFO ./../tb/uart_scoreboard.sv(77) @ 14144000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# 
+# =====[RHS & LHS] PARITY COMPARISON =====
+# 
+# UVM_INFO ./../tb/uart_scoreboard.sv(82) @ 14144000: uvm_test_top.env.uart_scoreboard [uart_scoreboard] 
+# ===== PASSED SUCCESSFULLY !!! Expected value is 0, Actual value is 0 =====
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 14144000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 14144000: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   45
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [NO_DPI_TSTNAME]     1
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVM/COMP/NAMECHECK]     1
+# [UVM/RELNOTES]     1
+# [build_phase]     2
+# [uart_agent]     2
+# [uart_data_frame_test]     4
+# [uart_scoreboard]    32
+# 
+# ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 14144 us  Iteration: 74  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 07:49:34 on Jul 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

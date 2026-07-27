@@ -31,6 +31,7 @@ class ahb_monitor extends uvm_monitor;
         ahb_trans.xfer_size   = ahb_transaction::xfer_size_enum'(ahb_vif.HSIZE);
         ahb_trans.prot        = ahb_vif.HPROT;
         ahb_trans.lock        = ahb_vif.HMASTLOCK;
+        ahb_trans.hresp       = ahb_vif.HRESP;
 
         @(posedge ahb_vif.HCLK);
         if(ahb_trans.xact_type) begin
