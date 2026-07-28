@@ -9,14 +9,16 @@ class access_reserved_chk_sequence extends uvm_sequence #(ahb_transaction);
     bit [31:0] address;
     bit [31:0] wdata;
     bit [31:0] rdata;
+    bit        hresp;
 
     for(int i = 0; i < 10; i++) begin
       address = 32'h020 + $urandom_range(0, 1023);
       wdata   = $urandom();
  
-      write_read(address, wdata, rdata);
-      if(rdata != 32'hFFFF_FFFF) begin
-        `uvm_error("ACCESS RESERVED", $sformatf("\n===== FAILED!!! Actual data is %h, Expected data is %h =====",rdata,32'hFFFF_FFFF))
+      write_read(address, wdata, hresp);
+      if(hresp != 1'b1) begin
+        //`uvm_error("ACCESS RESERVED", $sformatf("\n===== FAILED!!! Actual data is %h, Expected data is %h =====",rdata,32'hFFFF_FFFF))
+        `uvm_error("ACCESS RESERVED", $sformatf("\n===== FAILED!!! HRESP is not high ====="))
       end
       else begin
         `uvm_info("ACCESS RESERVED", $sformatf("\n===== PASSED SUCCESSFULLY!!! ====="), UVM_LOW)
@@ -24,8 +26,15 @@ class access_reserved_chk_sequence extends uvm_sequence #(ahb_transaction);
     end
   endtask
 
-  task write_read(bit [31:0] haddr, bit [31:0] hwdata, bit [31:0] hrdata);
+  task write_read(bit [31:0] haddr, bit [31:0] hwdata,output bit hresp);
     ahb_transaction req;
+    ahb_transaction rsp;
+    uvm_event       xfer_done_e;
+
+    if(!uvm_config_db#(uvm_event)::get(m_sequencer, "", "xfer_done", xfer_done_e)) begin
+      `uvm_fatal("ACCESS RESERVED", "FAILED to get xfer_done event form driver")
+    end
+  
     //FOR WRITE TRANSACTION
     req   = ahb_transaction::type_id::create("req");
     start_item(req);
@@ -48,8 +57,9 @@ class access_reserved_chk_sequence extends uvm_sequence #(ahb_transaction);
       burst_type  == ahb_transaction::SINGLE;
     });
     finish_item(req);
-
-    hrdata = req.data;
+    xfer_done_e.wait_trigger();
+    get_response(rsp);
+    hresp = rsp.hresp;
   endtask
 
 endclass

@@ -1,1 +1,8 @@
   CREATE_STREAM @243000 {NAME:arc_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:2264}
+  CREATE_STREAM @243000 {NAME:arc_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:2264}
+  CREATE_STREAM @243000 {NAME:arc_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:2264}
+  CREATE_STREAM @243000 {NAME:arc_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:2264}
+  CREATE_STREAM @243000 {NAME:arc_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:2264}
+  CREATE_STREAM @243000 {NAME:arc_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:2264}
+  CREATE_STREAM @243000 {NAME:arc_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:2264}
+  CREATE_STREAM @243000 {NAME:arc_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:2270}

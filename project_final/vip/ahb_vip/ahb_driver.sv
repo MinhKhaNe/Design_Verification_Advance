@@ -2,6 +2,7 @@ class ahb_driver extends uvm_driver #(ahb_transaction);
   `uvm_component_utils(ahb_driver)
 
   virtual ahb_if ahb_vif;
+  uvm_event xfer_done_e;
 
   function new(string name="ahb_driver", uvm_component parent);
     super.new(name,parent);
@@ -12,6 +13,9 @@ class ahb_driver extends uvm_driver #(ahb_transaction);
     /** Applying the virtual interface received through the config db - learn detail in next session*/
     if(!uvm_config_db#(virtual ahb_if)::get(null,"*","ahb_vif",ahb_vif))
       `uvm_fatal(get_type_name(),$sformatf("Failed to get from uvm_config_db. Please check!"))
+
+    xfer_done_e = new("xfer_done_e");
+    uvm_config_db#(uvm_event)::set(get_parent(), "*", "xfer_done", xfer_done_e);
   endfunction: build_phase
 
   /** User can use ahb_vif to control real interface like systemverilog part*/
@@ -21,6 +25,7 @@ class ahb_driver extends uvm_driver #(ahb_transaction);
       seq_item_port.get(req);
       //`uvm_info("driver",$sformatf("Driver received transaction: %0s",req.sprint()),UVM_LOW)
       #10ns;
+      xfer_done_e.reset();
       if(req.xact_type == ahb_transaction::WRITE) begin
         ahb_write(req);
         //`uvm_info("driver",$sformatf("Start drive value to AHB: %0s",req.sprint()),UVM_LOW)
@@ -85,7 +90,9 @@ class ahb_driver extends uvm_driver #(ahb_transaction);
     repeat(2) @(posedge ahb_vif.HCLK);
     //ahb_vif.HRDATA  <= pkt.data;
     #10;
+    ->xfer_done_e;
     pkt.data        = ahb_vif.HRDATA;
+    pkt.hresp       = ahb_vif.HRESP;
   endtask
 
 
