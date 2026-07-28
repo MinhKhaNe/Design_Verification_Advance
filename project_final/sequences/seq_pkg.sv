@@ -6,5 +6,6 @@ package seq_pkg;
 
   `include "default_value_chk_sequence.sv"
   `include "read_write_chk_sequence.sv"
+  `include "access_reserved_chk_sequence.sv"
 
 endpackage

@@ -1,6 +1,6 @@
 # vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l reg_test_1.log "+UVM_TESTNAME=reg_test" "+UVM_VERBOSITY=UVM_HIGH" 
-# Start time: 13:05:20 on Jul 28,2026
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_2925/linux_x86_64_gcc-11/export_tramp.so
+# Start time: 19:07:54 on Jul 28,2026
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_33592/linux_x86_64_gcc-11/export_tramp.so
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim-64
 # //  Version 10.6d_1 linux_x86_64 Apr 11 2018
@@ -41,9 +41,9 @@
 # Loading work.uart_receiver(fast)
 # Loading work.uart_interrupt(fast)
 # Loading work.baud_generator(fast)
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_2925/linux_x86_64_gcc-5.3.0/exportwrapper.c
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_2925/linux_x86_64_gcc-11/exportwrapper.c
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_2925/linux_x86_64_gcc-11/vsim_auto_compile.so
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_33592/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_33592/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_33592/linux_x86_64_gcc-11/vsim_auto_compile.so
 #  log -r /*
 # run -all
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
@@ -602,7 +602,7 @@
 # UVM_INFO @ 162000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.RBR=0
 # UVM_INFO ./../sequences/read_write_chk_sequence.sv(82) @ 162000: reporter@@rw_seq [RAL] 
 # ===== PASSED SUCCESSFULLY!!!! =====
-# UVM_INFO ./../testcases/reg_test.sv(25) @ 162000: uvm_test_top [REG_TEST] 
+# UVM_INFO ./../testcases/reg_test.sv(26) @ 162000: uvm_test_top [REG_TEST] 
 # ===== START RESET DUT =====
 # UVM_INFO @ 162000: reporter@@reset_seq [STARTING_SEQ] 
 # 
@@ -768,19 +768,336 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(225) @ 233000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed READ transaction to register regmodel.RBR: value='h0
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 243000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x1c data = 0x0 kind = UVM_READ status = UVM_IS_OK
 # UVM_INFO @ 243000: reporter [RegModel] Read  register via map regmodel.ahb_map: regmodel.RBR=0
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 243000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ./../testcases/base_test.sv(60) @ 243000: uvm_test_top [reg_test] -----------------------------------
-# UVM_INFO ./../testcases/base_test.sv(61) @ 243000: uvm_test_top [reg_test] ---   PASSED SUCCESSFULLY!!!    ---
-# UVM_INFO ./../testcases/base_test.sv(62) @ 243000: uvm_test_top [reg_test] -----------------------------------
-# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 243000: reporter [UVM/REPORT/SERVER] 
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 243000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2274     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h10f     
+#   data        integral         32    'h63955e29
+#   prot        integral         4     'h8       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 243000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x10f data = 0x63955e29 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_ERROR ./../sequences/access_reserved_chk_sequence.sv(19) @ 243000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [ACCESS RESERVED] 
+# ===== FAILED!!! Actual data is 00000000, Expected data is ffffffff =====
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 243000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2292     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h10f     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h4       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 243000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x10f data = 0xffffffff kind = UVM_READ status = UVM_IS_OK
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 253000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2308     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1eb     
+#   data        integral         32    'h31844378
+#   prot        integral         4     'h1       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 253000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x1eb data = 0x31844378 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_ERROR ./../sequences/access_reserved_chk_sequence.sv(19) @ 253000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [ACCESS RESERVED] 
+# ===== FAILED!!! Actual data is 00000000, Expected data is ffffffff =====
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 253000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2326     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1eb     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h2       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 253000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x1eb data = 0xffffffff kind = UVM_READ status = UVM_IS_OK
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 263000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2342     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1c1     
+#   data        integral         32    'h52d001d4
+#   prot        integral         4     'hb       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 263000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x1c1 data = 0x52d001d4 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_ERROR ./../sequences/access_reserved_chk_sequence.sv(19) @ 263000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [ACCESS RESERVED] 
+# ===== FAILED!!! Actual data is 00000000, Expected data is ffffffff =====
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 263000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2360     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h1c1     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'ha       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 263000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x1c1 data = 0xffffffff kind = UVM_READ status = UVM_IS_OK
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 273000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2376     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h2ff     
+#   data        integral         32    'h4e0461a7
+#   prot        integral         4     'h9       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 273000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x2ff data = 0x4e0461a7 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_ERROR ./../sequences/access_reserved_chk_sequence.sv(19) @ 273000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [ACCESS RESERVED] 
+# ===== FAILED!!! Actual data is 00000000, Expected data is ffffffff =====
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 274000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2394     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h2ff     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h3       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 274000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x2ff data = 0xffffffff kind = UVM_READ status = UVM_IS_OK
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 284000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2410     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'haf      
+#   data        integral         32    'hecf98aff
+#   prot        integral         4     'h3       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 284000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xaf data = 0xecf98aff kind = UVM_WRITE status = UVM_IS_OK
+# UVM_ERROR @ 284000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [uvm_test_top.env.ahb_agt.sequencer.arc_seq] Response queue overflow, response was dropped
+# UVM_ERROR ./../sequences/access_reserved_chk_sequence.sv(19) @ 284000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [ACCESS RESERVED] 
+# ===== FAILED!!! Actual data is 00000000, Expected data is ffffffff =====
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 284000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2430     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'haf      
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'hb       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 284000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xaf data = 0xffffffff kind = UVM_READ status = UVM_IS_OK
+# UVM_ERROR @ 294000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [uvm_test_top.env.ahb_agt.sequencer.arc_seq] Response queue overflow, response was dropped
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 294000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2448     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h2f3     
+#   data        integral         32    'h6d95a924
+#   prot        integral         4     'h8       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 294000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x2f3 data = 0x6d95a924 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_ERROR @ 294000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [uvm_test_top.env.ahb_agt.sequencer.arc_seq] Response queue overflow, response was dropped
+# UVM_ERROR ./../sequences/access_reserved_chk_sequence.sv(19) @ 294000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [ACCESS RESERVED] 
+# ===== FAILED!!! Actual data is 00000000, Expected data is ffffffff =====
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 294000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2468     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h2f3     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'he       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 294000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x2f3 data = 0xffffffff kind = UVM_READ status = UVM_IS_OK
+# UVM_ERROR @ 304000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [uvm_test_top.env.ahb_agt.sequencer.arc_seq] Response queue overflow, response was dropped
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 304000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2486     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h3c1     
+#   data        integral         32    'h1f7d7cb3
+#   prot        integral         4     'h5       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 304000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x3c1 data = 0x1f7d7cb3 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_ERROR @ 304000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [uvm_test_top.env.ahb_agt.sequencer.arc_seq] Response queue overflow, response was dropped
+# UVM_ERROR ./../sequences/access_reserved_chk_sequence.sv(19) @ 304000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [ACCESS RESERVED] 
+# ===== FAILED!!! Actual data is 00000000, Expected data is ffffffff =====
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 304000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2506     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h3c1     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h3       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 304000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x3c1 data = 0xffffffff kind = UVM_READ status = UVM_IS_OK
+# UVM_ERROR @ 314000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [uvm_test_top.env.ahb_agt.sequencer.arc_seq] Response queue overflow, response was dropped
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 314000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2524     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h173     
+#   data        integral         32    'h57959762
+#   prot        integral         4     'h8       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 314000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x173 data = 0x57959762 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_ERROR @ 314000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [uvm_test_top.env.ahb_agt.sequencer.arc_seq] Response queue overflow, response was dropped
+# UVM_ERROR ./../sequences/access_reserved_chk_sequence.sv(19) @ 314000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [ACCESS RESERVED] 
+# ===== FAILED!!! Actual data is 00000000, Expected data is ffffffff =====
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 314000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2544     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h173     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'ha       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 314000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x173 data = 0xffffffff kind = UVM_READ status = UVM_IS_OK
+# UVM_ERROR @ 324000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [uvm_test_top.env.ahb_agt.sequencer.arc_seq] Response queue overflow, response was dropped
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 324000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2562     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h3f7     
+#   data        integral         32    'ha32c6e12
+#   prot        integral         4     'h2       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 324000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x3f7 data = 0xa32c6e12 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_ERROR @ 324000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [uvm_test_top.env.ahb_agt.sequencer.arc_seq] Response queue overflow, response was dropped
+# UVM_ERROR ./../sequences/access_reserved_chk_sequence.sv(19) @ 324000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [ACCESS RESERVED] 
+# ===== FAILED!!! Actual data is 00000000, Expected data is ffffffff =====
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 324000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2582     
+#   xact_type   xact_type_enum   1     READ      
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h3f7     
+#   data        integral         32    'hffffffff
+#   prot        integral         4     'h4       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h1       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 324000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x3f7 data = 0xffffffff kind = UVM_READ status = UVM_IS_OK
+# UVM_ERROR @ 334000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [uvm_test_top.env.ahb_agt.sequencer.arc_seq] Response queue overflow, response was dropped
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 334000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @2600     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h30f     
+#   data        integral         32    'h8649ad24
+#   prot        integral         4     'h7       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 334000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x30f data = 0x8649ad24 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_ERROR @ 334000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [uvm_test_top.env.ahb_agt.sequencer.arc_seq] Response queue overflow, response was dropped
+# UVM_ERROR ./../sequences/access_reserved_chk_sequence.sv(19) @ 334000: uvm_test_top.env.ahb_agt.sequencer@@arc_seq [ACCESS RESERVED] 
+# ===== FAILED!!! Actual data is 00000000, Expected data is ffffffff =====
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 334000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ./../testcases/base_test.sv(55) @ 334000: uvm_test_top [reg_test] -----------------------------------
+# UVM_INFO ./../testcases/base_test.sv(56) @ 334000: uvm_test_top [reg_test] ---         FAILED!!!           ---
+# UVM_INFO ./../testcases/base_test.sv(57) @ 334000: uvm_test_top [reg_test] -----------------------------------
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 334000: reporter [UVM/REPORT/SERVER] 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :  229
+# UVM_INFO :  267
 # UVM_WARNING :    0
-# UVM_ERROR :    0
+# UVM_ERROR :   21
 # UVM_FATAL :    0
 # ** Report counts by id
+# [ACCESS RESERVED]    10
 # [NO_DPI_TSTNAME]     1
 # [RAL]    16
 # [REG_PREDICT]    32
@@ -793,13 +1110,14 @@
 # [UVM/RELNOTES]     1
 # [UVMTOP]     1
 # [ahb_agent]     1
-# [ahb_monitor]    32
+# [ahb_monitor]    51
 # [reg_test]     3
 # [uart_agent]     1
-# [uart_reg2ahb_adapter]    96
+# [uart_reg2ahb_adapter]   115
 # [uvm_reg_hw_reset_seq]     8
+# [uvm_test_top.env.ahb_agt.sequencer.arc_seq]    11
 # 
 # ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
-#    Time: 242870 ns  Iteration: 74  Instance: /testbench
-# End time: 13:05:23 on Jul 28,2026, Elapsed time: 0:00:03
+#    Time: 334390 ns  Iteration: 78  Instance: /testbench
+# End time: 19:07:56 on Jul 28,2026, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
