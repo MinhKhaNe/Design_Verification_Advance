@@ -5,5 +5,6 @@ package seq_pkg;
   import uart_regmodel_pkg::*;
 
   `include "default_value_chk_sequence.sv"
+  `include "read_write_chk_sequence.sv"
 
 endpackage
