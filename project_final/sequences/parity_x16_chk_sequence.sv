@@ -1,8 +1,9 @@
 class parity_X16_chk_sequence extends uvm_sequence;
   `uvm_object_utils(parity_X16_chk_sequence)
 
-  ahb_transation    ahb_trans;
-  uart_transaction  uart_trans;
+  ahb_transation      ahb_trans;
+  uart_transaction    uart_trans;
+  uart_configuration  cfg;
 
   localparam  MDR = 10'h000;
   localparam  DLL = 10'h004;
@@ -13,18 +14,33 @@ class parity_X16_chk_sequence extends uvm_sequence;
   localparam  TBR = 10'h018;
   localparam  RBR = 10'h01C;
 
+  bit [31:0] lcr_value[3] = '{32'h20, 32'h28, 32'h38};
 
   function new(string name = "parity_X16_chk_sequence");
     super.new(name);
   endfunction
 
   virtual task body();
-    //Settings DUT
-    write_ahb(MDR, 32'h00);
-    write_ahb(DLL, 32'h2C);
-    write_ahb(DLH, 32'h0A);
-    write_ahb(LCR, 32'h20);
-    write_ahb(TBR, );
+    bit [31:0] wdata;
+
+    //for(int i = 0; i < 3; i++) begin
+      wdata   = $urandom();
+
+      //Settings DUT
+      write_ahb(MDR, 32'h00);
+      write_ahb(DLL, 32'h2C);
+      write_ahb(DLH, 32'h0A);
+      if(cfg.parity_mode == uart_configuration::UART_PARITY_ODD) begin
+        write_ahb(LCR, 32'h28);
+      end
+      else if(cfg.parity_mode == uart_configuration::UART_PARITY_EVEN) begin
+        write_ahb(LCR, 32'h38);
+      end
+      else begin
+        write_ahb(LCR, 32'h20);
+      end
+      write_ahb(TBR, wdata);
+    //end
   endtask
 
   task write_ahb(bit [9:0] haddr, bit [31:0] hwdata);

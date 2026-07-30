@@ -41,6 +41,7 @@ class dut_environment extends uvm_env;
     uvm_config_db#(virtual ahb_if)::set(this, "ahb_agt", "ahb_vif", ahb_vif); 
     uvm_config_db#(virtual uart_if)::set(this, "uart_agt", "uart_vif", uart_vif);
     uvm_config_db#(uart_configuration)::set(this, "uart_agt", "cfg", cfg);
+    uvm_config_db#(uart_configuration)::set(this, "dut_sb", "cfg", cfg);
   endfunction
 
   virtual function void connect_phase(uvm_phase phase);
