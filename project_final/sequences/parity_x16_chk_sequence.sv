@@ -1,7 +1,7 @@
-class parity_X16_chk_sequence extends uvm_sequence;
-  `uvm_object_utils(parity_X16_chk_sequence)
+class parity_x16_chk_sequence extends uvm_sequence;
+  `uvm_object_utils(parity_x16_chk_sequence)
 
-  ahb_transation      ahb_trans;
+  ahb_transaction     ahb_trans;
   uart_transaction    uart_trans;
   uart_configuration  cfg;
 

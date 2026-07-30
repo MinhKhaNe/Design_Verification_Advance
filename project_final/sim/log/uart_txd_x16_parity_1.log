@@ -1,0 +1,394 @@
+# vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l uart_txd_x16_parity_1.log "+UVM_TESTNAME=uart_txd_x16_parity" "+UVM_VERBOSITY=UVM_HIGH" 
+# Start time: 20:35:49 on Jul 30,2026
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_109467/linux_x86_64_gcc-11/export_tramp.so
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ./../testcases/uart_txd_x16_parity.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.6d_1 linux_x86_64 Apr 11 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.uart_if(fast)
+# Loading work.ahb_if(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.uart_register_pkg(fast)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.ahb_pkg(fast)
+# Loading work.uart_regmodel_pkg(fast)
+# Loading work.uart_pkg(fast)
+# Loading work.seq_pkg(fast)
+# Loading work.env_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.ahb_if(fast)
+# Loading work.uart_if(fast)
+# Loading work.uart_top(fast)
+# Loading work.cmsdk_ahb_to_apb(fast)
+# Loading work.apb_decoder(fast)
+# Loading work.uart_fifo(fast)
+# Loading work.uart_transmitter(fast)
+# Loading work.uart_receiver(fast)
+# Loading work.uart_interrupt(fast)
+# Loading work.baud_generator(fast)
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_109467/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_109467/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_109467/linux_x86_64_gcc-11/vsim_auto_compile.so
+#  log -r /*
+# run -all
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(453) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+# UVM_INFO @ 0: reporter [RNTST] Running test uart_txd_x16_parity...
+# UVM_INFO ./../vip/ahb_vip/ahb_agent.sv(20) @ 0: uvm_test_top.env.ahb_agt [ahb_agent] Active agent is configued
+# UVM_INFO ./../vip/uart_vip/uart_agent.sv(25) @ 0: uvm_test_top.env.uart_agt [uart_agent] Active agent is configured
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(579) @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------------------------
+# Name                       Type                                  Size  Value
+# ----------------------------------------------------------------------------
+# uvm_test_top               uart_txd_x16_parity                   -     @347 
+#   env                      dut_environment                       -     @371 
+#     ahb_agt                ahb_agent                             -     @393 
+#       driver               ahb_driver                            -     @500 
+#         rsp_port           uvm_analysis_port                     -     @519 
+#         seq_item_port      uvm_seq_item_pull_port                -     @509 
+#       monitor              ahb_monitor                           -     @666 
+#         a_port             uvm_analysis_port                     -     @675 
+#       sequencer            ahb_sequencer                         -     @529 
+#         rsp_export         uvm_analysis_export                   -     @538 
+#         seq_item_export    uvm_seq_item_pull_imp                 -     @656 
+#         arbitration_queue  array                                 0     -    
+#         lock_queue         array                                 0     -    
+#         num_last_reqs      integral                              32    'd1  
+#         num_last_rsps      integral                              32    'd1  
+#     ahb_predictor          uvm_reg_predictor #(ahb_transaction)  -     @411 
+#       bus_in               uvm_analysis_imp                      -     @420 
+#       reg_ap               uvm_analysis_port                     -     @430 
+#     dut_sb                 dut_scoreboard                        -     @384 
+#       ahb_a_export         uvm_analysis_imp_ahb                  -     @695 
+#       uart_a_export        uvm_analysis_imp_uart                 -     @705 
+#     uart_agt               uart_agent                            -     @402 
+#       driver               uart_driver                           -     @721 
+#         rsp_port           uvm_analysis_port                     -     @740 
+#         seq_item_port      uvm_seq_item_pull_port                -     @730 
+#         uart_a_port        uvm_analysis_port                     -     @750 
+#       monitor              uart_monitor                          -     @760 
+#         uart_a_port        uvm_analysis_port                     -     @769 
+#       sequencer            uart_sequencer                        -     @779 
+#         rsp_export         uvm_analysis_export                   -     @788 
+#         seq_item_export    uvm_seq_item_pull_imp                 -     @906 
+#         arbitration_queue  array                                 0     -    
+#         lock_queue         array                                 0     -    
+#         num_last_reqs      integral                              32    'd1  
+#         num_last_rsps      integral                              32    'd1  
+# ----------------------------------------------------------------------------
+# 
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 0: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1010     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h0       
+#   data        integral         32    'h0       
+#   prot        integral         4     'hb       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 0: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 0: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 0: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1032     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h4       
+#   data        integral         32    'h2c      
+#   prot        integral         4     'he       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 0: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x4 data = 0x2c kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 0: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='h2c : updated value = 'h2c
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 0: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1054     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h8       
+#   data        integral         32    'ha       
+#   prot        integral         4     'h0       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 0: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x8 data = 0xa kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 0: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='ha : updated value = 'ha
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 0: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1076     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'hc       
+#   data        integral         32    'h20      
+#   prot        integral         4     'hb       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 0: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xc data = 0x20 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 0: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h20 : updated value = 'h20
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 1000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1098     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h18      
+#   data        integral         32    'h33f9e439
+#   prot        integral         4     'h1       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0x33f9e439 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h33f9e439 : updated value = 'h39
+# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 1000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from AHB: 0x33f9e439
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 1000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1134     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h0       
+#   data        integral         32    'h0       
+#   prot        integral         4     'hf       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 1000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1156     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h4       
+#   data        integral         32    'h2c      
+#   prot        integral         4     'he       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x4 data = 0x2c kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='h2c : updated value = 'h2c
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 1000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1178     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h8       
+#   data        integral         32    'ha       
+#   prot        integral         4     'h7       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x8 data = 0xa kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='ha : updated value = 'ha
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 1000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1200     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'hc       
+#   data        integral         32    'h28      
+#   prot        integral         4     'h7       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xc data = 0x28 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h28 : updated value = 'h28
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 1000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1222     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h18      
+#   data        integral         32    'hf9625ca 
+#   prot        integral         4     'hd       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0xf9625ca kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hf9625ca : updated value = 'hca
+# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 1000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from AHB: 0xf9625ca
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 1000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1258     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h0       
+#   data        integral         32    'h0       
+#   prot        integral         4     'h4       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 1000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1280     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h4       
+#   data        integral         32    'h2c      
+#   prot        integral         4     'hf       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x4 data = 0x2c kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='h2c : updated value = 'h2c
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 1000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1302     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h8       
+#   data        integral         32    'ha       
+#   prot        integral         4     'h4       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x8 data = 0xa kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='ha : updated value = 'ha
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 1000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1324     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'hc       
+#   data        integral         32    'h38      
+#   prot        integral         4     'hd       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xc data = 0x38 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h38 : updated value = 'h38
+# UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 1000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
+# Name          Type             Size  Value     
+# -----------------------------------------------
+# ahb_trans     ahb_transaction  -     @1346     
+#   xact_type   xact_type_enum   1     WRITE     
+#   xfer_size   xfer_size_enum   3     SIZE_32BIT
+#   burst_type  burst_type_enum  3     SINGLE    
+#   addr        integral         10    'h18      
+#   data        integral         32    'h7d0b6a55
+#   prot        integral         4     'hb       
+#   lock        integral         1     'h0       
+#   hresp       integral         1     'h0       
+# -----------------------------------------------
+# 
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0x7d0b6a55 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h7d0b6a55 : updated value = 'h55
+# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 1000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from AHB: 0x7d0b6a55
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 1000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ./../testcases/base_test.sv(60) @ 1000: uvm_test_top [uart_txd_x16_parity] -----------------------------------
+# UVM_INFO ./../testcases/base_test.sv(61) @ 1000: uvm_test_top [uart_txd_x16_parity] ---   PASSED SUCCESSFULLY!!!    ---
+# UVM_INFO ./../testcases/base_test.sv(62) @ 1000: uvm_test_top [uart_txd_x16_parity] -----------------------------------
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 1000: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   59
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [NO_DPI_TSTNAME]     1
+# [REG_PREDICT]    15
+# [RNTST]     1
+# [SCOREBOARD]     3
+# [TEST_DONE]     1
+# [UVM/COMP/NAMECHECK]     1
+# [UVM/RELNOTES]     1
+# [UVMTOP]     1
+# [ahb_agent]     1
+# [ahb_monitor]    15
+# [uart_agent]     1
+# [uart_reg2ahb_adapter]    15
+# [uart_txd_x16_parity]     3
+# 
+# ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 1350 ns  Iteration: 76  Instance: /testbench
+# End time: 20:35:55 on Jul 30,2026, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 1

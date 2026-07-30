@@ -9,7 +9,7 @@ class uart_transaction extends uvm_sequence_item;
 
   rand  bit   [8:0]   data;
         bit           parity;
-        //bit   [1:0]   stop_bit;
+        bit   [1:0]   stop_bit;
         bit           baud_rate;
 
   direction_e  direction;
@@ -18,7 +18,7 @@ class uart_transaction extends uvm_sequence_item;
     `uvm_field_enum   (direction_e, direction,  UVM_ALL_ON | UVM_HEX)
     `uvm_field_int    (data,                    UVM_ALL_ON | UVM_HEX)
     `uvm_field_int    (parity,                  UVM_ALL_ON | UVM_HEX)
-    //`uvm_field_int    (stop_bit,                UVM_ALL_ON | UVM_HEX)
+    `uvm_field_int    (stop_bit,                UVM_ALL_ON | UVM_HEX)
     `uvm_field_int    (baud_rate,               UVM_ALL_ON | UVM_HEX)
   `uvm_object_utils_end
 

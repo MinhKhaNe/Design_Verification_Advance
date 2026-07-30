@@ -17,12 +17,13 @@ class uart_txd_x16_parity extends base_test;
     #150ns;
     
     for(int i = 0; i < 3; i++) begin
-      cfg.parity_mode       == i;
-      cfg.data_width        == 5;
-      cfg.num_of_stop_bit   == 1;
-      cfg.baud_rate         == 2400;
-      cfg.baud_rate_enable  == 1'b0;
-      cfg.parity_enable     == 1'b0;
+      cfg.randomize() with {parity_mode       == i;
+                            data_width        == 5;
+                            num_of_stop_bit   == 1;
+                            baud_rate         == 2400;
+                            baud_rate_enable  == 1'b0;
+                            parity_enable     == 1'b0;
+                            };
 
       parity_seq      = parity_x16_chk_sequence::type_id::create("parity_seq", this);
       parity_seq.cfg  = cfg;
