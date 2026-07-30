@@ -28,8 +28,8 @@ class parity_x16_chk_sequence extends uvm_sequence;
 
       //Settings DUT
       write_ahb(MDR, 32'h00);
-      write_ahb(DLL, 32'h2C);
-      write_ahb(DLH, 32'h0A);
+      write_ahb(DLL, 32'h36);
+      write_ahb(DLH, 32'h00);
       if(cfg.parity_mode == uart_configuration::UART_PARITY_ODD) begin
         write_ahb(LCR, 32'h28);
       end

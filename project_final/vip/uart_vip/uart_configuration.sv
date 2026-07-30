@@ -7,7 +7,13 @@ class uart_configuration extends uvm_object;
     UART_PARITY_EVEN
   } parity_mode_e;
 
-  randc   parity_mode_e parity_mode;
+  typedef enum {
+    MODE_X16,
+    MODE_X13
+  } sampling_mode_e;
+
+  randc   parity_mode_e   parity_mode;
+  randc   sampling_mode_e sampling;
   randc   int   unsigned  data_width;
   randc   int   unsigned  num_of_stop_bit;
   randc   int   unsigned  baud_rate;
@@ -23,6 +29,7 @@ class uart_configuration extends uvm_object;
 
   `uvm_object_utils_begin(uart_configuration)
     `uvm_field_enum(parity_mode_e, parity_mode, UVM_ALL_ON | UVM_HEX)
+    `uvm_field_enum(sampling_mode_e, sampling,  UVM_ALL_ON | UVM_HEX)
     `uvm_field_int(data_width,                  UVM_ALL_ON | UVM_HEX)
     `uvm_field_int(num_of_stop_bit,             UVM_ALL_ON | UVM_HEX)
     `uvm_field_int(baud_rate,                   UVM_ALL_ON | UVM_HEX)

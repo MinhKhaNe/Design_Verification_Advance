@@ -110,8 +110,12 @@ class uart_monitor extends uvm_monitor;
           //trans.data_frame = cfg.data_width;
           //having start bi
           @(negedge uart_vif.tx);
-          period = 1s / cfg.baud_rate;
-        
+          if(cfg.sampling == uart_configuration::MODE_X16) begin
+            period = 10ns / (cfg.baud_rate * 16);
+          end
+          else begin
+            period = 10ns / (cfg.baud_rate * 13);
+          end
           #(period/2.00);
 
           //data
@@ -132,7 +136,7 @@ class uart_monitor extends uvm_monitor;
             end
           end
           trans.direction = uart_transaction::TX;
-          //`uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
+          `uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
           uart_a_port.write(trans);
   endtask
 
@@ -167,7 +171,7 @@ class uart_monitor extends uvm_monitor;
             end
           end
           trans.direction = uart_transaction::RX;
-          //`uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
+          `uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
           uart_a_port.write(trans);
   endtask
 endclass

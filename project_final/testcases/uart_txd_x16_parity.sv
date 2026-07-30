@@ -18,9 +18,10 @@ class uart_txd_x16_parity extends base_test;
     
     for(int i = 0; i < 3; i++) begin
       cfg.randomize() with {parity_mode       == i;
+                            sampling          == uart_configuration::MODE_X16;
                             data_width        == 5;
                             num_of_stop_bit   == 1;
-                            baud_rate         == 2400;
+                            baud_rate         == 115200;
                             baud_rate_enable  == 1'b0;
                             parity_enable     == 1'b0;
                             };
@@ -28,6 +29,8 @@ class uart_txd_x16_parity extends base_test;
       parity_seq      = parity_x16_chk_sequence::type_id::create("parity_seq", this);
       parity_seq.cfg  = cfg;
       parity_seq.start(env.ahb_agt.sequencer);
+
+      #420us;
     end
     phase.drop_objection(this);
   endtask
