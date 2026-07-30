@@ -13,6 +13,7 @@ class uart_configuration extends uvm_object;
   randc   int   unsigned  baud_rate;
 
   bit     baud_rate_enable;
+  bit     parity_enable;
 
   constraint uart_config {
     baud_rate         inside   {2400, 4800, 9600, 19200, 57600, 115200};
@@ -25,16 +26,18 @@ class uart_configuration extends uvm_object;
     `uvm_field_int(data_width,                  UVM_ALL_ON | UVM_HEX)
     `uvm_field_int(num_of_stop_bit,             UVM_ALL_ON | UVM_HEX)
     `uvm_field_int(baud_rate,                   UVM_ALL_ON | UVM_HEX)
+    `uvm_field_int(parity_enable,               UVM_ALL_ON | UVM_HEX)
   `uvm_object_utils_end
 
   function new(string name = "uart_configuration");
     super.new(name);
     //Default value
-    parity_mode     = UART_PARITY_NONE;
-    data_width      = 8;
-    num_of_stop_bit = 1;
-    baud_rate       = 115200;
-    baud_rate_enable = 0;
+    //parity_mode     = UART_PARITY_NONE;
+    //data_width      = 8;
+    //num_of_stop_bit = 1;
+    //baud_rate       = 115200;
+    //baud_rate_enable = 0;
+    //parity_enable   = 0;
   endfunction
 
 endclass

@@ -85,4 +85,12 @@ class uart_driver extends uvm_driver #(uart_transaction);
     endcase
   endfunction
 
+  function bit inject_parity(bit [7:0] data);
+    case(cfg.parity_mode)
+      uart_configuration::UART_PARITY_NONE:   return 0 ;
+      uart_configuration::UART_PARITY_ODD:   return ^(data);
+      uart_configuration::UART_PARITY_EVEN:    return ~(^data);
+    endcase
+  endfunction
+
 endclass

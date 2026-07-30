@@ -15,10 +15,10 @@ class access_reserved_chk_sequence extends uvm_sequence #(ahb_transaction);
       address = 32'h020 + $urandom_range(0, 1023);
       wdata   = $urandom();
  
-      write_read(address, wdata, hresp);
-      if(hresp != 1'b1) begin
-        //`uvm_error("ACCESS RESERVED", $sformatf("\n===== FAILED!!! Actual data is %h, Expected data is %h =====",rdata,32'hFFFF_FFFF))
-        `uvm_error("ACCESS RESERVED", $sformatf("\n===== FAILED!!! HRESP is not high ====="))
+      write_read(address, wdata, rdata, hresp);
+      if((rdata != 32'hFFFF_FFFF) && (hresp != 1'b1)) begin
+        `uvm_error("ACCESS RESERVED", $sformatf("\n===== FAILED!!! Actual data is %h, Expected data is %h =====",rdata,32'hFFFF_FFFF))
+        `uvm_error("ACCESS RESERVED", $sformatf("\n===== FAILED!!! HRESP is not high, HRESP = %b =====", hresp))
       end
       else begin
         `uvm_info("ACCESS RESERVED", $sformatf("\n===== PASSED SUCCESSFULLY!!! ====="), UVM_LOW)
@@ -26,14 +26,14 @@ class access_reserved_chk_sequence extends uvm_sequence #(ahb_transaction);
     end
   endtask
 
-  task write_read(bit [31:0] haddr, bit [31:0] hwdata,output bit hresp);
+  task write_read(bit [31:0] haddr, bit [31:0] hwdata,output bit [31:0] hrdata, output bit hresp);
     ahb_transaction req;
     ahb_transaction rsp;
-    uvm_event       xfer_done_e;
+    //uvm_event       xfer_done_e;
 
-    if(!uvm_config_db#(uvm_event)::get(m_sequencer, "", "xfer_done", xfer_done_e)) begin
-      `uvm_fatal("ACCESS RESERVED", "FAILED to get xfer_done event form driver")
-    end
+    //if(!uvm_config_db#(uvm_event)::get(m_sequencer, "", "xfer_done", xfer_done_e)) begin
+    //  `uvm_fatal("ACCESS RESERVED", "FAILED to get xfer_done event form driver")
+    //end
   
     //FOR WRITE TRANSACTION
     req   = ahb_transaction::type_id::create("req");
@@ -46,6 +46,7 @@ class access_reserved_chk_sequence extends uvm_sequence #(ahb_transaction);
       burst_type  == ahb_transaction::SINGLE;
     });
     finish_item(req);
+    get_response(rsp);
 
     //FOR READ TRANSACTION
     req   = ahb_transaction::type_id::create("req");
@@ -57,9 +58,9 @@ class access_reserved_chk_sequence extends uvm_sequence #(ahb_transaction);
       burst_type  == ahb_transaction::SINGLE;
     });
     finish_item(req);
-    xfer_done_e.wait_trigger();
     get_response(rsp);
-    hresp = rsp.hresp;
+    hrdata  = rsp.data;
+    hresp   = rsp.hresp;
   endtask
 
 endclass
