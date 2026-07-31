@@ -53,9 +53,9 @@ class dut_scoreboard extends uvm_scoreboard;
   endfunction
 
   function void write_uart(uart_transaction trans);
-    if((trans.direction == uart_transaction::TX)) begin
+    if((trans.direction == uart_transaction::RX)) begin
       actual_txd_q.push_back(trans);
-      `uvm_info("SCOREBOARD", $sformatf("\n===== Captured data from AHB: 0x%0h",trans.data), UVM_LOW)
+      `uvm_info("SCOREBOARD", $sformatf("\n===== Captured data from UART: 0x%0h",trans.data), UVM_LOW)
     end
     compare_txd();
   endfunction

@@ -1,6 +1,6 @@
 # vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l uart_txd_x16_parity_1.log "+UVM_TESTNAME=uart_txd_x16_parity" "+UVM_VERBOSITY=UVM_HIGH" 
-# Start time: 21:48:13 on Jul 30,2026
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_112251/linux_x86_64_gcc-11/export_tramp.so
+# Start time: 13:13:32 on Jul 31,2026
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_41710/linux_x86_64_gcc-11/export_tramp.so
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: ./../testcases/uart_txd_x16_parity.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
 # //  Questa Sim-64
@@ -42,9 +42,9 @@
 # Loading work.uart_receiver(fast)
 # Loading work.uart_interrupt(fast)
 # Loading work.baud_generator(fast)
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_112251/linux_x86_64_gcc-5.3.0/exportwrapper.c
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_112251/linux_x86_64_gcc-11/exportwrapper.c
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_112251/linux_x86_64_gcc-11/vsim_auto_compile.so
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_41710/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_41710/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_41710/linux_x86_64_gcc-11/vsim_auto_compile.so
 #  log -r /*
 # run -all
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
@@ -197,22 +197,35 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h33f9e439 : updated value = 'h39
 # UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 1000: uvm_test_top.env.dut_sb [SCOREBOARD] 
 # ===== Captured data from AHB: 0x33f9e439
-# UVM_ERROR ./../vip/uart_vip/uart_monitor.sv(170) @ 60000: uvm_test_top.env.uart_agt.monitor [uart_monitor] ===== stop bit error detected =====
-# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(174) @ 60000: uvm_test_top.env.uart_agt.monitor [uart_monitor] Data read from DUT is ------------------------------------------
+# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(178) @ 112000: uvm_test_top.env.uart_agt.monitor [uart_monitor] Data read from DUT is ------------------------------------------
 # Name         Type              Size  Value
 # ------------------------------------------
 # trans        uart_transaction  -     @953 
 #   direction  direction_e       32    RX   
-#   data       integral          9     'h6  
+#   data       integral          9     'h19 
 #   parity     integral          1     'h0  
 #   stop_bit   integral          2     'h0  
 #   baud_rate  integral          1     'h0  
 # ------------------------------------------
 # 
+# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 112000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from UART: 0x19
+# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Data comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(77) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# ===== PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(80) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Parity comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(86) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# ===== PASSED SUCCESSFULLY!!! =====
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 421000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
 # Name          Type             Size  Value     
 # -----------------------------------------------
-# ahb_trans     ahb_transaction  -     @1142     
+# ahb_trans     ahb_transaction  -     @1150     
 #   xact_type   xact_type_enum   1     WRITE     
 #   xfer_size   xfer_size_enum   3     SIZE_32BIT
 #   burst_type  burst_type_enum  3     SINGLE    
@@ -228,7 +241,7 @@
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 421000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
 # Name          Type             Size  Value     
 # -----------------------------------------------
-# ahb_trans     ahb_transaction  -     @1164     
+# ahb_trans     ahb_transaction  -     @1172     
 #   xact_type   xact_type_enum   1     WRITE     
 #   xfer_size   xfer_size_enum   3     SIZE_32BIT
 #   burst_type  burst_type_enum  3     SINGLE    
@@ -244,7 +257,7 @@
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 421000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
 # Name          Type             Size  Value     
 # -----------------------------------------------
-# ahb_trans     ahb_transaction  -     @1186     
+# ahb_trans     ahb_transaction  -     @1194     
 #   xact_type   xact_type_enum   1     WRITE     
 #   xfer_size   xfer_size_enum   3     SIZE_32BIT
 #   burst_type  burst_type_enum  3     SINGLE    
@@ -260,7 +273,7 @@
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 421000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
 # Name          Type             Size  Value     
 # -----------------------------------------------
-# ahb_trans     ahb_transaction  -     @1208     
+# ahb_trans     ahb_transaction  -     @1216     
 #   xact_type   xact_type_enum   1     WRITE     
 #   xfer_size   xfer_size_enum   3     SIZE_32BIT
 #   burst_type  burst_type_enum  3     SINGLE    
@@ -276,7 +289,7 @@
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 421000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
 # Name          Type             Size  Value     
 # -----------------------------------------------
-# ahb_trans     ahb_transaction  -     @1230     
+# ahb_trans     ahb_transaction  -     @1238     
 #   xact_type   xact_type_enum   1     WRITE     
 #   xfer_size   xfer_size_enum   3     SIZE_32BIT
 #   burst_type  burst_type_enum  3     SINGLE    
@@ -291,33 +304,35 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 421000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hf9625ca : updated value = 'hca
 # UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 421000: uvm_test_top.env.dut_sb [SCOREBOARD] 
 # ===== Captured data from AHB: 0xf9625ca
-# UVM_ERROR ./../vip/uart_vip/uart_monitor.sv(170) @ 489000: uvm_test_top.env.uart_agt.monitor [uart_monitor] ===== stop bit error detected =====
-# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(174) @ 489000: uvm_test_top.env.uart_agt.monitor [uart_monitor] Data read from DUT is ------------------------------------------
+# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(178) @ 549000: uvm_test_top.env.uart_agt.monitor [uart_monitor] Data read from DUT is ------------------------------------------
 # Name         Type              Size  Value
 # ------------------------------------------
-# trans        uart_transaction  -     @1128
+# trans        uart_transaction  -     @1136
 #   direction  direction_e       32    RX   
-#   data       integral          9     'h18 
+#   data       integral          9     'ha  
 #   parity     integral          1     'h0  
 #   stop_bit   integral          2     'h0  
 #   baud_rate  integral          1     'h0  
 # ------------------------------------------
 # 
-# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(174) @ 576000: uvm_test_top.env.uart_agt.monitor [uart_monitor] Data read from DUT is ------------------------------------------
-# Name         Type              Size  Value
-# ------------------------------------------
-# trans        uart_transaction  -     @1260
-#   direction  direction_e       32    RX   
-#   data       integral          9     'h18 
-#   parity     integral          1     'h1  
-#   stop_bit   integral          2     'h0  
-#   baud_rate  integral          1     'h0  
-# ------------------------------------------
+# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 549000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from UART: 0xa
+# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
 # 
+# =====[UART TXD] Data comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(77) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# ===== PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(80) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Parity comparison =====
+# 
+# UVM_ERROR ./../tb/dut_scoreboard.sv(83) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# ===== FAILED!!! Expected parity is 1, Actual parity is 0 =====
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 841000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
 # Name          Type             Size  Value     
 # -----------------------------------------------
-# ahb_trans     ahb_transaction  -     @1280     
+# ahb_trans     ahb_transaction  -     @1290     
 #   xact_type   xact_type_enum   1     WRITE     
 #   xfer_size   xfer_size_enum   3     SIZE_32BIT
 #   burst_type  burst_type_enum  3     SINGLE    
@@ -333,7 +348,7 @@
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 841000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
 # Name          Type             Size  Value     
 # -----------------------------------------------
-# ahb_trans     ahb_transaction  -     @1302     
+# ahb_trans     ahb_transaction  -     @1312     
 #   xact_type   xact_type_enum   1     WRITE     
 #   xfer_size   xfer_size_enum   3     SIZE_32BIT
 #   burst_type  burst_type_enum  3     SINGLE    
@@ -349,7 +364,7 @@
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 841000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
 # Name          Type             Size  Value     
 # -----------------------------------------------
-# ahb_trans     ahb_transaction  -     @1324     
+# ahb_trans     ahb_transaction  -     @1334     
 #   xact_type   xact_type_enum   1     WRITE     
 #   xfer_size   xfer_size_enum   3     SIZE_32BIT
 #   burst_type  burst_type_enum  3     SINGLE    
@@ -365,7 +380,7 @@
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 841000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
 # Name          Type             Size  Value     
 # -----------------------------------------------
-# ahb_trans     ahb_transaction  -     @1346     
+# ahb_trans     ahb_transaction  -     @1356     
 #   xact_type   xact_type_enum   1     WRITE     
 #   xfer_size   xfer_size_enum   3     SIZE_32BIT
 #   burst_type  burst_type_enum  3     SINGLE    
@@ -381,7 +396,7 @@
 # UVM_INFO ./../vip/ahb_vip/ahb_monitor.sv(44) @ 841000: uvm_test_top.env.ahb_agt.monitor [ahb_monitor] Data read from DUT is -----------------------------------------------
 # Name          Type             Size  Value     
 # -----------------------------------------------
-# ahb_trans     ahb_transaction  -     @1368     
+# ahb_trans     ahb_transaction  -     @1378     
 #   xact_type   xact_type_enum   1     WRITE     
 #   xfer_size   xfer_size_enum   3     SIZE_32BIT
 #   burst_type  burst_type_enum  3     SINGLE    
@@ -396,28 +411,31 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 841000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h7d0b6a55 : updated value = 'h55
 # UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 841000: uvm_test_top.env.dut_sb [SCOREBOARD] 
 # ===== Captured data from AHB: 0x7d0b6a55
-# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(174) @ 909000: uvm_test_top.env.uart_agt.monitor [uart_monitor] Data read from DUT is ------------------------------------------
+# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(178) @ 969000: uvm_test_top.env.uart_agt.monitor [uart_monitor] Data read from DUT is ------------------------------------------
 # Name         Type              Size  Value
 # ------------------------------------------
-# trans        uart_transaction  -     @1266
+# trans        uart_transaction  -     @1276
 #   direction  direction_e       32    RX   
-#   data       integral          9     'h6  
+#   data       integral          9     'h15 
 #   parity     integral          1     'h1  
 #   stop_bit   integral          2     'h0  
 #   baud_rate  integral          1     'h0  
 # ------------------------------------------
 # 
-# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(174) @ 978000: uvm_test_top.env.uart_agt.monitor [uart_monitor] Data read from DUT is ------------------------------------------
-# Name         Type              Size  Value
-# ------------------------------------------
-# trans        uart_transaction  -     @1396
-#   direction  direction_e       32    RX   
-#   data       integral          9     'h1e 
-#   parity     integral          1     'h1  
-#   stop_bit   integral          2     'h0  
-#   baud_rate  integral          1     'h0  
-# ------------------------------------------
+# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 969000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from UART: 0x15
+# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
 # 
+# =====[UART TXD] Data comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(77) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# ===== PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(80) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Parity comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(86) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# ===== PASSED SUCCESSFULLY!!! =====
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 1261000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # UVM_INFO ./../testcases/base_test.sv(55) @ 1261000: uvm_test_top [uart_txd_x16_parity] -----------------------------------
 # UVM_INFO ./../testcases/base_test.sv(56) @ 1261000: uvm_test_top [uart_txd_x16_parity] ---         FAILED!!!           ---
@@ -426,27 +444,28 @@
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   64
+# UVM_INFO :   76
 # UVM_WARNING :    0
-# UVM_ERROR :    2
+# UVM_ERROR :    1
 # UVM_FATAL :    0
 # ** Report counts by id
 # [NO_DPI_TSTNAME]     1
 # [REG_PREDICT]    15
 # [RNTST]     1
-# [SCOREBOARD]     3
+# [SCOREBOARD]     6
 # [TEST_DONE]     1
 # [UVM/COMP/NAMECHECK]     1
 # [UVM/RELNOTES]     1
 # [UVMTOP]     1
 # [ahb_agent]     1
 # [ahb_monitor]    15
+# [dut_scoreboard]    12
 # [uart_agent]     1
-# [uart_monitor]     7
+# [uart_monitor]     3
 # [uart_reg2ahb_adapter]    15
 # [uart_txd_x16_parity]     3
 # 
 # ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
 #    Time: 1261350 ns  Iteration: 68  Instance: /testbench
-# End time: 21:48:16 on Jul 30,2026, Elapsed time: 0:00:03
+# End time: 13:13:35 on Jul 31,2026, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 1

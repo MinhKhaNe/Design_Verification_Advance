@@ -111,10 +111,10 @@ class uart_monitor extends uvm_monitor;
           //having start bi
           @(negedge uart_vif.tx);
           if(cfg.sampling == uart_configuration::MODE_X16) begin
-            period = 10ns / (cfg.baud_rate * 16);
+            period = 2s / (cfg.baud_rate);
           end
           else begin
-            period = 10ns / (cfg.baud_rate * 13);
+            period = 1s / (cfg.baud_rate * 13);
           end
           #(period/2.00);
 
@@ -149,8 +149,12 @@ class uart_monitor extends uvm_monitor;
           //trans.data_frame = cfg.data_width;
           //having start bi
           @(negedge uart_vif.rx);
-          period = 1s / cfg.baud_rate;
-        
+          if(cfg.sampling == uart_configuration::MODE_X16) begin
+            period = 2s / (cfg.baud_rate);
+          end
+          else begin
+            period = 1s / (cfg.baud_rate * 13);
+          end
           #(period/2.00);
 
           //data
