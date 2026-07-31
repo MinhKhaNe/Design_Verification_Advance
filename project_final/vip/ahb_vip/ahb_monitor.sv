@@ -41,7 +41,7 @@ class ahb_monitor extends uvm_monitor;
           repeat(2) @(posedge ahb_vif.HCLK);
           ahb_trans.data      = ahb_vif.HRDATA;
         end
-        `uvm_info("ahb_monitor", $sformatf("Data read from DUT is %0s", ahb_trans.sprint()), UVM_LOW)
+        //`uvm_info("ahb_monitor", $sformatf("Data read from DUT is %0s", ahb_trans.sprint()), UVM_LOW)
 
         a_port.write(ahb_trans);
       end

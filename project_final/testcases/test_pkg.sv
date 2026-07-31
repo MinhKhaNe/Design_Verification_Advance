@@ -9,5 +9,8 @@ package test_pkg;
   `include "base_test.sv"
   `include "reg_test.sv"
   `include "uart_txd_x16_parity.sv"
+  `include "uart_txd_x16_data_frame.sv"
+  `include "uart_txd_x16_stop_bit.sv"
+  `include "uart_txd_x16_baud_rate.sv"
 
 endpackage

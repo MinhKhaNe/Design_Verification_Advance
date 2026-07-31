@@ -71,19 +71,19 @@ class dut_scoreboard extends uvm_scoreboard;
       `uvm_info(get_type_name(), $sformatf("\n\n=====[UART TXD] Data comparison =====\n"), UVM_LOW)
 
       if(act.data != exp.data) begin
-        `uvm_error(get_type_name(), $sformatf("\n===== FAILED!!! Expected value is 0x%0h, Actual data is 0x%0h =====",exp.data,act.data))
+        `uvm_error(get_type_name(), $sformatf("\n=====[DATA FRAME: %d] FAILED!!! Expected value is 0x%0h, Actual data is 0x%0h =====",cfg.data_width, exp.data,act.data))
       end
       else begin
-        `uvm_info(get_type_name(), $sformatf("\n===== PASSED SUCCESSFULLY!!! ====="), UVM_LOW)
+        `uvm_info(get_type_name(), $sformatf("\n=====[DATA FRAME: %d] PASSED SUCCESSFULLY!!! =====", cfg.data_width), UVM_LOW)
       end
 
       `uvm_info(get_type_name(), $sformatf("\n\n=====[UART TXD] Parity comparison =====\n"), UVM_LOW)   
 
       if(act.parity != exp.parity) begin
-        `uvm_error(get_type_name(), $sformatf("\n===== FAILED!!! Expected parity is %b, Actual parity is %b =====",exp.parity, act.parity))
+        `uvm_error(get_type_name(), $sformatf("\n=====[PARITY MODE: %b] FAILED!!! Expected parity is %b, Actual parity is %b =====",cfg.parity_mode, exp.parity, act.parity))
       end
       else begin
-        `uvm_info(get_type_name(), $sformatf("\n===== PASSED SUCCESSFULLY!!! ====="), UVM_LOW)
+        `uvm_info(get_type_name(), $sformatf("\n=====[PARITY MODE: %b] PASSED SUCCESSFULLY!!! =====", cfg.parity_mode), UVM_LOW)
       end
 
 

@@ -91,11 +91,11 @@ class uart_monitor extends uvm_monitor;
 
         @(negedge uart_vif.rx);
         T1 = $realtime;
-        period = 1s/cfg.baud_rate;
+        period = 2s/cfg.baud_rate;
         @(posedge uart_vif.rx);
         T2 = $realtime;
 
-        `uvm_info(get_type_name(), $sformatf("\n===== Baud rate actual is %d, Baud rate expected is %d =====",(1s / (T2-T1)), cfg.baud_rate ), UVM_LOW)
+        `uvm_info(get_type_name(), $sformatf("\n===== Baud rate actual is %d, Baud rate expected is %d =====",(2s / (T2-T1)), cfg.baud_rate ), UVM_LOW)
         
         cfg.baud_rate_enable = 1'b0;
 
@@ -136,7 +136,7 @@ class uart_monitor extends uvm_monitor;
             end
           end
           trans.direction = uart_transaction::TX;
-          `uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
+          //`uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
           uart_a_port.write(trans);
   endtask
 
@@ -153,7 +153,7 @@ class uart_monitor extends uvm_monitor;
             period = 2s / (cfg.baud_rate);
           end
           else begin
-            period = 1s / (cfg.baud_rate * 13);
+            period = 2s / (cfg.baud_rate * 13);
           end
           #(period/2.00);
 
@@ -175,7 +175,7 @@ class uart_monitor extends uvm_monitor;
             end
           end
           trans.direction = uart_transaction::RX;
-          `uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
+          //`uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
           uart_a_port.write(trans);
   endtask
 endclass

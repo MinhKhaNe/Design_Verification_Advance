@@ -1,0 +1,340 @@
+# vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l uart_txd_x16_baud_rate_1.log "+UVM_TESTNAME=uart_txd_x16_baud_rate" "+UVM_VERBOSITY=UVM_HIGH" 
+# Start time: 19:59:47 on Jul 31,2026
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_52072/linux_x86_64_gcc-11/export_tramp.so
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: ./../testcases/uart_txd_x16_parity.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_data_frame.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_stop_bit.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_baud_rate.sv(22): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.6d_1 linux_x86_64 Apr 11 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.uart_if(fast)
+# Loading work.ahb_if(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.uart_register_pkg(fast)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.ahb_pkg(fast)
+# Loading work.uart_regmodel_pkg(fast)
+# Loading work.uart_pkg(fast)
+# Loading work.seq_pkg(fast)
+# Loading work.env_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.ahb_if(fast)
+# Loading work.uart_if(fast)
+# Loading work.uart_top(fast)
+# Loading work.cmsdk_ahb_to_apb(fast)
+# Loading work.apb_decoder(fast)
+# Loading work.uart_fifo(fast)
+# Loading work.uart_transmitter(fast)
+# Loading work.uart_receiver(fast)
+# Loading work.uart_interrupt(fast)
+# Loading work.baud_generator(fast)
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_52072/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_52072/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_52072/linux_x86_64_gcc-11/vsim_auto_compile.so
+#  log -r /*
+# run -all
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(453) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+# UVM_INFO @ 0: reporter [RNTST] Running test uart_txd_x16_baud_rate...
+# UVM_INFO ./../vip/ahb_vip/ahb_agent.sv(20) @ 0: uvm_test_top.env.ahb_agt [ahb_agent] Active agent is configued
+# UVM_INFO ./../vip/uart_vip/uart_agent.sv(25) @ 0: uvm_test_top.env.uart_agt [uart_agent] Active agent is configured
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(579) @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------------------------
+# Name                       Type                                  Size  Value
+# ----------------------------------------------------------------------------
+# uvm_test_top               uart_txd_x16_baud_rate                -     @347 
+#   env                      dut_environment                       -     @371 
+#     ahb_agt                ahb_agent                             -     @393 
+#       driver               ahb_driver                            -     @500 
+#         rsp_port           uvm_analysis_port                     -     @519 
+#         seq_item_port      uvm_seq_item_pull_port                -     @509 
+#       monitor              ahb_monitor                           -     @666 
+#         a_port             uvm_analysis_port                     -     @675 
+#       sequencer            ahb_sequencer                         -     @529 
+#         rsp_export         uvm_analysis_export                   -     @538 
+#         seq_item_export    uvm_seq_item_pull_imp                 -     @656 
+#         arbitration_queue  array                                 0     -    
+#         lock_queue         array                                 0     -    
+#         num_last_reqs      integral                              32    'd1  
+#         num_last_rsps      integral                              32    'd1  
+#     ahb_predictor          uvm_reg_predictor #(ahb_transaction)  -     @411 
+#       bus_in               uvm_analysis_imp                      -     @420 
+#       reg_ap               uvm_analysis_port                     -     @430 
+#     dut_sb                 dut_scoreboard                        -     @384 
+#       ahb_a_export         uvm_analysis_imp_ahb                  -     @695 
+#       uart_a_export        uvm_analysis_imp_uart                 -     @705 
+#     uart_agt               uart_agent                            -     @402 
+#       driver               uart_driver                           -     @721 
+#         rsp_port           uvm_analysis_port                     -     @740 
+#         seq_item_port      uvm_seq_item_pull_port                -     @730 
+#         uart_a_port        uvm_analysis_port                     -     @750 
+#       monitor              uart_monitor                          -     @760 
+#         uart_a_port        uvm_analysis_port                     -     @769 
+#       sequencer            uart_sequencer                        -     @779 
+#         rsp_export         uvm_analysis_export                   -     @788 
+#         seq_item_export    uvm_seq_item_pull_imp                 -     @906 
+#         arbitration_queue  array                                 0     -    
+#         lock_queue         array                                 0     -    
+#         num_last_reqs      integral                              32    'd1  
+#         num_last_rsps      integral                              32    'd1  
+# ----------------------------------------------------------------------------
+# 
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 0: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 0: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 0: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x4 data = 0x36 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 0: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='h36 : updated value = 'h36
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 0: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x8 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 0: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 0: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xc data = 0x20 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 0: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h20 : updated value = 'h20
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0xff kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hff : updated value = 'hff
+# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 1000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from AHB: 0xff
+# ** Error (suppressible): (vsim-8630) ./../vip/uart_vip/uart_monitor.sv(153): Infinity results from division operation.
+# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 2000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from UART: 0x0
+# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 2000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Data comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(77) @ 2000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[DATA FRAME:          0] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(80) @ 2000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Parity comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(86) @ 2000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[PARITY MODE: 00000000000000000000000000000000] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 421000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 421000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 421000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x4 data = 0x36 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 421000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='h36 : updated value = 'h36
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 421000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x8 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 421000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 421000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xc data = 0x20 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 421000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h20 : updated value = 'h20
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 421000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0xff kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 421000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hff : updated value = 'hff
+# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 421000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from AHB: 0xff
+# ** Error (suppressible): (vsim-8630) ./../vip/uart_vip/uart_monitor.sv(153): Infinity results from division operation.
+# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 422000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from UART: 0x0
+# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 422000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Data comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(77) @ 422000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[DATA FRAME:          0] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(80) @ 422000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Parity comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(86) @ 422000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[PARITY MODE: 00000000000000000000000000000000] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 841000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 841000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 841000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x4 data = 0x36 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 841000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='h36 : updated value = 'h36
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 841000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x8 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 841000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 841000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xc data = 0x20 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 841000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h20 : updated value = 'h20
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 841000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0xff kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 841000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hff : updated value = 'hff
+# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 841000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from AHB: 0xff
+# ** Error (suppressible): (vsim-8630) ./../vip/uart_vip/uart_monitor.sv(153): Infinity results from division operation.
+# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 842000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from UART: 0x0
+# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 842000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Data comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(77) @ 842000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[DATA FRAME:          0] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(80) @ 842000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Parity comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(86) @ 842000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[PARITY MODE: 00000000000000000000000000000000] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1261000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1261000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1261000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x4 data = 0x36 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1261000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='h36 : updated value = 'h36
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1262000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x8 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1262000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1262000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xc data = 0x20 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1262000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h20 : updated value = 'h20
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1262000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0xff kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1262000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hff : updated value = 'hff
+# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 1262000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from AHB: 0xff
+# ** Error (suppressible): (vsim-8630) ./../vip/uart_vip/uart_monitor.sv(153): Infinity results from division operation.
+# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 1262000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from UART: 0x0
+# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 1262000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Data comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(77) @ 1262000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[DATA FRAME:          0] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(80) @ 1262000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Parity comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(86) @ 1262000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[PARITY MODE: 00000000000000000000000000000000] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1682000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1682000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1682000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x4 data = 0x36 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1682000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='h36 : updated value = 'h36
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1682000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x8 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1682000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1682000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xc data = 0x20 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1682000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h20 : updated value = 'h20
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1682000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0xff kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1682000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hff : updated value = 'hff
+# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 1682000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from AHB: 0xff
+# ** Error (suppressible): (vsim-8630) ./../vip/uart_vip/uart_monitor.sv(153): Infinity results from division operation.
+# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 1683000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from UART: 0x0
+# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 1683000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Data comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(77) @ 1683000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[DATA FRAME:          0] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(80) @ 1683000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Parity comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(86) @ 1683000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[PARITY MODE: 00000000000000000000000000000000] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 2102000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 2102000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 2102000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x4 data = 0x36 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 2102000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='h36 : updated value = 'h36
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 2102000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x8 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 2102000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 2102000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xc data = 0x20 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 2102000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h20 : updated value = 'h20
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 2103000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0xff kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 2103000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hff : updated value = 'hff
+# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 2103000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from AHB: 0xff
+# ** Error (suppressible): (vsim-8630) ./../vip/uart_vip/uart_monitor.sv(153): Infinity results from division operation.
+# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 2103000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from UART: 0x0
+# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 2103000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Data comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(77) @ 2103000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[DATA FRAME:          0] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(80) @ 2103000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Parity comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(86) @ 2103000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[PARITY MODE: 00000000000000000000000000000000] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 2523000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 2523000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 2523000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x4 data = 0x36 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 2523000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLL: value='h36 : updated value = 'h36
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 2523000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x8 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 2523000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.DLH: value='h0 : updated value = 'h0
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 2523000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0xc data = 0x20 kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 2523000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h20 : updated value = 'h20
+# UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 2523000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0xff kind = UVM_WRITE status = UVM_IS_OK
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 2523000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hff : updated value = 'hff
+# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 2523000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from AHB: 0xff
+# ** Error (suppressible): (vsim-8630) ./../vip/uart_vip/uart_monitor.sv(153): Infinity results from division operation.
+# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 2523000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# ===== Captured data from UART: 0x0
+# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 2523000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Data comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(77) @ 2523000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[DATA FRAME:          0] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(80) @ 2523000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# 
+# =====[UART TXD] Parity comparison =====
+# 
+# UVM_INFO ./../tb/dut_scoreboard.sv(86) @ 2523000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[PARITY MODE: 00000000000000000000000000000000] PASSED SUCCESSFULLY!!! =====
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 2943000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ./../testcases/base_test.sv(60) @ 2943000: uvm_test_top [uart_txd_x16_baud_rate] -----------------------------------
+# UVM_INFO ./../testcases/base_test.sv(61) @ 2943000: uvm_test_top [uart_txd_x16_baud_rate] ---   PASSED SUCCESSFULLY!!!    ---
+# UVM_INFO ./../testcases/base_test.sv(62) @ 2943000: uvm_test_top [uart_txd_x16_baud_rate] -----------------------------------
+# UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 2943000: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  123
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [NO_DPI_TSTNAME]     1
+# [REG_PREDICT]    35
+# [RNTST]     1
+# [SCOREBOARD]    14
+# [TEST_DONE]     1
+# [UVM/COMP/NAMECHECK]     1
+# [UVM/RELNOTES]     1
+# [UVMTOP]     1
+# [ahb_agent]     1
+# [dut_scoreboard]    28
+# [uart_agent]     1
+# [uart_reg2ahb_adapter]    35
+# [uart_txd_x16_baud_rate]     3
+# 
+# ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 2942950 ns  Iteration: 68  Instance: /testbench
+# End time: 19:59:51 on Jul 31,2026, Elapsed time: 0:00:04
+# Errors: 7, Warnings: 4
