@@ -22,10 +22,11 @@ class uart_txd_x16_parity extends base_test;
                             data_width        == 5;
                             num_of_stop_bit   == 1;
                             baud_rate         == 115200;
-                            baud_rate_enable  == 1'b0;
-                            parity_enable     == 1'b0;
+                            //baud_rate_enable  == 1'b0;
+                            //parity_enable     == 1'b0;
                             };
-
+      cfg.baud_rate_enable = 1'b0;
+      cfg.parity_enable = 1'b0;
       parity_seq      = parity_x16_chk_sequence::type_id::create("parity_seq", this);
       parity_seq.cfg  = cfg;
       parity_seq.start(env.ahb_agt.sequencer);

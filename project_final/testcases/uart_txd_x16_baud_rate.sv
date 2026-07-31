@@ -24,10 +24,13 @@ class uart_txd_x16_baud_rate extends base_test;
                             data_width        == 5;
                             num_of_stop_bit   == 1;
                             baud_rate         == baud_rate_a[i];
-                            baud_rate_enable  == 1'b1;
-                            parity_enable     == 1'b0;
+                            //baud_rate_enable  == 1'b1;
+                            //parity_enable     == 1'b0;
                             };
 
+      cfg.parity_enable     = 1'b0;
+      cfg.baud_rate_enable  = 1'b1;
+      `uvm_info(get_type_name(), $sformatf("%s", cfg.sprint()), UVM_LOW)
       br_seq      = baud_rate_x16_chk_sequence::type_id::create("df_seq", this);
       br_seq.cfg  = cfg;
       br_seq.start(env.ahb_agt.sequencer);

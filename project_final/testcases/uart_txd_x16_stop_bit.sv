@@ -25,7 +25,8 @@ class uart_txd_x16_stop_bit extends base_test;
                             baud_rate_enable  == 1'b0;
                             parity_enable     == 1'b0;
                             };
-
+      cfg.baud_rate_enable = 1'b0;
+      cfg.parity_enable = 1'b0;
       sb_seq      = stop_bit_x16_chk_sequence::type_id::create("df_seq", this);
       sb_seq.cfg  = cfg;
       sb_seq.start(env.ahb_agt.sequencer);

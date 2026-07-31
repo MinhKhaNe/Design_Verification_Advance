@@ -25,6 +25,9 @@ class uart_txd_x16_data_frame extends base_test;
                             baud_rate_enable  == 1'b0;
                             parity_enable     == 1'b0;
                             };
+          
+      cfg.baud_rate_enable = 1'b0;
+      cfg.parity_enable = 1'b0;
 
       df_seq      = data_frame_x16_chk_sequence::type_id::create("df_seq", this);
       df_seq.cfg  = cfg;
