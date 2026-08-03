@@ -69,6 +69,8 @@ class dut_scoreboard extends uvm_scoreboard;
       exp   = expected_txd_q.pop_front();
 
       `uvm_info(get_type_name(), $sformatf("\n\n=====[UART TXD] Data comparison =====\n"), UVM_LOW)
+      `uvm_info(get_type_name(), $sformatf("%s", act.sprint()), UVM_LOW)
+      `uvm_info(get_type_name(), $sformatf("%s", exp.sprint()), UVM_LOW)
 
       if(act.data != exp.data) begin
         `uvm_error(get_type_name(), $sformatf("\n=====[DATA FRAME: %d] FAILED!!! Expected value is 0x%0h, Actual data is 0x%0h =====",cfg.data_width, exp.data,act.data))

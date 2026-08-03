@@ -1,11 +1,7 @@
 # vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l uart_txd_x16_baud_rate_1.log "+UVM_TESTNAME=uart_txd_x16_baud_rate" "+UVM_VERBOSITY=UVM_HIGH" 
-# Start time: 20:34:40 on Jul 31,2026
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_29024/linux_x86_64_gcc-11/export_tramp.so
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: ./../testcases/uart_txd_x16_parity.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
-# ** Warning: ./../testcases/uart_txd_x16_data_frame.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
-# ** Warning: ./../testcases/uart_txd_x16_stop_bit.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
-# ** Warning: ./../testcases/uart_txd_x16_baud_rate.sv(22): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# Start time: 13:14:23 on Aug 03,2026
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9398/linux_x86_64_gcc-11/export_tramp.so
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 10.6d_1 linux_x86_64 Apr 11 2018
 # //
@@ -45,9 +41,9 @@
 # Loading work.uart_receiver(fast)
 # Loading work.uart_interrupt(fast)
 # Loading work.baud_generator(fast)
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_29024/linux_x86_64_gcc-5.3.0/exportwrapper.c
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_29024/linux_x86_64_gcc-11/exportwrapper.c
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_29024/linux_x86_64_gcc-11/vsim_auto_compile.so
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9398/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9398/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9398/linux_x86_64_gcc-11/vsim_auto_compile.so
 #  log -r /*
 # run -all
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
@@ -321,5 +317,5 @@
 # 
 # ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
 #    Time: 2942950 ns  Iteration: 68  Instance: /testbench
-# End time: 20:34:44 on Jul 31,2026, Elapsed time: 0:00:04
-# Errors: 0, Warnings: 4
+# End time: 13:14:25 on Aug 03,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

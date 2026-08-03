@@ -134,6 +134,9 @@ class uart_monitor extends uvm_monitor;
             if(uart_vif.tx != 1'b1) begin
               `uvm_error(get_type_name(), "===== stop bit error detected =====")
             end
+            else begin
+              trans.stop_bit = uart_vif.tx;
+            end
           end
           trans.direction = uart_transaction::TX;
           //`uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
@@ -172,6 +175,9 @@ class uart_monitor extends uvm_monitor;
             #(period);
             if(uart_vif.rx != 1'b1) begin
               `uvm_error(get_type_name(), "===== stop bit error detected =====")
+            end
+            else begin
+              trans.stop_bit = uart_vif.rx;
             end
           end
           trans.direction = uart_transaction::RX;
