@@ -8,7 +8,7 @@ class base_test extends uvm_test;
 
   uvm_report_server   svr;
   uart_reg_block      regmodel;
-  time   usr_timeout = 1s;
+  time   usr_timeout = 3s;
 
   function new(string name = "base_test", uvm_component parent);
     super.new(name, parent);

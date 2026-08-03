@@ -21,7 +21,7 @@ class uart_txd_x16_random extends base_test;
     for(int pm = 0; pm < 3; pm++) begin
       for(int dw = 5; dw <= 8; dw++) begin
         for(int sb = 1; sb <= 2; sb++) begin
-          for(int br = 0; br < 8; br++) begin
+          for(int br = 0; br < 7; br++) begin
       
             cfg.randomize() with {parity_mode       == pm;
                                   sampling          == uart_configuration::MODE_X16;

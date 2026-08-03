@@ -1,0 +1,14 @@
+###########################################################
+####               ICTC Regression Report              ####
+###########################################################
+Total testcase run: 3
+Passed            : 0
+Failed            : 0
+Unknown           : 0
+Used time         : 1m 44s
+-----------------------------------------------------------
+Run log detail:
+log/uart_txd_x16_random_1.log => Unknown
+log/uart_txd_x16_random_647922.log => Unknown
+log/uart_tx_x16_random_1.log => Unknown
+-----------------------------------------------------------
