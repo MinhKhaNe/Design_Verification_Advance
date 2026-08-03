@@ -12,5 +12,6 @@ package test_pkg;
   `include "uart_txd_x16_data_frame.sv"
   `include "uart_txd_x16_stop_bit.sv"
   `include "uart_txd_x16_baud_rate.sv"
+  `include "uart_txd_x16_random.sv"
 
 endpackage

@@ -11,5 +11,6 @@ package seq_pkg;
   `include "data_frame_x16_chk_sequence.sv"
   `include "stop_bit_x16_chk_sequence.sv"
   `include "baud_rate_x16_chk_sequence.sv"
+  `include "random_x16_chk_sequence.sv"
 
 endpackage

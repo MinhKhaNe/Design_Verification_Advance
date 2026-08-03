@@ -58,9 +58,6 @@ class uart_monitor extends uvm_monitor;
     
     time period;
 
-      //1st
-      if(!cfg.baud_rate_enable) begin
-
       fork    
   
         forever begin
@@ -81,8 +78,7 @@ class uart_monitor extends uvm_monitor;
         end
       
       join        
-      
-      end    
+          
   endtask
 
   virtual task check_baud_rate();

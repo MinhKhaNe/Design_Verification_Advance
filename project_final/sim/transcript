@@ -20,4 +20,4 @@
 # 
 # stdin: <EOF>
 add wave -position end vsim:/testbench/uart_vif/*
-find drivers -source -time {2568982 ns} -cause vsim:/testbench/uart_vif/rx
+add wave -position end vsim:/testbench/u_dut/*

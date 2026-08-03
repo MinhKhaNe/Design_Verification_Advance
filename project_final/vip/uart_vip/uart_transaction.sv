@@ -7,12 +7,15 @@ class uart_transaction extends uvm_sequence_item;
     RX
   } direction_e;
 
-  rand  bit   [8:0]   data;
-        bit           parity;
-        bit   [1:0]   stop_bit;
-        bit           baud_rate;
-
+  rand  bit   [8:0]     data;
+        bit             parity;
+        bit   [1:0]     stop_bit;
+        int   unsigned  baud_rate;
   direction_e  direction;
+
+  constraint baud_rate_c {
+    baud_rate inside {2400, 4800, 9600, 19200, 38400, 7600, 115200};
+  }
 
   `uvm_object_utils_begin (uart_transaction)
     `uvm_field_enum   (direction_e, direction,  UVM_ALL_ON | UVM_HEX)

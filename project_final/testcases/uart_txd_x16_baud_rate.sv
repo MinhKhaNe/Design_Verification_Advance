@@ -35,7 +35,7 @@ class uart_txd_x16_baud_rate extends base_test;
       br_seq.cfg  = cfg;
       br_seq.start(env.ahb_agt.sequencer);
 
-      #420us;
+      #10ms;
     end
     phase.drop_objection(this);
   endtask
