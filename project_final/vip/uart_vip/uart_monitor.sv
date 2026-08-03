@@ -74,14 +74,15 @@ class uart_monitor extends uvm_monitor;
           UART_CFG_GROUP.sample();
       
         end
-      join        
-      end
-      else begin
-        check_baud_rate();
-        UART_CFG_GROUP.sample();
-      end
 
-    
+        forever begin
+          check_baud_rate();
+          UART_CFG_GROUP.sample();
+        end
+      
+      join        
+      
+      end    
   endtask
 
   virtual task check_baud_rate();
@@ -181,7 +182,7 @@ class uart_monitor extends uvm_monitor;
             end
           end
           trans.direction = uart_transaction::RX;
-          //`uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
+          `uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
           uart_a_port.write(trans);
   endtask
 endclass

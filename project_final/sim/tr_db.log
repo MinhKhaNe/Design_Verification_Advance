@@ -1,45 +1,5 @@
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
   CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1004}
   CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1004}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
   CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1004}
   CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1004}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:parity_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1002}
-  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1004}
+  CREATE_STREAM @0 {NAME:df_seq T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1003}

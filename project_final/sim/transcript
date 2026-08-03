@@ -19,7 +19,5 @@
 # 
 # 
 # stdin: <EOF>
-add wave -position end vsim:/testbench/u_dut/*
-find drivers -source -time {17401 ns} -cause vsim:/testbench/u_dut/uart_txd
-find drivers -source -time {16278 ns} -cause vsim:/testbench/u_dut/uart_txd
-find drivers -source -time {558945 ns} -cause vsim:/testbench/u_dut/uart_txd
+add wave -position end vsim:/testbench/uart_vif/*
+find drivers -source -time {2568982 ns} -cause vsim:/testbench/uart_vif/rx

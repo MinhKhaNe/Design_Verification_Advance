@@ -27,7 +27,7 @@ class dut_environment extends uvm_env;
     if(!uvm_config_db#(uart_configuration)::get(this, "", "cfg", cfg))
       `uvm_fatal(get_type_name(), $sformatf("FAILED to get uart_config from uvm_config_db"))
 
-    cfg             = uart_configuration::type_id::create("cfg", this);
+    //cfg             = uart_configuration::type_id::create("cfg", this);
     dut_sb          = dut_scoreboard::type_id::create("dut_sb", this); 
 
     ahb_agt         = ahb_agent::type_id::create("ahb_agt", this);

@@ -1,7 +1,11 @@
 # vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l uart_txd_x16_baud_rate_1.log "+UVM_TESTNAME=uart_txd_x16_baud_rate" "+UVM_VERBOSITY=UVM_HIGH" 
-# Start time: 13:14:23 on Aug 03,2026
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9398/linux_x86_64_gcc-11/export_tramp.so
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 13:38:33 on Aug 03,2026
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_63003/linux_x86_64_gcc-11/export_tramp.so
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: ./../testcases/uart_txd_x16_parity.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_data_frame.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_stop_bit.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_baud_rate.sv(22): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
 # //  Questa Sim-64
 # //  Version 10.6d_1 linux_x86_64 Apr 11 2018
 # //
@@ -41,9 +45,9 @@
 # Loading work.uart_receiver(fast)
 # Loading work.uart_interrupt(fast)
 # Loading work.baud_generator(fast)
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9398/linux_x86_64_gcc-5.3.0/exportwrapper.c
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9398/linux_x86_64_gcc-11/exportwrapper.c
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9398/linux_x86_64_gcc-11/vsim_auto_compile.so
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_63003/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_63003/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_63003/linux_x86_64_gcc-11/vsim_auto_compile.so
 #  log -r /*
 # run -all
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
@@ -78,35 +82,35 @@
 # ----------------------------------------------------------------------------
 # uvm_test_top               uart_txd_x16_baud_rate                -     @347 
 #   env                      dut_environment                       -     @371 
-#     ahb_agt                ahb_agent                             -     @393 
-#       driver               ahb_driver                            -     @500 
-#         rsp_port           uvm_analysis_port                     -     @519 
-#         seq_item_port      uvm_seq_item_pull_port                -     @509 
-#       monitor              ahb_monitor                           -     @666 
-#         a_port             uvm_analysis_port                     -     @675 
-#       sequencer            ahb_sequencer                         -     @529 
-#         rsp_export         uvm_analysis_export                   -     @538 
-#         seq_item_export    uvm_seq_item_pull_imp                 -     @656 
+#     ahb_agt                ahb_agent                             -     @392 
+#       driver               ahb_driver                            -     @499 
+#         rsp_port           uvm_analysis_port                     -     @518 
+#         seq_item_port      uvm_seq_item_pull_port                -     @508 
+#       monitor              ahb_monitor                           -     @665 
+#         a_port             uvm_analysis_port                     -     @674 
+#       sequencer            ahb_sequencer                         -     @528 
+#         rsp_export         uvm_analysis_export                   -     @537 
+#         seq_item_export    uvm_seq_item_pull_imp                 -     @655 
 #         arbitration_queue  array                                 0     -    
 #         lock_queue         array                                 0     -    
 #         num_last_reqs      integral                              32    'd1  
 #         num_last_rsps      integral                              32    'd1  
-#     ahb_predictor          uvm_reg_predictor #(ahb_transaction)  -     @411 
-#       bus_in               uvm_analysis_imp                      -     @420 
-#       reg_ap               uvm_analysis_port                     -     @430 
-#     dut_sb                 dut_scoreboard                        -     @384 
-#       ahb_a_export         uvm_analysis_imp_ahb                  -     @695 
-#       uart_a_export        uvm_analysis_imp_uart                 -     @705 
-#     uart_agt               uart_agent                            -     @402 
-#       driver               uart_driver                           -     @721 
-#         rsp_port           uvm_analysis_port                     -     @740 
-#         seq_item_port      uvm_seq_item_pull_port                -     @730 
-#         uart_a_port        uvm_analysis_port                     -     @750 
-#       monitor              uart_monitor                          -     @760 
-#         uart_a_port        uvm_analysis_port                     -     @769 
-#       sequencer            uart_sequencer                        -     @779 
-#         rsp_export         uvm_analysis_export                   -     @788 
-#         seq_item_export    uvm_seq_item_pull_imp                 -     @906 
+#     ahb_predictor          uvm_reg_predictor #(ahb_transaction)  -     @410 
+#       bus_in               uvm_analysis_imp                      -     @419 
+#       reg_ap               uvm_analysis_port                     -     @429 
+#     dut_sb                 dut_scoreboard                        -     @383 
+#       ahb_a_export         uvm_analysis_imp_ahb                  -     @694 
+#       uart_a_export        uvm_analysis_imp_uart                 -     @704 
+#     uart_agt               uart_agent                            -     @401 
+#       driver               uart_driver                           -     @720 
+#         rsp_port           uvm_analysis_port                     -     @739 
+#         seq_item_port      uvm_seq_item_pull_port                -     @729 
+#         uart_a_port        uvm_analysis_port                     -     @749 
+#       monitor              uart_monitor                          -     @759 
+#         uart_a_port        uvm_analysis_port                     -     @768 
+#       sequencer            uart_sequencer                        -     @778 
+#         rsp_export         uvm_analysis_export                   -     @787 
+#         seq_item_export    uvm_seq_item_pull_imp                 -     @905 
 #         arbitration_queue  array                                 0     -    
 #         lock_queue         array                                 0     -    
 #         num_last_reqs      integral                              32    'd1  
@@ -164,6 +168,8 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 421000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hff : updated value = 'hff
 # UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 421000: uvm_test_top.env.dut_sb [SCOREBOARD] 
 # ===== Captured data from AHB: 0xff
+# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(99) @ 652000: uvm_test_top.env.uart_agt.monitor [uart_monitor] 
+# ===== Baud rate actual is       3339, Baud rate expected is       4800 =====
 # UVM_INFO ./../testcases/uart_txd_x16_baud_rate.sv(33) @ 841000: uvm_test_top [uart_txd_x16_baud_rate] --------------------------------------------------------------
 # Name                Type                Size  Value           
 # --------------------------------------------------------------
@@ -289,6 +295,8 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 2523000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hff : updated value = 'hff
 # UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 2523000: uvm_test_top.env.dut_sb [SCOREBOARD] 
 # ===== Captured data from AHB: 0xff
+# UVM_INFO ./../vip/uart_vip/uart_monitor.sv(99) @ 2657000: uvm_test_top.env.uart_agt.monitor [uart_monitor] 
+# ===== Baud rate actual is     117647, Baud rate expected is     115200 =====
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 2943000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # UVM_INFO ./../testcases/base_test.sv(60) @ 2943000: uvm_test_top [uart_txd_x16_baud_rate] -----------------------------------
 # UVM_INFO ./../testcases/base_test.sv(61) @ 2943000: uvm_test_top [uart_txd_x16_baud_rate] ---   PASSED SUCCESSFULLY!!!    ---
@@ -297,7 +305,7 @@
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   95
+# UVM_INFO :   97
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
@@ -312,10 +320,11 @@
 # [UVMTOP]     1
 # [ahb_agent]     1
 # [uart_agent]     1
+# [uart_monitor]     2
 # [uart_reg2ahb_adapter]    35
 # [uart_txd_x16_baud_rate]    10
 # 
 # ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
 #    Time: 2942950 ns  Iteration: 68  Instance: /testbench
-# End time: 13:14:25 on Aug 03,2026, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
+# End time: 13:38:38 on Aug 03,2026, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 4
