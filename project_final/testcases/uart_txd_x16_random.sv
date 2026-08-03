@@ -31,7 +31,7 @@ class uart_txd_x16_random extends base_test;
                             };
 
             cfg.parity_enable     = 1'b0;
-            cfg.baud_rate_enable  = 1'b1;
+            cfg.baud_rate_enable  = 1'b0;
             `uvm_info(get_type_name(), $sformatf("%s", cfg.sprint()), UVM_LOW)
             random_seq      = random_x16_chk_sequence::type_id::create("random_seq", this);
             random_seq.cfg  = cfg;

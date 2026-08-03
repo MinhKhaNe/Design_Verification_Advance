@@ -136,6 +136,7 @@ class uart_monitor extends uvm_monitor;
             end
           end
           trans.direction = uart_transaction::TX;
+          trans.baud_rate = cfg.baud_rate;
           //`uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
           uart_a_port.write(trans);
   endtask
@@ -178,7 +179,8 @@ class uart_monitor extends uvm_monitor;
             end
           end
           trans.direction = uart_transaction::RX;
-          `uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
+          trans.baud_rate = cfg.baud_rate;
+          //`uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
           uart_a_port.write(trans);
   endtask
 endclass

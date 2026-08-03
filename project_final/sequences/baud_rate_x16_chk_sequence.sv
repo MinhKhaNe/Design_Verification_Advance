@@ -37,8 +37,8 @@ class baud_rate_x16_chk_sequence extends uvm_sequence;
         write_ahb(DLH, 32'h05);
       end
       else if(cfg.baud_rate == 9600) begin
-        write_ahb(DLL, 32'h16);
-        write_ahb(DLH, 32'h05);
+        write_ahb(DLL, 32'h8B);
+        write_ahb(DLH, 32'h02);
       end
       else if(cfg.baud_rate == 19200) begin
         write_ahb(DLL, 32'h45);

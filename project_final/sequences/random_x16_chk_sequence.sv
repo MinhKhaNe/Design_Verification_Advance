@@ -37,8 +37,8 @@ class random_x16_chk_sequence extends uvm_sequence;
         write_ahb(DLH, 32'h05);
       end
       else if(cfg.baud_rate == 9600) begin
-        write_ahb(DLL, 32'h16);
-        write_ahb(DLH, 32'h05);
+        write_ahb(DLL, 32'h8B);
+        write_ahb(DLH, 32'h02);
       end
       else if(cfg.baud_rate == 19200) begin
         write_ahb(DLL, 32'h45);
@@ -62,7 +62,7 @@ class random_x16_chk_sequence extends uvm_sequence;
 
       //EPS, PEN
       case(cfg.parity_mode)
-        uart_configuration::UART_PARITY_NONE: lcr[3]    = 1'b0;
+        uart_configuration::UART_PARITY_NONE: lcr[4:3]  = 2'b00;
         uart_configuration::UART_PARITY_ODD:  lcr[4:3]  = 2'b01;
         uart_configuration::UART_PARITY_EVEN: lcr[4:3]  = 2'b11;
       endcase
