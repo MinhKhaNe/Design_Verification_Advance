@@ -18,13 +18,18 @@ class dut_scoreboard extends uvm_scoreboard;
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
+
+    $display("ENTER SCOREBOARD BUILD PHASE");  
+
     ahb_a_export  = new("ahb_a_export", this);
     uart_a_export = new("uart_a_export", this);
 
     if(!uvm_config_db#(uart_configuration)::get(this, "", "cfg", cfg))
       `uvm_fatal("CFG", "CANNOT get uart_configuration")
+    else
+      `uvm_info("CFG", "GET SUCCESSFULLY!!!!", UVM_NONE)
 
-    `uvm_info(get_type_name(), $sformatf("%s",cfg.sprint()), UVM_LOW)
+    `uvm_info(get_type_name(), $sformatf("%s",cfg.sprint()), UVM_NONE)
   endfunction
 
   virtual task run_phase(uvm_phase phase);
@@ -32,25 +37,47 @@ class dut_scoreboard extends uvm_scoreboard;
   endtask
 
   function void write_ahb(ahb_transaction trans);
-    bit [7:0] data;
+    bit [7:0]   data;
+    bit [31:0]  lcr;
+    int         data_width;
+    int         stop_bit;
+    bit [1:0]   parity_mode;
     uart_transaction exp;
+
+    if((trans.xact_type == ahb_transaction::WRITE) && (trans.addr == 10'h00C)) begin
+      lcr = trans.data;
+      if(lcr[3] == 1'b0) begin
+        parity_mode = 2'b00;  //NONE
+      end
+      else begin
+        parity_mode = lcr[4] ? 2'b10 : 2'b01; //EVEN : ODD
+      end
+
+      case(lcr[1:0])
+        2'b11: data_width = 8;
+        2'b10: data_width = 7;
+        2'b01: data_width = 6;
+        2'b00: data_width = 5;
+      endcase
+
+      stop_bit = lcr[2] ? 2 : 1;
+    end
 
     if((trans.xact_type == ahb_transaction::WRITE) && (trans.addr == 10'h018)) begin
       exp   = uart_transaction::type_id::create("exp");
       //Assign data
-      data      = trans.data & ((1 << cfg.data_width) - 1);
+      data      = trans.data & ((1 << data_width) - 1);
       exp.data  = data;
       //Assign Parity
-      if(cfg.parity_mode != uart_configuration::UART_PARITY_NONE) begin
-        exp.parity  = parity_calculation(data);
-      end
+      exp.parity  = parity_calculation(data, parity_mode);
       //Assign stop bit
-      exp.stop_bit  = cfg.num_of_stop_bit;
+      exp.stop_bit  = stop_bit;
       //Push transaction to queue
       expected_txd_q.push_back(exp);      
 
       `uvm_info("SCOREBOARD", $sformatf("\n===== Captured data from AHB: 0x%0h",trans.data), UVM_LOW)
     end
+    
     compare_txd();
   endfunction
 
@@ -94,11 +121,11 @@ class dut_scoreboard extends uvm_scoreboard;
     end
   endfunction
 
-  function bit parity_calculation(bit [7:0] data);
-    case(cfg.parity_mode)
-      uart_configuration::UART_PARITY_NONE: return 0;
-      uart_configuration::UART_PARITY_EVEN:  return ^(data);
-      uart_configuration::UART_PARITY_ODD:   return ~(^data);
+  function bit parity_calculation(bit [7:0] data, bit [1:0] parity_mode);
+    case(parity_mode)
+      2'b00: return 0;
+      2'b10:  return ^(data);
+      2'b01:   return ~(^data);
     endcase
   endfunction
 

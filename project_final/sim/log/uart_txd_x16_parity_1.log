@@ -1,7 +1,12 @@
 # vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l uart_txd_x16_parity_1.log "+UVM_TESTNAME=uart_txd_x16_parity" "+UVM_VERBOSITY=UVM_HIGH" 
-# Start time: 21:05:31 on Aug 03,2026
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9567/linux_x86_64_gcc-11/export_tramp.so
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 13:37:14 on Aug 04,2026
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_63670/linux_x86_64_gcc-11/export_tramp.so
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: ./../testcases/uart_txd_x16_parity.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_data_frame.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_stop_bit.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_baud_rate.sv(22): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_random.sv(26): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
 # //  Questa Sim-64
 # //  Version 10.6d_1 linux_x86_64 Apr 11 2018
 # //
@@ -41,9 +46,9 @@
 # Loading work.uart_receiver(fast)
 # Loading work.uart_interrupt(fast)
 # Loading work.baud_generator(fast)
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9567/linux_x86_64_gcc-5.3.0/exportwrapper.c
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9567/linux_x86_64_gcc-11/exportwrapper.c
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_9567/linux_x86_64_gcc-11/vsim_auto_compile.so
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_63670/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_63670/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_63670/linux_x86_64_gcc-11/vsim_auto_compile.so
 #  log -r /*
 # run -all
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
@@ -71,6 +76,21 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(453) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
 # UVM_INFO @ 0: reporter [RNTST] Running test uart_txd_x16_parity...
 # UVM_INFO ./../vip/ahb_vip/ahb_agent.sv(20) @ 0: uvm_test_top.env.ahb_agt [ahb_agent] Active agent is configued
+# ENTER SCOREBOARD BUILD PHASE
+# UVM_INFO ./../tb/dut_scoreboard.sv(30) @ 0: uvm_test_top.env.dut_sb [CFG] GET SUCCESSFULLY!!!!
+# UVM_INFO ./../tb/dut_scoreboard.sv(32) @ 0: uvm_test_top.env.dut_sb [dut_scoreboard] --------------------------------------------------------------
+# Name                Type                Size  Value           
+# --------------------------------------------------------------
+# cfg                 uart_configuration  -     @360            
+#   parity_mode       parity_mode_e       32    UART_PARITY_NONE
+#   sampling          sampling_mode_e     32    MODE_X16        
+#   data_width        integral            32    'h0             
+#   num_of_stop_bit   integral            32    'h0             
+#   baud_rate         integral            32    'h0             
+#   baud_rate_enable  integral            1     'h0             
+#   parity_enable     integral            1     'h0             
+# --------------------------------------------------------------
+# 
 # UVM_INFO ./../vip/uart_vip/uart_agent.sv(25) @ 0: uvm_test_top.env.uart_agt [uart_agent] Active agent is configured
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(579) @ 0: reporter [UVMTOP] UVM testbench topology:
 # ----------------------------------------------------------------------------
@@ -98,15 +118,15 @@
 #       ahb_a_export         uvm_analysis_imp_ahb                  -     @694 
 #       uart_a_export        uvm_analysis_imp_uart                 -     @704 
 #     uart_agt               uart_agent                            -     @401 
-#       driver               uart_driver                           -     @720 
-#         rsp_port           uvm_analysis_port                     -     @739 
-#         seq_item_port      uvm_seq_item_pull_port                -     @729 
-#         uart_a_port        uvm_analysis_port                     -     @749 
-#       monitor              uart_monitor                          -     @759 
-#         uart_a_port        uvm_analysis_port                     -     @768 
-#       sequencer            uart_sequencer                        -     @778 
-#         rsp_export         uvm_analysis_export                   -     @787 
-#         seq_item_export    uvm_seq_item_pull_imp                 -     @905 
+#       driver               uart_driver                           -     @724 
+#         rsp_port           uvm_analysis_port                     -     @743 
+#         seq_item_port      uvm_seq_item_pull_port                -     @733 
+#         uart_a_port        uvm_analysis_port                     -     @753 
+#       monitor              uart_monitor                          -     @763 
+#         uart_a_port        uvm_analysis_port                     -     @772 
+#       sequencer            uart_sequencer                        -     @782 
+#         rsp_export         uvm_analysis_export                   -     @791 
+#         seq_item_export    uvm_seq_item_pull_imp                 -     @909 
 #         arbitration_queue  array                                 0     -    
 #         lock_queue         array                                 0     -    
 #         num_last_reqs      integral                              32    'd1  
@@ -124,21 +144,21 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 0: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h20 : updated value = 'h20
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 1000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0x33f9e439 kind = UVM_WRITE status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 1000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h33f9e439 : updated value = 'h39
-# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 1000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# UVM_INFO ./../tb/dut_scoreboard.sv(78) @ 1000: uvm_test_top.env.dut_sb [SCOREBOARD] 
 # ===== Captured data from AHB: 0x33f9e439
-# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 112000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# UVM_INFO ./../tb/dut_scoreboard.sv(87) @ 112000: uvm_test_top.env.dut_sb [SCOREBOARD] 
 # ===== Captured data from UART: 0x19
-# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# UVM_INFO ./../tb/dut_scoreboard.sv(100) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
 # 
 # =====[UART TXD] Data comparison =====
 # 
-# UVM_INFO ./../tb/dut_scoreboard.sv(79) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
-# =====[DATA FRAME: 5] PASSED SUCCESSFULLY!!! =====
-# UVM_INFO ./../tb/dut_scoreboard.sv(82) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# UVM_ERROR ./../tb/dut_scoreboard.sv(105) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[DATA FRAME: 5] FAILED!!! Expected value is 0x0, Actual data is 0x19 =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(111) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
 # 
 # =====[UART TXD] Parity comparison =====
 # 
-# UVM_INFO ./../tb/dut_scoreboard.sv(88) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# UVM_INFO ./../tb/dut_scoreboard.sv(117) @ 112000: uvm_test_top.env.dut_sb [dut_scoreboard] 
 # =====[PARITY MODE: 0] PASSED SUCCESSFULLY!!! =====
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 421000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 421000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
@@ -150,22 +170,22 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 421000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h28 : updated value = 'h28
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 421000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0xf9625ca kind = UVM_WRITE status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 421000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='hf9625ca : updated value = 'hca
-# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 421000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# UVM_INFO ./../tb/dut_scoreboard.sv(78) @ 421000: uvm_test_top.env.dut_sb [SCOREBOARD] 
 # ===== Captured data from AHB: 0xf9625ca
-# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 549000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# UVM_INFO ./../tb/dut_scoreboard.sv(87) @ 549000: uvm_test_top.env.dut_sb [SCOREBOARD] 
 # ===== Captured data from UART: 0xa
-# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# UVM_INFO ./../tb/dut_scoreboard.sv(100) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
 # 
 # =====[UART TXD] Data comparison =====
 # 
-# UVM_INFO ./../tb/dut_scoreboard.sv(79) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
-# =====[DATA FRAME: 5] PASSED SUCCESSFULLY!!! =====
-# UVM_INFO ./../tb/dut_scoreboard.sv(82) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# UVM_ERROR ./../tb/dut_scoreboard.sv(105) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[DATA FRAME: 5] FAILED!!! Expected value is 0x0, Actual data is 0xa =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(111) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
 # 
 # =====[UART TXD] Parity comparison =====
 # 
-# UVM_ERROR ./../tb/dut_scoreboard.sv(85) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
-# =====[PARITY MODE: 1] FAILED!!! Expected parity is 1, Actual parity is 0 =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(117) @ 549000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[PARITY MODE: 1] PASSED SUCCESSFULLY!!! =====
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 841000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x0 data = 0x0 kind = UVM_WRITE status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 841000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.MDR: value='h0 : updated value = 'h0
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 841000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x4 data = 0x36 kind = UVM_WRITE status = UVM_IS_OK
@@ -176,22 +196,22 @@
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 841000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.LCR: value='h38 : updated value = 'h38
 # UVM_INFO ./../regmodel/uart_reg2ahb_adapter.sv(42) @ 841000: reporter [uart_reg2ahb_adapter] bus2reg: address = 0x18 data = 0x7d0b6a55 kind = UVM_WRITE status = UVM_IS_OK
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/reg/uvm_reg_predictor.svh(221) @ 841000: uvm_test_top.env.ahb_predictor [REG_PREDICT] Observed WRITE transaction to register regmodel.TBR: value='h7d0b6a55 : updated value = 'h55
-# UVM_INFO ./../tb/dut_scoreboard.sv(50) @ 841000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# UVM_INFO ./../tb/dut_scoreboard.sv(78) @ 841000: uvm_test_top.env.dut_sb [SCOREBOARD] 
 # ===== Captured data from AHB: 0x7d0b6a55
-# UVM_INFO ./../tb/dut_scoreboard.sv(58) @ 969000: uvm_test_top.env.dut_sb [SCOREBOARD] 
+# UVM_INFO ./../tb/dut_scoreboard.sv(87) @ 969000: uvm_test_top.env.dut_sb [SCOREBOARD] 
 # ===== Captured data from UART: 0x15
-# UVM_INFO ./../tb/dut_scoreboard.sv(71) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# UVM_INFO ./../tb/dut_scoreboard.sv(100) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
 # 
 # =====[UART TXD] Data comparison =====
 # 
-# UVM_INFO ./../tb/dut_scoreboard.sv(79) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
-# =====[DATA FRAME: 5] PASSED SUCCESSFULLY!!! =====
-# UVM_INFO ./../tb/dut_scoreboard.sv(82) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# UVM_ERROR ./../tb/dut_scoreboard.sv(105) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[DATA FRAME: 5] FAILED!!! Expected value is 0x0, Actual data is 0x15 =====
+# UVM_INFO ./../tb/dut_scoreboard.sv(111) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
 # 
 # =====[UART TXD] Parity comparison =====
 # 
-# UVM_INFO ./../tb/dut_scoreboard.sv(88) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
-# =====[PARITY MODE: 10] PASSED SUCCESSFULLY!!! =====
+# UVM_ERROR ./../tb/dut_scoreboard.sv(114) @ 969000: uvm_test_top.env.dut_sb [dut_scoreboard] 
+# =====[PARITY MODE: 10] FAILED!!! Expected parity is 0, Actual parity is 1 =====
 # UVM_INFO /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 1261000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # UVM_INFO ./../testcases/base_test.sv(55) @ 1261000: uvm_test_top [uart_txd_x16_parity] -----------------------------------
 # UVM_INFO ./../testcases/base_test.sv(56) @ 1261000: uvm_test_top [uart_txd_x16_parity] ---         FAILED!!!           ---
@@ -200,11 +220,12 @@
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   58
+# UVM_INFO :   57
 # UVM_WARNING :    0
-# UVM_ERROR :    1
+# UVM_ERROR :    4
 # UVM_FATAL :    0
 # ** Report counts by id
+# [CFG]     1
 # [NO_DPI_TSTNAME]     1
 # [REG_PREDICT]    15
 # [RNTST]     1
@@ -214,12 +235,12 @@
 # [UVM/RELNOTES]     1
 # [UVMTOP]     1
 # [ahb_agent]     1
-# [dut_scoreboard]    12
+# [dut_scoreboard]    13
 # [uart_agent]     1
 # [uart_reg2ahb_adapter]    15
 # [uart_txd_x16_parity]     3
 # 
 # ** Note: $finish    : /ictc/other/tools/QuestaDVA/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
 #    Time: 1261350 ns  Iteration: 68  Instance: /testbench
-# End time: 21:05:33 on Aug 03,2026, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
+# End time: 13:37:18 on Aug 04,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 5
