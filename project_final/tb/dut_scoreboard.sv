@@ -23,6 +23,8 @@ class dut_scoreboard extends uvm_scoreboard;
 
     if(!uvm_config_db#(uart_configuration)::get(this, "", "cfg", cfg))
       `uvm_fatal("CFG", "CANNOT get uart_configuration")
+
+    `uvm_info(get_type_name(), $sformatf("%s",cfg.sprint()), UVM_LOW)
   endfunction
 
   virtual task run_phase(uvm_phase phase);
