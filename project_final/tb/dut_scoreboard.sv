@@ -12,6 +12,10 @@ class dut_scoreboard extends uvm_scoreboard;
   uart_transaction    expected_txd_q[$];
   uart_transaction    actual_txd_q[$];
 
+  int       data_width;
+  int       stop_bit;
+  bit [1:0] parity_mode;
+
   function new(string name = "dut_scoreboard", uvm_component parent);
     super.new(name, parent);
   endfunction
@@ -26,10 +30,10 @@ class dut_scoreboard extends uvm_scoreboard;
 
     if(!uvm_config_db#(uart_configuration)::get(this, "", "cfg", cfg))
       `uvm_fatal("CFG", "CANNOT get uart_configuration")
-    else
-      `uvm_info("CFG", "GET SUCCESSFULLY!!!!", UVM_NONE)
+    //else
+    //  `uvm_info("CFG", "GET SUCCESSFULLY!!!!", UVM_NONE)
 
-    `uvm_info(get_type_name(), $sformatf("%s",cfg.sprint()), UVM_NONE)
+    //`uvm_info(get_type_name(), $sformatf("%s",cfg.sprint()), UVM_NONE)
   endfunction
 
   virtual task run_phase(uvm_phase phase);
@@ -39,9 +43,6 @@ class dut_scoreboard extends uvm_scoreboard;
   function void write_ahb(ahb_transaction trans);
     bit [7:0]   data;
     bit [31:0]  lcr;
-    int         data_width;
-    int         stop_bit;
-    bit [1:0]   parity_mode;
     uart_transaction exp;
 
     if((trans.xact_type == ahb_transaction::WRITE) && (trans.addr == 10'h00C)) begin
@@ -102,19 +103,19 @@ class dut_scoreboard extends uvm_scoreboard;
       //`uvm_info(get_type_name(), $sformatf("%s", exp.sprint()), UVM_LOW)
 
       if(act.data != exp.data) begin
-        `uvm_error(get_type_name(), $sformatf("\n=====[DATA FRAME: %0d] FAILED!!! Expected value is 0x%0h, Actual data is 0x%0h =====",cfg.data_width, exp.data,act.data))
+        `uvm_error(get_type_name(), $sformatf("\n=====[DATA FRAME: %0d] FAILED!!! Expected value is 0x%0h, Actual data is 0x%0h =====",data_width, exp.data,act.data))
       end
       else begin
-        `uvm_info(get_type_name(), $sformatf("\n=====[DATA FRAME: %0d] PASSED SUCCESSFULLY!!! =====", cfg.data_width), UVM_LOW)
+        `uvm_info(get_type_name(), $sformatf("\n=====[DATA FRAME: %0d] PASSED SUCCESSFULLY!!! =====", data_width), UVM_LOW)
       end
 
       `uvm_info(get_type_name(), $sformatf("\n\n=====[UART TXD] Parity comparison =====\n"), UVM_LOW)   
 
       if(act.parity != exp.parity) begin
-        `uvm_error(get_type_name(), $sformatf("\n=====[PARITY MODE: %0b] FAILED!!! Expected parity is %b, Actual parity is %b =====",cfg.parity_mode, exp.parity, act.parity))
+        `uvm_error(get_type_name(), $sformatf("\n=====[PARITY MODE: %0b] FAILED!!! Expected parity is %b, Actual parity is %b =====",parity_mode, exp.parity, act.parity))
       end
       else begin
-        `uvm_info(get_type_name(), $sformatf("\n=====[PARITY MODE: %0b] PASSED SUCCESSFULLY!!! =====", cfg.parity_mode), UVM_LOW)
+        `uvm_info(get_type_name(), $sformatf("\n=====[PARITY MODE: %0b] PASSED SUCCESSFULLY!!! =====", parity_mode), UVM_LOW)
       end
 
 

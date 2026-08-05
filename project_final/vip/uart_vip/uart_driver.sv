@@ -46,7 +46,7 @@ class uart_driver extends uvm_driver #(uart_transaction);
     time clk;
 
     //TRANSFER TIMING CALCULATION
-    clk = 1s / cfg.baud_rate;
+    clk = 2s / cfg.baud_rate;
 
     //IDLE
     uart_vif.tx  <= 1'b1; 

@@ -1,0 +1,64 @@
+# vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l uart_rxd_x16_parity_1.log "+UVM_TESTNAME=uart_rxd_x16_parity" "+UVM_VERBOSITY=UVM_HIGH" 
+# Start time: 13:56:48 on Aug 05,2026
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_122254/linux_x86_64_gcc-11/export_tramp.so
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: ./../testcases/uart_txd_x16_parity.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_data_frame.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_stop_bit.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_baud_rate.sv(22): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x16_random.sv(26): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x13_parity.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x13_data_frame.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x13_stop_bit.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x13_baud_rate.sv(22): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_txd_x13_random.sv(26): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ./../testcases/uart_rxd_x16_parity.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.6d_1 linux_x86_64 Apr 11 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.uart_if(fast)
+# Loading work.ahb_if(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.uart_register_pkg(fast)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.ahb_pkg(fast)
+# Loading work.uart_regmodel_pkg(fast)
+# Loading work.uart_pkg(fast)
+# Loading work.seq_pkg(fast)
+# Loading work.env_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading work.testbench(fast)
+# Loading work.ahb_if(fast)
+# Loading work.uart_if(fast)
+# Loading work.uart_top(fast)
+# Loading work.cmsdk_ahb_to_apb(fast)
+# Loading work.apb_decoder(fast)
+# Loading work.uart_fifo(fast)
+# Loading work.uart_transmitter(fast)
+# Loading work.uart_receiver(fast)
+# Loading work.uart_interrupt(fast)
+# Loading work.baud_generator(fast)
+# ** Error: (vsim-7065) ./../sequences/parity_rxd_x16_chk_sequence.sv(95): Illegal assignment to class work.ahb_pkg::ahb_transaction from class work.uvm_pkg::uvm_sequence_item
+#    Time: 0 ns  Iteration: 0  Region: /seq_pkg::parity_rxd_x16_chk_sequence File: ./../sequences/seq_pkg.sv
+# ** Error: (vsim-8754) ./../sequences/parity_rxd_x16_chk_sequence.sv(95): Actual output arg. of type 'class work.ahb_pkg::ahb_transaction' for formal 'response' of 'get_response' is not compatible with the formal's type 'class work.uvm_pkg::uvm_sequence_item'.
+#    Time: 0 ns  Iteration: 0  Region: /seq_pkg::parity_rxd_x16_chk_sequence File: ./../sequences/seq_pkg.sv
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_122254/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_122254/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_122254/linux_x86_64_gcc-11/vsim_auto_compile.so
+# Error loading design
+# End time: 13:56:51 on Aug 05,2026, Elapsed time: 0:00:03
+# Errors: 2, Warnings: 11
