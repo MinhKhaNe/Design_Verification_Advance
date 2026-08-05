@@ -1,6 +1,6 @@
 # vsim -sv_seed 1 -voptargs="+acc" -assertdebug -c testbench -do " log -r /*;run -all;" -l uart_rxd_x16_parity_1.log "+UVM_TESTNAME=uart_rxd_x16_parity" "+UVM_VERBOSITY=UVM_HIGH" 
-# Start time: 13:56:48 on Aug 05,2026
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_122254/linux_x86_64_gcc-11/export_tramp.so
+# Start time: 17:17:49 on Aug 05,2026
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_37570/linux_x86_64_gcc-11/export_tramp.so
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: ./../testcases/uart_txd_x16_parity.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
 # ** Warning: ./../testcases/uart_txd_x16_data_frame.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
@@ -52,13 +52,13 @@
 # Loading work.uart_receiver(fast)
 # Loading work.uart_interrupt(fast)
 # Loading work.baud_generator(fast)
-# ** Error: (vsim-7065) ./../sequences/parity_rxd_x16_chk_sequence.sv(95): Illegal assignment to class work.ahb_pkg::ahb_transaction from class work.uvm_pkg::uvm_sequence_item
+# ** Error: (vsim-7065) ./../sequences/parity_rxd_x16_chk_sequence.sv(91): Illegal assignment to class work.ahb_pkg::ahb_transaction from class work.uvm_pkg::uvm_sequence_item
 #    Time: 0 ns  Iteration: 0  Region: /seq_pkg::parity_rxd_x16_chk_sequence File: ./../sequences/seq_pkg.sv
-# ** Error: (vsim-8754) ./../sequences/parity_rxd_x16_chk_sequence.sv(95): Actual output arg. of type 'class work.ahb_pkg::ahb_transaction' for formal 'response' of 'get_response' is not compatible with the formal's type 'class work.uvm_pkg::uvm_sequence_item'.
+# ** Error: (vsim-8754) ./../sequences/parity_rxd_x16_chk_sequence.sv(91): Actual output arg. of type 'class work.ahb_pkg::ahb_transaction' for formal 'response' of 'get_response' is not compatible with the formal's type 'class work.uvm_pkg::uvm_sequence_item'.
 #    Time: 0 ns  Iteration: 0  Region: /seq_pkg::parity_rxd_x16_chk_sequence File: ./../sequences/seq_pkg.sv
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_122254/linux_x86_64_gcc-5.3.0/exportwrapper.c
-# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_122254/linux_x86_64_gcc-11/exportwrapper.c
-# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_122254/linux_x86_64_gcc-11/vsim_auto_compile.so
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_37570/linux_x86_64_gcc-5.3.0/exportwrapper.c
+# Compiling /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_37570/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/khaminh_3008@ictc-eda-ldap.ipa.test_dpi_37570/linux_x86_64_gcc-11/vsim_auto_compile.so
 # Error loading design
-# End time: 13:56:51 on Aug 05,2026, Elapsed time: 0:00:03
+# End time: 17:17:51 on Aug 05,2026, Elapsed time: 0:00:02
 # Errors: 2, Warnings: 11

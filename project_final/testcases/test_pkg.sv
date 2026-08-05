@@ -18,6 +18,6 @@ package test_pkg;
   `include "uart_txd_x13_stop_bit.sv"
   `include "uart_txd_x13_baud_rate.sv"
   `include "uart_txd_x13_random.sv"
-  `include "uart_rxd_x16_parity.sv"
+  `include "uart_rxd_random.sv"
 
 endpackage

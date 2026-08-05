@@ -19,6 +19,8 @@ package seq_pkg;
   `include "baud_rate_x13_chk_sequence.sv"
   `include "random_x13_chk_sequence.sv"
   //RXD
-  `include "parity_rxd_x16_chk_sequence.sv"
+  `include "ahb_rxd_write_sequence.sv"
+  `include "ahb_rxd_read_sequence.sv"
+  `include "uart_rxd_write_sequence.sv"
 
 endpackage
