@@ -23,15 +23,25 @@ class ahb_rxd_read_sequence extends uvm_sequence #(ahb_transaction);
   endfunction
 
   virtual task body();
+    //if(cfg == null)
+    //  `uvm_fatal(get_type_name(), "CFG NULL")
+
+    //if(regmodel == null)
+    //  `uvm_fatal(get_type_name(), "REGMODEL NULL")
+
     bit [7:0] mask;
     mask = (1 << cfg.data_width) - 1;
 
     //Check RX FIFO Status
-    regmodel.FSR.read(status, data);
+    do begin
+      regmodel.FSR.read(status, data);
+    end
+    while(data[3] == 1'b1);
+
     if(data[3] != 1'b1) begin
       regmodel.RBR.read(status, data);
-      if(mask != data[7:0]) begin
-        `uvm_error(get_type_name(), $sformatf("\n===== FAILED!!! Actual data is %h, Expected data is %h =====", data, mask))
+      if((exp & mask) != (data[7:0] & mask)) begin
+        `uvm_error(get_type_name(), $sformatf("\n===== FAILED!!! Actual data is %h, Expected data is %h =====", data[7:0] & mask, exp & mask))
       end
       else begin
         `uvm_info(get_type_name(), $sformatf("\n===== PASSED SUCCESSFULLY!!! ====="), UVM_LOW)

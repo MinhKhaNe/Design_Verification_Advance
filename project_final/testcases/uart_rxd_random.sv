@@ -25,13 +25,15 @@ class uart_rxd_random extends base_test;
         for(int sb = 1; sb <= 2; sb++) begin
           for(int br = 0; br < 7; br++) begin
             for(int m = 0; m < 2; m++) begin
+              bit [7:0] data;
+
               cfg.randomize() with {parity_mode       == pm;
                                     sampling          == m;
                                     data_width        == dw;
                                     num_of_stop_bit   == sb;
                                     baud_rate         == baud_rate_a[br];
                               };
-              bit [7:0] data = $urandom();
+              data = $urandom();
 
               cfg.parity_enable     = 1'b0;
               cfg.baud_rate_enable  = 1'b0;
@@ -43,13 +45,13 @@ class uart_rxd_random extends base_test;
 
               uart_write    = uart_rxd_write_sequence::type_id::create("uart_write", this);
               uart_write.wdata = data;
-              uart_write.start(env.uart_agt.sequencer);
+              uart_write.start(env.uart_agt.seq);
 
-              ahb_read      = ahb_rxd_write_sequence::type_id::create("ahb_read", this);
+              ahb_read      = ahb_rxd_read_sequence::type_id::create("ahb_read", this);
               ahb_read.cfg  = cfg;
               ahb_read.exp  = data;
+              ahb_read.regmodel = env.regmodel;
               ahb_read.start(env.ahb_agt.sequencer);
-
               #10ms;
             end
           end

@@ -24,7 +24,7 @@ module testbench;
     .HRESP(ahb_vif.HRESP),
     .uart_rxd(uart_vif.tx),
     .uart_txd(uart_vif.rx),
-    .interrupt()
+    .interrupt(uart_vif.interrupt)
   );
 
   assign ahb_vif.HSEL = 1'b1;

@@ -1,11 +1,13 @@
 `uvm_analysis_imp_decl(_ahb)
 `uvm_analysis_imp_decl(_uart)
+`uvm_analysis_imp_decl(_interrupt)
 
 class dut_scoreboard extends uvm_scoreboard;
   `uvm_component_utils(dut_scoreboard)
 
-  uvm_analysis_imp_ahb  #(ahb_transaction, dut_scoreboard) ahb_a_export;
-  uvm_analysis_imp_uart #(uart_transaction, dut_scoreboard) uart_a_export;
+  uvm_analysis_imp_ahb        #(ahb_transaction, dut_scoreboard) ahb_a_export;
+  uvm_analysis_imp_uart       #(uart_transaction, dut_scoreboard) uart_a_export;
+  uvm_analysis_imp_interrupt  #(interrupt_transaction, dut_scoreboard) interrupt_a_export;
 
   uart_configuration  cfg;
 
@@ -27,6 +29,7 @@ class dut_scoreboard extends uvm_scoreboard;
 
     ahb_a_export  = new("ahb_a_export", this);
     uart_a_export = new("uart_a_export", this);
+    interrupt_a_export = new("interrupt_a_export", this);
 
     if(!uvm_config_db#(uart_configuration)::get(this, "", "cfg", cfg))
       `uvm_fatal("CFG", "CANNOT get uart_configuration")
@@ -128,6 +131,15 @@ class dut_scoreboard extends uvm_scoreboard;
       2'b10:  return ^(data);
       2'b01:   return ~(^data);
     endcase
+  endfunction
+
+  function void write_interrupt(interrupt transaction trans);
+    if(cfg.interrupt_enable != trans.interrupt ) begin
+      `uvm_error(get_type_name(), $sformatf("\n===== Interrupt is not triggered ====="))
+    end
+    else begin
+      `uvm_info(get_type_name(), $sformatf("\n===== Interrupt is triggered ====="), UVM_LOW)
+    end
   endfunction
 
 endclass

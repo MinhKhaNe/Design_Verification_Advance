@@ -6,6 +6,7 @@ class uart_monitor extends uvm_monitor;
   uart_configuration  cfg;
   
   uvm_analysis_port #(uart_transaction) uart_a_port;
+  uvm_analysis_port #(interrupt_transaction) interrupt_a_port;
 
   covergroup  UART_CFG_GROUP;
     parity_mode: coverpoint cfg.parity_mode{
@@ -40,8 +41,9 @@ class uart_monitor extends uvm_monitor;
 
   function new(string name = "uart_monitor", uvm_component parent);
     super.new(name, parent);
-    uart_a_port = new("uart_a_port", this);
-    UART_CFG_GROUP = new();
+    uart_a_port       = new("uart_a_port", this);
+    interrupt_a_port  = new("interrupt_a_port", this);
+    UART_CFG_GROUP    = new();
   endfunction
 
   virtual function void build_phase(uvm_phase phase);
@@ -77,6 +79,7 @@ class uart_monitor extends uvm_monitor;
           UART_CFG_GROUP.sample();
         end
       
+        interrupt_monitor();
       join        
           
   endtask
@@ -175,5 +178,16 @@ class uart_monitor extends uvm_monitor;
           trans.baud_rate = cfg.baud_rate;
           //`uvm_info("uart_monitor", $sformatf("Data read from DUT is %0s", trans.sprint()), UVM_LOW)
           uart_a_port.write(trans);
+  endtask
+
+  virtual task interrupt_monitor();
+    interrupt_transaction   trans;
+    forever begin
+      @(posedge uart_vif.interrrupt);
+      trans           = interrupt_transaction::type_id::create("trans");
+      trans.interrupt = 1'b1;
+      trans.int_time  = $time;
+      interrupt_a_port.write(trans);
+    end
   endtask
 endclass

@@ -48,7 +48,8 @@ class dut_environment extends uvm_env;
     super.connect_phase(phase);
     //Connect uart_monitor to Scoreboard
     uart_agt.mon.uart_a_port.connect(dut_sb.uart_a_export);
-    
+    uart_agt.mon.interrupt_a_port.connect(dut_sb.interrupt_a_export);
+ 
     //Connect RAL
     if(regmodel.get_parent() == null)
       regmodel.ahb_map.set_sequencer(ahb_agt.sequencer, ahb_adapter);
