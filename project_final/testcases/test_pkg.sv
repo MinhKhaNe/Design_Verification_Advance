@@ -19,5 +19,8 @@ package test_pkg;
   `include "uart_txd_x13_baud_rate.sv"
   `include "uart_txd_x13_random.sv"
   `include "uart_rxd_random.sv"
+  `include "uart_rxd_parity_status.sv"
+  `include "uart_rxd_parity_status_clear.sv"
+  `include "uart_rxd_interrupt.sv"
 
 endpackage

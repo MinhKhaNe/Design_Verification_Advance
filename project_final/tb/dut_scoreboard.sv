@@ -14,9 +14,19 @@ class dut_scoreboard extends uvm_scoreboard;
   uart_transaction    expected_txd_q[$];
   uart_transaction    actual_txd_q[$];
 
-  int       data_width;
-  int       stop_bit;
-  bit [1:0] parity_mode;
+  int         data_width;
+  int         stop_bit;
+  bit [1:0]   parity_mode;
+  bit         check_interrupt_empty, check_interrupt_full;
+  bit [31:0]  int_status;
+
+  typedef enum{
+    INT_IDLE,
+    INT_ASSERT,
+    INT_DEASSERT
+  } int_state_e;
+
+  int_state_e int_state = INT_IDLE;
 
   function new(string name = "dut_scoreboard", uvm_component parent);
     super.new(name, parent);
@@ -82,6 +92,17 @@ class dut_scoreboard extends uvm_scoreboard;
       `uvm_info("SCOREBOARD", $sformatf("\n===== Captured data from AHB: 0x%0h",trans.data), UVM_LOW)
     end
     
+    if((trans.xact_type == ahb_transaction::WRITE) && (trans.addr == 10'h010)) begin
+      int_status = trans.data;
+      if((int_status[3] == 1) || (int_status[1] = 1)) begin
+        check_interrupt_empty = 1;
+        int_state = INT_ASSERT;
+      end
+      else if((int_status[2] == 1) || (int_status[0] == 1)) begin
+        check_interrupt_full = 1;
+      end
+    end
+
     compare_txd();
   endfunction
 
@@ -133,13 +154,27 @@ class dut_scoreboard extends uvm_scoreboard;
     endcase
   endfunction
 
-  function void write_interrupt(interrupt transaction trans);
-    if(cfg.interrupt_enable != trans.interrupt ) begin
-      `uvm_error(get_type_name(), $sformatf("\n===== Interrupt is not triggered ====="))
-    end
-    else begin
-      `uvm_info(get_type_name(), $sformatf("\n===== Interrupt is triggered ====="), UVM_LOW)
-    end
+  function void write_interrupt(interrupt_transaction trans);
+    case(int_state)
+      INT_ASSERT: begin
+        if(trans.interrupt) begin
+          `uvm_info(get_type_name(), $sformatf("===== Interrupt is asserted ====="), UVM_LOW)
+          int_state = INT_DEASSERT;
+        end
+        else begin
+          `uvm_error(get_type_name(), $sformatf("===== Interrupt should be asserted ====="))
+        end
+      end
+      INT_DEASSERT: begin
+        if(!trans.interrupt) begin
+          `uvm_info(get_type_name(), $sformatf("===== PASSED SUCCESSFULLY!!! ====="), UVM_LOW)
+          int_state = INT_DEASSERT;
+        end
+        else begin
+          `uvm_error(get_type_name(), $sformatf("===== FAILED!!! Interrupt should be deasserted ====="))
+        end
+      end
+    endcase
   endfunction
 
 endclass

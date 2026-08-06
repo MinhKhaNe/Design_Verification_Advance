@@ -20,6 +20,7 @@ class uart_configuration extends uvm_object;
 
   bit     baud_rate_enable;
   bit     parity_enable;
+  bit     interrupt_enable;
 
   constraint uart_config {
     baud_rate         inside   {2400, 4800, 9600, 19200, 38400, 76800, 115200};
@@ -35,6 +36,7 @@ class uart_configuration extends uvm_object;
     `uvm_field_int(baud_rate,                   UVM_ALL_ON | UVM_HEX)
     `uvm_field_int(baud_rate_enable,            UVM_ALL_ON | UVM_HEX)
     `uvm_field_int(parity_enable,               UVM_ALL_ON | UVM_HEX)
+    `uvm_field_int(interrupt_enable,            UVM_ALL_ON | UVM_HEX)
   `uvm_object_utils_end
 
   function new(string name = "uart_configuration");

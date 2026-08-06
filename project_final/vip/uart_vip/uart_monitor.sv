@@ -78,8 +78,11 @@ class uart_monitor extends uvm_monitor;
           check_baud_rate();
           UART_CFG_GROUP.sample();
         end
-      
-        interrupt_monitor();
+        
+        forever begin 
+         // wait(cfg.interrupt_enable)
+            interrupt_monitor();
+        end
       join        
           
   endtask
@@ -183,11 +186,18 @@ class uart_monitor extends uvm_monitor;
   virtual task interrupt_monitor();
     interrupt_transaction   trans;
     forever begin
-      @(posedge uart_vif.interrrupt);
+      @(posedge uart_vif.interrupt);
       trans           = interrupt_transaction::type_id::create("trans");
       trans.interrupt = 1'b1;
       trans.int_time  = $time;
       interrupt_a_port.write(trans);
+
+      @(negedge uart_vif.interrupt);
+      trans           = interrupt_transaction::type_id::create("trans");
+      trans.interrupt = 1'b0;
+      trans.int_time  = $time;
+      interrupt_a_port.write(trans);
+
     end
   endtask
 endclass

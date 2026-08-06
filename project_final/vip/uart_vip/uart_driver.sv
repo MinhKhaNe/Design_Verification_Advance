@@ -63,9 +63,15 @@ class uart_driver extends uvm_driver #(uart_transaction);
 
     //PARITY BIT
     if(cfg.parity_mode != uart_configuration::UART_PARITY_NONE) begin
-      uart_vif.tx    <= parity_calculation(trans.data);
-      trans.parity  = parity_calculation(trans.data);
-      #(clk);
+      if(!cfg.parity_enable) begin
+        uart_vif.tx    <= parity_calculation(trans.data);
+        //trans.parity  = parity_calculation(trans.data);
+        #(clk);
+      end
+      else begin
+        uart_vif.tx   <= inject_parity(trans.data);
+        #(clk);
+      end
     end
 
     //STOP BIT
@@ -87,7 +93,7 @@ class uart_driver extends uvm_driver #(uart_transaction);
 
   function bit inject_parity(bit [7:0] data);
     case(cfg.parity_mode)
-      uart_configuration::UART_PARITY_NONE:   return 0 ;
+      uart_configuration::UART_PARITY_NONE:   return 1;
       uart_configuration::UART_PARITY_ODD:   return ^(data);
       uart_configuration::UART_PARITY_EVEN:    return ~(^data);
     endcase
