@@ -98,6 +98,7 @@ class dut_scoreboard extends uvm_scoreboard;
       if((int_status[3] == 1) || (int_status[1] == 1)) begin
         check_interrupt_empty = 1;
         int_state = INT_ASSERT;
+        $display("===== IER[3] enabled -> ASSERTED =====");
       end
       else if((int_status[2] == 1) || (int_status[0] == 1)) begin
         check_interrupt_full = 1;
@@ -156,7 +157,11 @@ class dut_scoreboard extends uvm_scoreboard;
   endfunction
 
   function void write_interrupt(interrupt_transaction trans);
+    `uvm_info(get_type_name(), $sformatf("Interurpt = %b, state = %s", trans.interrupt, int_state.name()), UVM_LOW)
     case(int_state)
+      INT_IDLE: begin
+
+      end
       INT_ASSERT: begin
         if(trans.interrupt) begin
           `uvm_info(get_type_name(), $sformatf("===== Interrupt is asserted ====="), UVM_LOW)

@@ -27,5 +27,7 @@ package seq_pkg;
   `include "ahb_rxd_clear_parity_status_sequence.sv"
   `include "ahb_rxd_rx_empty_sequence.sv"
   `include "ahb_rxd_rx_read_empty_sequence.sv"
+  `include "ahb_txd_empty_sequence.sv"
+  `include "ahb_txd_read_empty_sequence.sv"
 
 endpackage

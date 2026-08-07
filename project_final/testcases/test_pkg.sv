@@ -21,6 +21,7 @@ package test_pkg;
   `include "uart_rxd_random.sv"
   `include "uart_rxd_parity_status.sv"
   `include "uart_rxd_parity_status_clear.sv"
-  `include "uart_rxd_interrupt.sv"
+  `include "uart_rxd_interrupt_empty.sv"
+  `include "uart_txd_interrupt_empty.sv"
 
 endpackage
