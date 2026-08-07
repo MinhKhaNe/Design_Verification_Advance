@@ -194,7 +194,7 @@ class dut_scoreboard extends uvm_scoreboard;
           `uvm_error(get_type_name(), $sformatf("===== Interrupt should be deasserted ====="))
         end
       end
-      INT_EMPTY_ASSERT: begin
+      INT_FULL_ASSERT: begin
         if(trans.interrupt) begin
           `uvm_info(get_type_name(), $sformatf("===== PASSED SUCCESSFULLY!!! ====="), UVM_LOW)
           int_state = INT_IDLE;

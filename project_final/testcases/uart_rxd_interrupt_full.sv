@@ -46,17 +46,21 @@ class uart_rxd_interrupt_full extends base_test;
               rx_full     = ahb_rxd_rx_full_sequence::type_id::create("rx_full", this);
               rx_full.cfg = cfg;
               rx_full.start(env.ahb_agt.sequencer);
-
+              $display(" after rx full");
               for(int i = 0; i < 16; i++) begin
                 data = $urandom();
+                $display("before uart write %d",i);
                 uart_write    = uart_rxd_write_sequence::type_id::create("uart_write", this);
                 uart_write.wdata = data;
                 uart_write.start(env.uart_agt.seq);
+                $display("after uart write");
               end
+
+              $display("before read");
               read_full     = ahb_rxd_rx_read_full_sequence::type_id::create("read_full", this);
               read_full.cfg = cfg;
               read_full.start(env.ahb_agt.sequencer);
-
+              $display("after read");
 
               #10ms;
             end

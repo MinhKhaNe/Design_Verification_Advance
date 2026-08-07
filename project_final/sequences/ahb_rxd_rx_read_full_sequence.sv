@@ -31,7 +31,7 @@ class ahb_rxd_rx_read_full_sequence extends uvm_sequence #(ahb_transaction);
       do begin
         read_ahb(FSR, data, hresp);
       end
-      while(data[2] == 1'b1);
+      while(data[2] == 1'b0);
       
    //end
   endtask
