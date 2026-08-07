@@ -21,7 +21,7 @@ class ahb_txd_empty_sequence extends uvm_sequence #(ahb_transaction);
   virtual task body();
     bit [31:0]  data;
     bit         hresp;
-    //for(int i = 0; i < 3; i++) begin
+    for(int i = 0; i < 1; i++) begin
       data = $urandom();
 
       //Settings DUT
@@ -138,7 +138,7 @@ class ahb_txd_empty_sequence extends uvm_sequence #(ahb_transaction);
 //      end
 //      while(data[3] == 1'b1);
       
-   //end
+   end
   endtask
 
   task write_ahb(bit [9:0] haddr, bit [31:0] hwdata);

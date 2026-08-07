@@ -29,5 +29,7 @@ package seq_pkg;
   `include "ahb_rxd_rx_read_empty_sequence.sv"
   `include "ahb_txd_empty_sequence.sv"
   `include "ahb_txd_read_empty_sequence.sv"
-
+  `include "ahb_rxd_rx_full_sequence.sv"
+  `include "ahb_rxd_rx_read_full_sequence.sv"
+  
 endpackage

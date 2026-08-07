@@ -26,7 +26,7 @@ class uart_txd_interrupt_empty extends base_test;
               bit [7:0] data;
 
               ahb_vif.HRESETn = 1'b0;
-              #100ns;
+              #1ms;
               ahb_vif.HRESETn = 1'b1;
               #50ns;
 
