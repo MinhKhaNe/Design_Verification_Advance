@@ -1,13 +1,9 @@
-  CREATE_STREAM @0 {NAME:ahb_write T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1023}
-  CREATE_STREAM @1000 {NAME:uart_write T:Transactions SCOPE:uvm_test_top.env.uart_agt.sequencer STREAM:1135}
-  CREATE_STREAM @5832000 {NAME:ahb_read T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1159}
-  CREATE_STREAM @0 {NAME:ahb_write T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1023}
-  CREATE_STREAM @1000 {NAME:uart_write T:Transactions SCOPE:uvm_test_top.env.uart_agt.sequencer STREAM:1135}
-  CREATE_STREAM @5832000 {NAME:ahb_read T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1159}
-  CREATE_STREAM @0 {NAME:ahb_write T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1023}
-  CREATE_STREAM @1000 {NAME:uart_write T:Transactions SCOPE:uvm_test_top.env.uart_agt.sequencer STREAM:1135}
-  CREATE_STREAM @6665000 {NAME:ahb_read T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1159}
-  CREATE_STREAM @0 {NAME:ahb_write T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1023}
-  CREATE_STREAM @1000 {NAME:uart_write T:Transactions SCOPE:uvm_test_top.env.uart_agt.sequencer STREAM:1135}
-  CREATE_STREAM @6665000 {NAME:ahb_clear T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1159}
   CREATE_STREAM @0 {NAME:rx_empty T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1023}
+  CREATE_STREAM @1000 {NAME:uart_write T:Transactions SCOPE:uvm_test_top.env.uart_agt.sequencer STREAM:1135}
+  CREATE_STREAM @5832000 {NAME:read_empty T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1165}
+  CREATE_STREAM @0 {NAME:rx_empty T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1023}
+  CREATE_STREAM @1000 {NAME:uart_write T:Transactions SCOPE:uvm_test_top.env.uart_agt.sequencer STREAM:1135}
+  CREATE_STREAM @5832000 {NAME:read_empty T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1165}
+  CREATE_STREAM @0 {NAME:rx_empty T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1023}
+  CREATE_STREAM @11000 {NAME:uart_write T:Transactions SCOPE:uvm_test_top.env.uart_agt.sequencer STREAM:1161}
+  CREATE_STREAM @5842000 {NAME:read_empty T:Transactions SCOPE:uvm_test_top.env.ahb_agt.sequencer STREAM:1191}

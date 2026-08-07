@@ -125,14 +125,14 @@ class ahb_rxd_rx_empty_sequence extends uvm_sequence #(ahb_transaction);
       write_ahb(IER, 32'h08);
 
       //READ RX_EMPTY_STATUS
-      read_ahb(FSR, data, hresp);
-      if(data[3] != 1) begin
-        `uvm_error(get_type_name(), $sformatf("\n===== FAILED!!! RX_EMPTY_STATUS is not right ====="))
-      end
-      do begin
-        read_ahb(FSR, data, hresp);
-      end
-      while(data[3] == 1'b1);
+//      read_ahb(FSR, data, hresp);
+//      if(data[3] != 1) begin
+//        `uvm_error(get_type_name(), $sformatf("\n===== FAILED!!! RX_EMPTY_STATUS is not right ====="))
+//      end
+//      do begin
+//        read_ahb(FSR, data, hresp);
+//      end
+//      while(data[3] == 1'b1);
       
    //end
   endtask

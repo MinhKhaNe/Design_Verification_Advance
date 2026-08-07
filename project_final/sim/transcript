@@ -19,4 +19,5 @@
 # 
 # 
 # stdin: <EOF>
+add wave -position end vsim:/testbench/uart_vif/*
 add wave -position end vsim:/testbench/u_dut/*

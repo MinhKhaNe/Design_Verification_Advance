@@ -94,7 +94,8 @@ class dut_scoreboard extends uvm_scoreboard;
     
     if((trans.xact_type == ahb_transaction::WRITE) && (trans.addr == 10'h010)) begin
       int_status = trans.data;
-      if((int_status[3] == 1) || (int_status[1] = 1)) begin
+      $display("===== Received Data from IER =====");
+      if((int_status[3] == 1) || (int_status[1] == 1)) begin
         check_interrupt_empty = 1;
         int_state = INT_ASSERT;
       end
@@ -168,7 +169,7 @@ class dut_scoreboard extends uvm_scoreboard;
       INT_DEASSERT: begin
         if(!trans.interrupt) begin
           `uvm_info(get_type_name(), $sformatf("===== PASSED SUCCESSFULLY!!! ====="), UVM_LOW)
-          int_state = INT_DEASSERT;
+          int_state = INT_IDLE;
         end
         else begin
           `uvm_error(get_type_name(), $sformatf("===== FAILED!!! Interrupt should be deasserted ====="))

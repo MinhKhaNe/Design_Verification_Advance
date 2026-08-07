@@ -1,8 +1,9 @@
 class uart_rxd_interrupt extends base_test;
   `uvm_component_utils(uart_rxd_interrupt)
 
-  ahb_rxd_rx_empty_sequence   rx_empty;
-  uart_rxd_write_sequence     uart_write;
+  ahb_rxd_rx_empty_sequence       rx_empty;
+  uart_rxd_write_sequence         uart_write;
+  ahb_rxd_rx_read_empty_sequence  read_empty;
   
   int baud_rate_a[7] = '{2400, 4800, 9600, 19200, 38400, 76800, 115200};
 
@@ -45,6 +46,11 @@ class uart_rxd_interrupt extends base_test;
               uart_write    = uart_rxd_write_sequence::type_id::create("uart_write", this);
               uart_write.wdata = data;
               uart_write.start(env.uart_agt.seq);
+  
+              read_empty     = ahb_rxd_rx_read_empty_sequence::type_id::create("read_empty", this);
+              read_empty.cfg = cfg;
+              read_empty.start(env.ahb_agt.sequencer);
+
 
               #10ms;
             end
